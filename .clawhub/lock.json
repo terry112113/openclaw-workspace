@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "skills": {
+    "browser-automation": {
+      "version": "1.0.1",
+      "installedAt": 1774428124010
+    },
+    "desktop-control": {
+      "version": "1.0.0",
+      "installedAt": 1774428132422
+    },
+    "screenshot": {
+      "version": "1.0.1",
+      "installedAt": 1774428184289
+    },
+    "system-info": {
+      "version": "1.0.0",
+      "installedAt": 1774428246861
+    },
+    "clipboard": {
+      "version": "1.0.0",
+      "installedAt": 1774428262080
+    },
+    "ai-web-automation": {
+      "version": "1.0.0",
+      "installedAt": 1774428304033
+    },
+    "image-process": {
+      "version": "0.1.0",
+      "installedAt": 1774428364798
+    },
+    "image-read": {
+      "version": "1.0.1",
+      "installedAt": 1774428372558
+    },
+    "pdf-toolkit-pro": {
+      "version": "1.0.0",
+      "installedAt": 1774428454041
+    },
+    "markdown-converter": {
+      "version": "1.0.0",
+      "installedAt": 1774428483614
+    },
+    "web-search": {
+      "version": "1.0.0",
+      "installedAt": 1774428491804
+    },
+    "document-processor": {
+      "version": "1.0.0",
+      "installedAt": 1774428499377
+    },
+    "personal-productivity": {
+      "version": "1.0.0",
+      "installedAt": 1774428604275
+    },
+    "memory-management": {
+      "version": "4.0.0",
+      "installedAt": 1774428613932
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1774428664451
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1774435263962
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1774435325794
+    },
+    "stock-analysis": {
+      "version": "6.2.0",
+      "installedAt": 1774435385159
+    },
+    "tushare-finance": {
+      "version": "2.0.6",
+      "installedAt": 1774435408628
+    },
+    "quant-analyst": {
+      "version": "0.1.1",
+      "installedAt": 1774435444742
+    },
+    "browser-use": {
+      "version": "2.0.0",
+      "installedAt": 1774435503758
+    },
+    "langchain": {
+      "version": "1.0.0",
+      "installedAt": 1774435516863
+    },
+    "rag": {
+      "version": "1.0.0",
+      "installedAt": 1774435564919
+    },
+    "knowledge-graph": {
+      "version": "1.0.0",
+      "installedAt": 1774435578148
+    },
+    "video-generation": {
+      "version": "1.0.1",
+      "installedAt": 1774435625667
+    },
+    "content-automation": {
+      "version": "1.0.0",
+      "installedAt": 1774435638240
+    },
+    "douyin-downloader": {
+      "version": "1.0.0",
+      "installedAt": 1774446904147
+    },
+    "video-tool-watermark-remove": {
+      "version": "1.0.0",
+      "installedAt": 1774447985025
+    },
+    "watermark": {
+      "version": "1.0.0",
+      "installedAt": 1774447996867
+    }
+  }
+}
