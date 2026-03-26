@@ -17,10 +17,6 @@
       "version": "1.0.0",
       "installedAt": 1774428304033
     },
-    "image-process": {
-      "version": "0.1.0",
-      "installedAt": 1774428364798
-    },
     "image-read": {
       "version": "1.0.1",
       "installedAt": 1774428372558
@@ -45,10 +41,6 @@
       "version": "4.0.0",
       "installedAt": 1774428613932
     },
-    "skill-creator": {
-      "version": "0.1.0",
-      "installedAt": 1774435325794
-    },
     "stock-analysis": {
       "version": "6.2.0",
       "installedAt": 1774435385159
@@ -56,10 +48,6 @@
     "tushare-finance": {
       "version": "2.0.6",
       "installedAt": 1774435408628
-    },
-    "quant-analyst": {
-      "version": "0.1.1",
-      "installedAt": 1774435444742
     },
     "browser-use": {
       "version": "2.0.0",
@@ -88,10 +76,6 @@
     "web": {
       "version": "1.0.0",
       "installedAt": 1774496103769
-    },
-    "typescript-pro": {
-      "version": "0.1.0",
-      "installedAt": 1774496103903
     },
     "excel-xlsx": {
       "version": "1.0.2",
@@ -320,6 +304,122 @@
     "planning-with-files": {
       "version": "2.26.1",
       "installedAt": 1774508416518
+    },
+    "security-audit-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1774508466837
+    },
+    "serp-analysis": {
+      "version": "4.0.0",
+      "installedAt": 1774508478744
+    },
+    "analyst": {
+      "version": "1.0.0",
+      "installedAt": 1774508523990
+    },
+    "senior-security": {
+      "version": "2.1.1",
+      "installedAt": 1774508582359
+    },
+    "content-generation": {
+      "version": "1.0.0",
+      "installedAt": 1774508589685
+    },
+    "best-image-generation": {
+      "version": "1.0.2",
+      "installedAt": 1774508663841
+    },
+    "competitor-analysis": {
+      "version": "4.0.0",
+      "installedAt": 1774508764672
+    },
+    "scout-growth": {
+      "version": "1.0.1",
+      "installedAt": 1774508825259
+    },
+    "coding-assistant": {
+      "version": "1.0.0",
+      "installedAt": 1774508832730
+    },
+    "prezentit": {
+      "version": "1.0.11",
+      "installedAt": 1774508950923
+    },
+    "ai-presentation-maker": {
+      "version": "1.0.0",
+      "installedAt": 1774508963248
+    },
+    "slidespeak": {
+      "version": "1.0.0",
+      "installedAt": 1774509013761
+    },
+    "research-orchestrator": {
+      "version": "1.1.0",
+      "installedAt": 1774509069380
+    },
+    "afrexai-presentation-mastery": {
+      "version": "1.0.0",
+      "installedAt": 1774509138661
+    },
+    "afrexai-project-manager": {
+      "version": "1.0.0",
+      "installedAt": 1774509362709
+    },
+    "cold-email-writer": {
+      "version": "1.0.0",
+      "installedAt": 1774509426342
+    },
+    "email-best-practices": {
+      "version": "1.0.0",
+      "installedAt": 1774509442411
+    },
+    "xhs-content-creator": {
+      "version": "1.0.0",
+      "installedAt": 1774509499340
+    },
+    "content-ideas-free": {
+      "version": "1.0.0",
+      "installedAt": 1774509554236
+    },
+    "human-writing": {
+      "version": "1.0.0",
+      "installedAt": 1774509607602
+    },
+    "rupert-data-analysis": {
+      "version": "1.0.0",
+      "installedAt": 1774509665002
+    },
+    "plan": {
+      "version": "1.0.0",
+      "installedAt": 1774509738983
+    },
+    "design-assets": {
+      "version": "1.0.0",
+      "installedAt": 1774509842438
+    },
+    "securityreview": {
+      "version": "1.0.0",
+      "installedAt": 1774509880477
+    },
+    "email-management": {
+      "version": "1.0.0",
+      "installedAt": 1774509962474
+    },
+    "content-creator-cn": {
+      "version": "1.2.1",
+      "installedAt": 1774509974780
+    },
+    "dragon-content-gen": {
+      "version": "1.0.0",
+      "installedAt": 1774509986881
+    },
+    "security-scanner": {
+      "version": "1.0.0",
+      "installedAt": 1774510021726
+    },
+    "content-marketing": {
+      "version": "1.0.0",
+      "installedAt": 1774510033885
     }
   }
 }
