@@ -117,10 +117,6 @@
       "version": "1.0.0",
       "installedAt": 1774496161932
     },
-    "day-trading-skill": {
-      "version": "1.2.2",
-      "installedAt": 1774496162008
-    },
     "add-analytics": {
       "version": "0.1.0",
       "installedAt": 1774496162100
@@ -181,10 +177,6 @@
       "version": "0.1.0",
       "installedAt": 1774496163220
     },
-    "trading-research": {
-      "version": "1.0.0",
-      "installedAt": 1774496164246
-    },
     "superdesign": {
       "version": "1.0.0",
       "installedAt": 1774496170667
@@ -224,10 +216,6 @@
     "angular": {
       "version": "1.0.1",
       "installedAt": 1774496235498
-    },
-    "crypto-market-data": {
-      "version": "1.0.2",
-      "installedAt": 1774496238978
     },
     "business": {
       "version": "1.1.0",
