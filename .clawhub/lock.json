@@ -13,14 +13,6 @@
       "version": "1.0.1",
       "installedAt": 1774428184289
     },
-    "system-info": {
-      "version": "1.0.0",
-      "installedAt": 1774428246861
-    },
-    "clipboard": {
-      "version": "1.0.0",
-      "installedAt": 1774428262080
-    },
     "ai-web-automation": {
       "version": "1.0.0",
       "installedAt": 1774428304033
@@ -129,10 +121,6 @@
       "version": "1.0.3",
       "installedAt": 1774496162251
     },
-    "data-analyst-pro": {
-      "version": "0.1.0",
-      "installedAt": 1774496162348
-    },
     "branding": {
       "version": "1.0.0",
       "installedAt": 1774496162369
@@ -209,10 +197,6 @@
       "version": "1.0.6",
       "installedAt": 1774496223968
     },
-    "lambda-lang": {
-      "version": "2.0.0",
-      "installedAt": 1774496225861
-    },
     "angular": {
       "version": "1.0.1",
       "installedAt": 1774496235498
@@ -224,10 +208,6 @@
     "video-cog": {
       "version": "1.0.4",
       "installedAt": 1774496243094
-    },
-    "project-management-guru-adhd": {
-      "version": "1.0.0",
-      "installedAt": 1774496247659
     },
     "react-expert": {
       "version": "0.1.0",
@@ -265,10 +245,6 @@
       "version": "1.0.0",
       "installedAt": 1774496318136
     },
-    "gitlab-cli-skills": {
-      "version": "1.12.0",
-      "installedAt": 1774496323616
-    },
     "fitness": {
       "version": "1.0.1",
       "installedAt": 1774496341770
@@ -293,13 +269,57 @@
       "version": "1.0.1",
       "installedAt": 1774496342531
     },
-    "banshee-s-last-cry": {
-      "version": "1.0.0",
-      "installedAt": 1774496362485
-    },
     "self-improving": {
       "version": "1.2.16",
       "installedAt": 1774506257536
+    },
+    "admapix": {
+      "version": "1.0.28",
+      "installedAt": 1774508070611
+    },
+    "content-writer": {
+      "version": "1.0.0",
+      "installedAt": 1774508120725
+    },
+    "copywriter": {
+      "version": "1.1.0",
+      "installedAt": 1774508166828
+    },
+    "explain-code": {
+      "version": "1.0.0",
+      "installedAt": 1774508174446
+    },
+    "python-dataviz": {
+      "version": "1.0.0",
+      "installedAt": 1774508226783
+    },
+    "email-marketing": {
+      "version": "1.0.0",
+      "installedAt": 1774508286619
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1774508296146
+    },
+    "image-edit": {
+      "version": "1.0.0",
+      "installedAt": 1774508306524
+    },
+    "image-cog": {
+      "version": "1.0.3",
+      "installedAt": 1774508353448
+    },
+    "ppt-generator": {
+      "version": "1.0.0",
+      "installedAt": 1774508362687
+    },
+    "powerpoint-pptx": {
+      "version": "1.0.1",
+      "installedAt": 1774508408957
+    },
+    "planning-with-files": {
+      "version": "2.26.1",
+      "installedAt": 1774508416518
     }
   }
 }
