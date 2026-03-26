@@ -44,6 +44,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 | GitHub | terry112113114@gmail.com |
 | 其他待补充 | - |
 
+### GitHub仓库备份
+- 仓库：https://github.com/terry112113/openclaw-workspace
+- 远程：origin
+- 认证方式：已配置git credentials store
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
