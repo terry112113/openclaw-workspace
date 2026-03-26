@@ -396,6 +396,30 @@
     "content-marketing": {
       "version": "1.0.0",
       "installedAt": 1774510033885
+    },
+    "anything-to-notebooklm": {
+      "version": "1.0.0",
+      "installedAt": 1774512962947
+    },
+    "in-depth-research": {
+      "version": "1.0.0",
+      "installedAt": 1774516382577
+    },
+    "reading": {
+      "version": "1.0.0",
+      "installedAt": 1774516383977
+    },
+    "web-researcher": {
+      "version": "1.0.0",
+      "installedAt": 1774516386542
+    },
+    "ai-researcher": {
+      "version": "1.0.0",
+      "installedAt": 1774516441651
+    },
+    "deep-research-prime": {
+      "version": "0.1.0",
+      "installedAt": 1774516443687
     }
   }
 }
