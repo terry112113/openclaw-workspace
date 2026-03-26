@@ -49,21 +49,9 @@
       "version": "1.0.0",
       "installedAt": 1774428499377
     },
-    "personal-productivity": {
-      "version": "1.0.0",
-      "installedAt": 1774428604275
-    },
     "memory-management": {
       "version": "4.0.0",
       "installedAt": 1774428613932
-    },
-    "self-improving": {
-      "version": "1.2.16",
-      "installedAt": 1774428664451
-    },
-    "agent-browser": {
-      "version": "0.2.0",
-      "installedAt": 1774435263962
     },
     "skill-creator": {
       "version": "0.1.0",
@@ -97,25 +85,233 @@
       "version": "1.0.0",
       "installedAt": 1774435578148
     },
-    "video-generation": {
-      "version": "1.0.1",
-      "installedAt": 1774435625667
-    },
-    "content-automation": {
-      "version": "1.0.0",
-      "installedAt": 1774435638240
-    },
-    "douyin-downloader": {
-      "version": "1.0.0",
-      "installedAt": 1774446904147
-    },
-    "video-tool-watermark-remove": {
-      "version": "1.0.0",
-      "installedAt": 1774447985025
-    },
     "watermark": {
       "version": "1.0.0",
       "installedAt": 1774447996867
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1774496102662
+    },
+    "web": {
+      "version": "1.0.0",
+      "installedAt": 1774496103769
+    },
+    "typescript-pro": {
+      "version": "0.1.0",
+      "installedAt": 1774496103903
+    },
+    "excel-xlsx": {
+      "version": "1.0.2",
+      "installedAt": 1774496161424
+    },
+    "mbb-strategist": {
+      "version": "1.0.0",
+      "installedAt": 1774496161568
+    },
+    "projects": {
+      "version": "1.0.0",
+      "installedAt": 1774496161805
+    },
+    "ecommerce": {
+      "version": "1.0.0",
+      "installedAt": 1774496161932
+    },
+    "day-trading-skill": {
+      "version": "1.2.2",
+      "installedAt": 1774496162008
+    },
+    "add-analytics": {
+      "version": "0.1.0",
+      "installedAt": 1774496162100
+    },
+    "social-media-scheduler": {
+      "version": "1.0.0",
+      "installedAt": 1774496162150
+    },
+    "sheet-cog": {
+      "version": "1.0.3",
+      "installedAt": 1774496162251
+    },
+    "data-analyst-pro": {
+      "version": "0.1.0",
+      "installedAt": 1774496162348
+    },
+    "branding": {
+      "version": "1.0.0",
+      "installedAt": 1774496162369
+    },
+    "market-research": {
+      "version": "1.0.1",
+      "installedAt": 1774496162390
+    },
+    "seo": {
+      "version": "1.0.3",
+      "installedAt": 1774496162511
+    },
+    "accountant": {
+      "version": "1.0.0",
+      "installedAt": 1774496162518
+    },
+    "academic-writing": {
+      "version": "1.0.0",
+      "installedAt": 1774496162626
+    },
+    "deepresearchwork": {
+      "version": "1.0.0",
+      "installedAt": 1774496162650
+    },
+    "business-administration": {
+      "version": "1.0.0",
+      "installedAt": 1774496162673
+    },
+    "learning": {
+      "version": "1.0.0",
+      "installedAt": 1774496162754
+    },
+    "business-writing": {
+      "version": "0.1.0",
+      "installedAt": 1774496162824
+    },
+    "academic-deep-research": {
+      "version": "1.0.0",
+      "installedAt": 1774496162865
+    },
+    "analytics-tracking-2": {
+      "version": "0.1.0",
+      "installedAt": 1774496163220
+    },
+    "trading-research": {
+      "version": "1.0.0",
+      "installedAt": 1774496164246
+    },
+    "superdesign": {
+      "version": "1.0.0",
+      "installedAt": 1774496170667
+    },
+    "music-cog": {
+      "version": "1.0.1",
+      "installedAt": 1774496171131
+    },
+    "ui-ux-pro-max": {
+      "version": "0.1.0",
+      "installedAt": 1774496173319
+    },
+    "japanese-translation-and-tutor": {
+      "version": "1.0.0",
+      "installedAt": 1774496221930
+    },
+    "wbs-planner": {
+      "version": "1.1.0",
+      "installedAt": 1774496222838
+    },
+    "audio-cog": {
+      "version": "1.0.4",
+      "installedAt": 1774496360242
+    },
+    "senior-data-engineer": {
+      "version": "2.1.1",
+      "installedAt": 1774496223224
+    },
+    "slides-cog": {
+      "version": "1.0.6",
+      "installedAt": 1774496223968
+    },
+    "lambda-lang": {
+      "version": "2.0.0",
+      "installedAt": 1774496225861
+    },
+    "angular": {
+      "version": "1.0.1",
+      "installedAt": 1774496235498
+    },
+    "crypto-market-data": {
+      "version": "1.0.2",
+      "installedAt": 1774496238978
+    },
+    "business": {
+      "version": "1.1.0",
+      "installedAt": 1774496239407
+    },
+    "video-cog": {
+      "version": "1.0.4",
+      "installedAt": 1774496243094
+    },
+    "project-management-guru-adhd": {
+      "version": "1.0.0",
+      "installedAt": 1774496247659
+    },
+    "react-expert": {
+      "version": "0.1.0",
+      "installedAt": 1774496284732
+    },
+    "seo-content-writer": {
+      "version": "4.0.0",
+      "installedAt": 1774496295982
+    },
+    "jobber": {
+      "version": "1.0.2",
+      "installedAt": 1774496300333
+    },
+    "api-dev": {
+      "version": "1.0.0",
+      "installedAt": 1774496301401
+    },
+    "apollo-api": {
+      "version": "1.0.5",
+      "installedAt": 1774496301433
+    },
+    "api-designer": {
+      "version": "0.1.0",
+      "installedAt": 1774496301597
+    },
+    "healthy-eating": {
+      "version": "1.0.0",
+      "installedAt": 1774496313996
+    },
+    "marketing-mode": {
+      "version": "1.0.0",
+      "installedAt": 1774496315402
+    },
+    "cicd-pipeline": {
+      "version": "1.0.0",
+      "installedAt": 1774496318136
+    },
+    "gitlab-cli-skills": {
+      "version": "1.12.0",
+      "installedAt": 1774496323616
+    },
+    "fitness": {
+      "version": "1.0.1",
+      "installedAt": 1774496341770
+    },
+    "devops": {
+      "version": "1.0.0",
+      "installedAt": 1774496341847
+    },
+    "apple-health-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774496341874
+    },
+    "gitflow": {
+      "version": "1.0.4",
+      "installedAt": 1774496341983
+    },
+    "git": {
+      "version": "1.0.8",
+      "installedAt": 1774496341988
+    },
+    "health": {
+      "version": "1.0.1",
+      "installedAt": 1774496342531
+    },
+    "banshee-s-last-cry": {
+      "version": "1.0.0",
+      "installedAt": 1774496362485
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1774506257536
     }
   }
 }
