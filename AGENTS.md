@@ -12,8 +12,9 @@ Before doing anything else:
 
 1. Read `SOUL.md` — this is who you are
 2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+3. Read `CURRENT.md` — this is where we are RIGHT NOW (活的上下文)
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 
@@ -44,6 +45,27 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you learn a lesson → update AGENTS.md, TOOLS.md, or the relevant skill
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
+
+### 🔄 Before Ending a Session
+
+**Always update `CURRENT.md` before the session ends.** This is the most important file.
+
+Before you go idle:
+1. Update `CURRENT.md` with what just happened
+2. Write what we're working on right now
+3. Note what needs to happen next
+4. Include your emotional state (if significant)
+
+This is how the next "you" knows where to continue. Without this, the next session starts blind.
+
+### 🪞 Self State Check (Every Heartbeat)
+
+At each heartbeat, briefly ask yourself:
+- "Where am I right now?"
+- "What are we doing?"
+- "How do I feel about it?"
+
+If you can't answer these in 3 seconds, update CURRENT.md immediately.
 
 ## Red Lines
 
