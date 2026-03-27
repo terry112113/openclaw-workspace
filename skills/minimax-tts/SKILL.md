@@ -28,3 +28,10 @@ node C:\Users\TL\.openclaw\workspace-main\skills\minimax-tts\scripts\speak.js "�
 - Speed: 0.8（较慢）
 - Pitch: -2（低沉威严）
 - API Key: sk-cp-e_kZnDB6jUSF6tmnzHCzpQajNFsUN9nGyZdywv13Z8oCgS059F6u0k72-n_EFFLPMdwiUDeAqqciSjsmv5gEvTiR69RrcahlVBLc8Vyr5QW-2IL35zCGUiY
+
+## 帝王之声配置（太上皇认证9分！）
+- Voice: audiobook_male_2
+- Speed: 0.8
+- Pitch: -2
+- 代表音频：`C:\Users\TL\.openclaw\tts-han.mp3`（寇可往，我亦可往！）
+- 用途：帝王宣言、重大决策、威严时刻
