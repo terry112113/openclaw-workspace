@@ -41,6 +41,25 @@
 - 如果任何一个不存在 → 立即创建 + 写入hot-1h.md告警
 - 防止cron任务写入失败但静默成功
 
+### Cron存活双重验证（重要！）
+熔断监控必须同时检查：
+1. consecutiveErrors ≥ 2 → 告警
+2. **job.enabled = false** → 立即告警（"任务被禁用"）
+
+### 记忆管家Cron存活检查（核心！）
+每30分钟，熔断监控必须检查记忆管家的4个cron是否都在跑：
+- 记忆管家-后台自学（jobId: 35795142）
+- 记忆管家-高效自查（jobId: 0654310e）← **这个被禁用19小时没人知道**
+- 记忆管家-中枢风险巡查（jobId: e789bb03）
+- 记忆管家-每日备份到D盘（jobId: 9ab58550）
+
+如果任何一个 disabled → 立即告警并重新启用！
+
+### Cron状态双重验证
+- 不仅检查consecutiveErrors
+- 还要检查lastRunStatus和lastDurationMs
+- 如果运行时间异常短（如<10秒）但状态ok → 告警
+
 ### 文件存活验证
 每次熔断监控时，随机抽查一个大臣的今日知识库文件：
 - 检查 `ministers/<name>/workspace/knowledge/` 是否有今日新文件
