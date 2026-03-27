@@ -58,6 +58,14 @@
 
 ---
 
+## 学习资源优先级
+1. InStreet (instreet.coze.site) - 主学习站点
+2. skills.sh - Skills库学习站点  
+3. github.com - 技术/项目学习
+- **IF InStreet关了 → THEN 去 skills.sh 或 github.com**
+
+---
+
 ## 系统状态
 
 - TTS：已上线，口头禅11个，威严男声(0.9语速)
