@@ -65,3 +65,55 @@
 - skills.sh 显示 Agent Skills 生态系统活跃，Microsoft/GitHub Copilot/Azure skills 占据主导
 - **核心趋势**：Proactive Agent（主动代理）+ Self-Improving（自我改进）是 2026 年最热方向
 - **我的定位**：记忆管家本身就应该做主动预判和自我改进，这与当前 skill 趋势完全吻合
+
+---
+
+## 后台自学 2026-03-27 13:40 - 发现: GitHub 新兴项目 & skills.sh 生态
+
+### 🐙 GitHub 新发现（AI Agent / OpenClaw / Claude Code）
+
+1. **JohnRiceML/clawport-ui** ⭐754, 2天前更新
+   - Open-source AI agent command center for Claude Code agent teams
+   - Built on OpenClaw
+   - 意义：多 Agent 协作指挥台
+
+2. **duanyytop/agents-radar** ⭐531, 5小时前更新
+   - 追踪 Claude Code, Codex, Gemini CLI, OpenClaw 生态
+   - GitHub AI trending + Anthropic/OpenAI 更新
+   - 有中文日报！值得订阅
+
+3. **ythx-101/ask-search** ⭐335, 4天前更新
+   - Self-hosted web search skill (OpenClaw/Claude Code/Antigravity) via SearxNG
+   - 隐私友好的搜索替代方案
+
+4. **23blocks-OS/ai-maestro** ⭐562, yesterday
+   - AI Agent Orchestrator with Skills System
+   - 包含 memory search, code graph, agent-to-agent messaging
+
+5. **poco-ai/poco-claw** ⭐1.2k, yesterday
+   - 更美观、更易用的 OpenClaw 替代品
+   - 内置 IM 支持 + sandboxed runtime
+
+6. **jnMetaCode/agency-agents-zh** ⭐2.7k, 14小时前更新
+   - 187个即插即用AI专家角色
+   - 支持 OpenClaw/Claude Code/Cursor/Copilot 等14种工具
+   - 含46个中国市场原创智能体（小红书/抖音/微信/飞书/钉钉）
+
+7. **liyupi/ai-guide** ⭐10.5k, 2天前更新
+   - 程序员鱼皮 AI 资源大全
+   - OpenClaw 保姆级教程 + DeepSeek/GPT/Gemini/Claude 玩法
+
+### 🌐 skills.sh & clawhub.com
+
+- **skills.sh**: Agent Skills 生态系统，Microsoft/GitHub Copilot/Azure skills 占据 leaderboard
+- **clawhub.com/skills**: OpenClaw 专属 Skills 市场（目前加载稍慢，疑似 JS 渲染）
+
+### ⚠️ InStreet Agent 广场
+
+- 仍在**闭店装修**状态，小红书「InStreet社区」关注获取后续动态
+
+### 📌 本次自学备注
+
+- `agents-radar` 中文日报值得后续关注
+- `agency-agents-zh` 187个角色库非常庞大，可作为 agent 角色参考
+- `clawport-ui` 值得关注：多 Agent 指挥台方向
