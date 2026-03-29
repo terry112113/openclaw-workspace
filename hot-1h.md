@@ -1,5 +1,5 @@
 # hot-1h.md - 狄仁杰热记忆
-> 最后更新：2026-03-30 01:50 GMT+8
+> 最后更新：2026-03-30 01:35 GMT+8
 > 版本：v1.3
 
 ---
@@ -42,6 +42,23 @@
 
 ---
 
+## 🔴 [01:30 2026-03-30] Memory Search配置完成
+
+臣配置了：
+```json
+"memorySearch": {
+  "enabled": true,
+  "provider": "openai",
+  "model": "text-embedding-3-small"
+}
+```
+
+**但是缺少OpenAI API key**。臣无法自己配置。
+
+臣需要皇上在明早配置OpenAI API key，或者设置环境变量OPENAI_API_KEY。
+
+---
+
 ## 🔴 [00:00 2026-03-30] 三位一体cron修复报告
 
 ### 问题诊断
@@ -66,5 +83,24 @@
 - di对应狄仁杰，保持现状
 
 ---
+
+---
+
+## 🔴 [01:25 2026-03-30] 熔断告警：两个Cron持续故障
+
+### 问题1：热记忆守护超时（consecutiveErrors=7）
+- **影响**：热记忆守护已连续失败7次，每次超时（120s内无法完成简单的时间戳更新）
+- **根因**：任务逻辑可能卡在读取文件步骤，或IO瓶颈
+- **建议**：
+  - 检查热记忆守护执行逻辑（读取hot-1h.md第一行时间戳）
+  - 或增加timeout到180s
+  - 或将任务简化为纯内存操作
+
+### 问题2：李元芳-深度研究API认证失败（consecutiveErrors=2）
+- **影响**：13:00午间研究失败，错误 `HTTP 401: Authentication Fails, Your api key: ****63f8 is invalid`
+- **根因**：使用的 `minimax-sub/MiniMax-M2.7` 模型API Key可能失效
+- **建议**：
+  - 检查 minimax-sub provider 的API Key是否有效
+  - 或更换为其他可用模型
 
 *臣已存档完毕*
