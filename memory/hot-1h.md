@@ -1,16 +1,38 @@
 # hot-1h.md - 热记忆（每30分钟刷新）
 
-> 最后更新：2026-03-29 17:15 GMT+8
+> 最后更新：2026-03-29 17:30 GMT+8
 
 ## 🛡️ 守护cron运行
-- 时间：17:15（每30分钟自动刷新）
-- 状态：⚠️ 2个cron告警恶化中（常驻进化引擎9次timeout；Skills维护恶化至2次timeout）
+- 时间：17:30（每30分钟自动刷新）
+- 状态：⚠️ 3个cron告警恶化中（Skills维护恶化至2次；任务预填充升至7次；常驻进化引擎持续9次timeout）
 
-## 🔴 [16:56] 熔断监控例行报告
-- Skills维护cron：consecutiveErrors=2（持续timeout，恶化！lastRun=2026-03-29 07:22）
-- 唐王-任务预填充：consecutiveErrors=6（auth key失效，持续未恢复）
+## 🔴 [17:26] 熔断监控例行报告
+- Skills维护cron：consecutiveErrors=2（持续timeout，lastRun=2026-03-29 07:22）
+- 唐王-任务预填充：consecutiveErrors=7（timeout，持续恶化！）
 - 唐王-常驻进化引擎：consecutiveErrors=9（timeout，持续恶化！）
-- 结论：⚠️ 常驻进化引擎9次timeout，Skills维护恶化至2次，需关注
+- 结论：⚠️ 常驻进化引擎9次timeout，任务预填充升至7次，Skills维护维持2次
+
+## 🔴 [17:26] 熔断告警：Skills维护cron连续超时（consecutiveErrors=2）
+- 影响：狄仁杰-每日Skills维护（618b25fa）连续2次执行超时
+  - 上次运行：2026-03-29 07:22
+  - consecutiveErrors: 2（⚠️ 已达熔断告警阈值）
+- 原因：任务执行时间超过600秒timeout限制
+- 建议：延长timeoutSeconds至900或1200，或拆分审核任务分批执行
+- 状态：enabled=true（仍在运行，但持续超时）
+
+## 🔴 [17:26] 熔断告警：任务预填充cron持续超时（consecutiveErrors=7）
+- 影响：唐王-任务预填充（05c374d5）连续7次执行超时
+  - lastRun=2026-03-29 17:15
+  - 原因：任务执行时间超过120秒timeout限制
+- 建议：延长timeoutSeconds至300，或精简任务预填充逻辑
+- 状态：enabled=true（持续超时）
+
+## 🔴 [17:26] 熔断告警：常驻进化引擎cron持续超时（consecutiveErrors=9）
+- 影响：唐王-常驻进化引擎（cebe4ff0）连续9次执行超时
+  - lastRun=2026-03-29 17:07
+  - lastDurationMs=301621（超时）
+- 建议：延长timeoutSeconds至600，或精简研究任务量
+- 状态：enabled=true（持续超时）
 
 ## 🔴 [11:55] 熔断告警：Skills维护cron连续超时（consecutiveErrors=2）
 - 影响：狄仁杰-每日Skills维护（618b25fa）连续2次执行超时
@@ -52,4 +74,4 @@
 
 ---
 
-*热记忆·2026-03-29 17:15·守护中*
+*热记忆·2026-03-29 17:30·守护中*

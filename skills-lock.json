@@ -76,6 +76,11 @@
       "sourceType": "github",
       "computedHash": "82588484b29316f3106185374cc6aedf409c38a0698d49f7034c9b5ec07a1aa7"
     },
+    "banana-skill-finder": {
+      "source": "treydong/banana-skills",
+      "sourceType": "github",
+      "computedHash": "57b39e4b96f50ac33c775cb11c98f502712c8bf3bfffd57c390fe6d43d97306b"
+    },
     "biomedical-search": {
       "source": "yorkeccak/scientific-skills",
       "sourceType": "github",
@@ -276,6 +281,11 @@
       "sourceType": "github",
       "computedHash": "3bedb4501de1c1eddf3712361115d8eef4e1455ecb87e036b454a006103d61e4"
     },
+    "markdown-converter": {
+      "source": "sundial-org/awesome-openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "a1b50a23ffd34815518b65c137f9489c8c8a491afe15e34bc8aa588e4beeeb50"
+    },
     "medical-research": {
       "source": "gexijin/vibe",
       "sourceType": "github",
@@ -285,6 +295,11 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "computedHash": "f44ba564132738c7d5fb2434e5251dbbcac407385d894177abd06b5fe47b4724"
+    },
+    "memory-lancedb-pro": {
+      "source": "cortexreach/memory-lancedb-pro-skill",
+      "sourceType": "github",
+      "computedHash": "1c083ff401a6fcc88dea39365335e7dd853ae72623baa73d6dcf4f55427e578d"
     },
     "memory-merger": {
       "source": "github/awesome-copilot",
@@ -306,6 +321,11 @@
       "sourceType": "github",
       "computedHash": "574cf4b7c901ebc7d88d34e2c3e3d08fdec127bd0047f888de148ff0af787d4e"
     },
+    "news-briefing": {
+      "source": "bitgetlimited/agent_hub",
+      "sourceType": "github",
+      "computedHash": "b058d8615bce4c8a72d5ecbf6a3c371a4a6b2130efaf2b606bb3518ebd860613"
+    },
     "newsletter-curation": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
@@ -320,6 +340,11 @@
       "source": "sickn33/antigravity-awesome-skills",
       "sourceType": "github",
       "computedHash": "43bd0125e17079e9d55d237cd824853d0dd9634e1cdd68a9e6043aaa20c315b4"
+    },
+    "ontology-semantic-modeler": {
+      "source": "sfc-gh-tjia/coco_skill_ontology",
+      "sourceType": "github",
+      "computedHash": "f3aab4b94d2c70f5c6b986d50d3a543e9516c1175b5344aef70ce56d60142934"
     },
     "opencode": {
       "source": "volcengine/OpenViking",
@@ -451,6 +476,11 @@
       "sourceType": "github",
       "computedHash": "81adf97487a3f9d575a94f4ab616a3f42a852e0c1d3cb0a5759615b5b274c1b5"
     },
+    "self-improving-agent": {
+      "source": "kimasplund/clawdbot-skills-pack",
+      "sourceType": "github",
+      "computedHash": "e1aca358a44be5bb247fee01ea69762ad55ed420cb8dae146ed9cd86f924ee76"
+    },
     "self-learning": {
       "source": "philschmid/self-learning-skill",
       "sourceType": "github",
@@ -460,6 +490,11 @@
       "source": "volcengine/OpenViking",
       "sourceType": "github",
       "computedHash": "cef9c7fd25e0b72d6a54075dba573be12726521e10eb1b00336e3a9beaa05d18"
+    },
+    "skills-vetter": {
+      "source": "kevinsong0/skills-vetter",
+      "sourceType": "github",
+      "computedHash": "fc0d807f48ccd1f953c613b240464128373cdbde5f5ff4b90d121c4d2343a776"
     },
     "slidespeak": {
       "source": "slidespeak/skills",
@@ -530,6 +565,11 @@
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "a049d900130e453e7f6ecb26e2c546831e870435aedfa031f3ad2cc7af269f74"
+    },
+    "ui-ux-pro-max": {
+      "source": "binhmuc/autobot-review",
+      "sourceType": "github",
+      "computedHash": "07cd4bcb4588ca4bb7195afad32f3e7342a283776cc0d951a2dbe283b7ea9d04"
     },
     "weather": {
       "source": "volcengine/OpenViking",
