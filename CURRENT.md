@@ -19,6 +19,7 @@
 
 ### P2: superpowers brainstorm ✅ Skill已创建
 - skills/三司会审-brainstorm/SKILL.md
+- 触发词：`/brainstorm` 或 `开启讨论`
 
 ## Skills状态
 - 当前：105个（+5 OpenViking）

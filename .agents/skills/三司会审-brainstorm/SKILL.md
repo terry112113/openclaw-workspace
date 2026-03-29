@@ -1,10 +1,14 @@
+---
+name: 三司会审-brainstorm
+description: 三司会审专用讨论技能，强制多方案权衡、两阶段审查、原子化输出
+triggers:
+  - /brainstorm
+  - 开启讨论
+---
+
 # 三司会审-brainstorm Skill
 
 ## 描述
-三司会审专用讨论技能，强制多方案权衡、两阶段审查、原子化输出。
-
-## 触发词
-/brainstorm 或 "开启讨论"
 
 ## 核心流程
 
