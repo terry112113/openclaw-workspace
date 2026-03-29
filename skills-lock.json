@@ -201,6 +201,11 @@
       "sourceType": "github",
       "computedHash": "3ceca583547c36999a9e52e3c9c193c5a5d4c1a9b9baa780dd5fa3de844aec12"
     },
+    "gemini-watermark-remover": {
+      "source": "rookie-ricardo/erduo-skills",
+      "sourceType": "github",
+      "computedHash": "d29e579f84ac7dd470c97e2370a64a07798e7730e8968b993053c7ef6f0a5e0f"
+    },
     "git-guardrails-claude-code": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -250,6 +255,11 @@
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "fefd64c3b89b53cc87fce12a955f47ca7ae48b8cd2164471fe17bfd1b45f6e33"
+    },
+    "linkedin-content-generation": {
+      "source": "eachlabs/skills",
+      "sourceType": "github",
+      "computedHash": "3bedb4501de1c1eddf3712361115d8eef4e1455ecb87e036b454a006103d61e4"
     },
     "medical-research": {
       "source": "gexijin/vibe",
@@ -400,6 +410,11 @@
       "source": "philschmid/self-learning-skill",
       "sourceType": "github",
       "computedHash": "49adf9d6e9027ad37066afa0b7d894b5c59c62bc429b4cc7a914d3617b764861"
+    },
+    "slidespeak": {
+      "source": "slidespeak/skills",
+      "sourceType": "github",
+      "computedHash": "11ba2ba18d6d2d5a62f6033359779e5467b394b76aa7c4967809d3a9d172f146"
     },
     "social-content": {
       "source": "coreyhaines31/marketingskills",
