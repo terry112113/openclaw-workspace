@@ -1,10 +1,30 @@
 {
   "version": 1,
   "skills": {
+    "academic-researcher": {
+      "source": "shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "computedHash": "73a461c6ca9d0d5d9fb66da78915f2500a92ed59874873f03beed4cfb7bdd281"
+    },
+    "biomedical-search": {
+      "source": "yorkeccak/scientific-skills",
+      "sourceType": "github",
+      "computedHash": "3c4df974ff6437f37ef4278466971d8e85243dd2664472e482a3b66b89857665"
+    },
+    "complex-reasoning": {
+      "source": "lobbi-docs/claude",
+      "sourceType": "github",
+      "computedHash": "e69c557a3c0f4279fb448cd5390dfde5dd35705d8b7e8a41acbc005de52edf86"
+    },
     "continuous-learning-v2": {
       "source": "affaan-m/everything-claude-code",
       "sourceType": "github",
       "computedHash": "8e3a3c99724fa9421963ca7f482dfabd4e96b6daa84ea3018468cac1096d3d65"
+    },
+    "critical-thinking-logical-reasoning": {
+      "source": "sammcj/agentic-coding",
+      "sourceType": "github",
+      "computedHash": "f4bea6fc01f51a2605194e39a2d23b8e35e95a0cb3557c465a94518ad97fc244"
     },
     "deep-agents-memory": {
       "source": "langchain-ai/langchain-skills",
@@ -21,6 +41,16 @@
       "sourceType": "github",
       "computedHash": "720e6800e94f1997054ac0787d0e900736a25848d749ade48e3c342aa0c89445"
     },
+    "execution-accelerator": {
+      "source": "shipshitdev/library",
+      "sourceType": "github",
+      "computedHash": "ad8f610f9a3c2861a0a91e318a8a4044bf6378d2a8159d46d11a2c6ebc9d6bf7"
+    },
+    "medical-research": {
+      "source": "gexijin/vibe",
+      "sourceType": "github",
+      "computedHash": "01052200998042798e5dcc3e256ec26e17d5cb80e0e409ab81dc4b7cefd0c5d3"
+    },
     "memory-forensics": {
       "source": "wshobson/agents",
       "sourceType": "github",
@@ -36,20 +66,40 @@
       "sourceType": "github",
       "computedHash": "13ac6de90026c1c2089cd6a36b3c86c121cf8c3e67b7a02129fb392f65f8c098"
     },
+    "running-decision-processes": {
+      "source": "refoundai/lenny-skills",
+      "sourceType": "github",
+      "computedHash": "2a1f6654a6af7e92978ec80959bb83de3ad5b7374ba9073dde21be79cc636783"
+    },
     "self-learning": {
       "source": "philschmid/self-learning-skill",
       "sourceType": "github",
       "computedHash": "49adf9d6e9027ad37066afa0b7d894b5c59c62bc429b4cc7a914d3617b764861"
+    },
+    "task-execution-engine": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "816db7156c6901e3255ad211b1cd6e62234d555ae0425c4a5a4c680ef1c65aeb"
     },
     "tavily-research": {
       "source": "tavily-ai/skills",
       "sourceType": "github",
       "computedHash": "8f0d7dc0a3d838fc647c5666f7dd398626d35b8f95bd7f0ae2512df8927d8f29"
     },
+    "technical-blog-writing": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "dbe6cbf7712aa01b89e6fa7b6cace36626502b5755ce0ab0d22649a61301346b"
+    },
     "writing-plans": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "computedHash": "bfaed11054ad8021c66860244e2d2e0d1eca483ae9f5fbfcb956e99c61f5c3d7"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "b0e3065034610df41b9119445b5fd052042752bb3e598ca66aea2403a7c7685e"
     }
   }
 }
