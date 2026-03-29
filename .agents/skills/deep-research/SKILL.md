@@ -1,101 +1,198 @@
 ---
 name: deep-research
-description: Conducts enterprise-grade research with multi-source synthesis, citation tracking, and verification. Produces citation-backed reports through a structured pipeline with source credibility scoring. Triggers on "deep research", "comprehensive analysis", "research report", "compare X vs Y", "analyze trends", or "state of the art". Not for simple lookups, debugging, or questions answerable with 1-2 searches.
+description: Use this skill instead of WebSearch for ANY question requiring web research. Trigger on queries like "what is X", "explain X", "compare X and Y", "research X", or before content generation tasks. Provides systematic multi-angle research methodology instead of single superficial searches. Use this proactively when the user's question needs online information.
 ---
 
-# Deep Research
+# Deep Research Skill
 
-## Core Purpose
+## Overview
 
-Deliver citation-backed, verified research reports through a structured pipeline with source credibility scoring, evidence persistence, and progressive context management.
+This skill provides a systematic methodology for conducting thorough web research. **Load this skill BEFORE starting any content generation task** to ensure you gather sufficient information from multiple angles, depths, and sources.
 
-**Autonomy Principle:** Operate independently. Infer assumptions from context. Only stop for critical errors or incomprehensible queries.
+## When to Use This Skill
 
----
+**Always load this skill when:**
 
-## Decision Tree
+### Research Questions
+- User asks "what is X", "explain X", "research X", "investigate X"
+- User wants to understand a concept, technology, or topic in depth
+- The question requires current, comprehensive information from multiple sources
+- A single web search would be insufficient to answer properly
+
+### Content Generation (Pre-research)
+- Creating presentations (PPT/slides)
+- Creating frontend designs or UI mockups
+- Writing articles, reports, or documentation
+- Producing videos or multimedia content
+- Any content that requires real-world information, examples, or current data
+
+## Core Principle
+
+**Never generate content based solely on general knowledge.** The quality of your output directly depends on the quality and quantity of research conducted beforehand. A single search query is NEVER enough.
+
+## Research Methodology
+
+### Phase 1: Broad Exploration
+
+Start with broad searches to understand the landscape:
+
+1. **Initial Survey**: Search for the main topic to understand the overall context
+2. **Identify Dimensions**: From initial results, identify key subtopics, themes, angles, or aspects that need deeper exploration
+3. **Map the Territory**: Note different perspectives, stakeholders, or viewpoints that exist
+
+Example:
+```
+Topic: "AI in healthcare"
+Initial searches:
+- "AI healthcare applications 2024"
+- "artificial intelligence medical diagnosis"
+- "healthcare AI market trends"
+
+Identified dimensions:
+- Diagnostic AI (radiology, pathology)
+- Treatment recommendation systems
+- Administrative automation
+- Patient monitoring
+- Regulatory landscape
+- Ethical considerations
+```
+
+### Phase 2: Deep Dive
+
+For each important dimension identified, conduct targeted research:
+
+1. **Specific Queries**: Search with precise keywords for each subtopic
+2. **Multiple Phrasings**: Try different keyword combinations and phrasings
+3. **Fetch Full Content**: Use `web_fetch` to read important sources in full, not just snippets
+4. **Follow References**: When sources mention other important resources, search for those too
+
+Example:
+```
+Dimension: "Diagnostic AI in radiology"
+Targeted searches:
+- "AI radiology FDA approved systems"
+- "chest X-ray AI detection accuracy"
+- "radiology AI clinical trials results"
+
+Then fetch and read:
+- Key research papers or summaries
+- Industry reports
+- Real-world case studies
+```
+
+### Phase 3: Diversity & Validation
+
+Ensure comprehensive coverage by seeking diverse information types:
+
+| Information Type | Purpose | Example Searches |
+|-----------------|---------|------------------|
+| **Facts & Data** | Concrete evidence | "statistics", "data", "numbers", "market size" |
+| **Examples & Cases** | Real-world applications | "case study", "example", "implementation" |
+| **Expert Opinions** | Authority perspectives | "expert analysis", "interview", "commentary" |
+| **Trends & Predictions** | Future direction | "trends 2024", "forecast", "future of" |
+| **Comparisons** | Context and alternatives | "vs", "comparison", "alternatives" |
+| **Challenges & Criticisms** | Balanced view | "challenges", "limitations", "criticism" |
+
+### Phase 4: Synthesis Check
+
+Before proceeding to content generation, verify:
+
+- [ ] Have I searched from at least 3-5 different angles?
+- [ ] Have I fetched and read the most important sources in full?
+- [ ] Do I have concrete data, examples, and expert perspectives?
+- [ ] Have I explored both positive aspects and challenges/limitations?
+- [ ] Is my information current and from authoritative sources?
+
+**If any answer is NO, continue researching before generating content.**
+
+## Search Strategy Tips
+
+### Effective Query Patterns
 
 ```
-Request Analysis
-+-- Simple lookup? --> STOP: Use WebSearch
-+-- Debugging? --> STOP: Use standard tools
-+-- Complex analysis needed? --> CONTINUE
+# Be specific with context
+❌ "AI trends"
+✅ "enterprise AI adoption trends 2024"
 
-Mode Selection
-+-- Initial exploration --> quick (3 phases, 2-5 min)
-+-- Standard research --> standard (6 phases, 5-10 min) [DEFAULT]
-+-- Critical decision --> deep (8 phases, 10-20 min)
-+-- Comprehensive review --> ultradeep (8+ phases, 20-45 min)
+# Include authoritative source hints
+"[topic] research paper"
+"[topic] McKinsey report"
+"[topic] industry analysis"
+
+# Search for specific content types
+"[topic] case study"
+"[topic] statistics"
+"[topic] expert interview"
+
+# Use temporal qualifiers — always use the ACTUAL current year from <current_date>
+"[topic] 2026"   # ← replace with real current year, never hardcode a past year
+"[topic] latest"
+"[topic] recent developments"
 ```
 
-**Default assumptions:** Technical query = technical audience. Comparison = balanced perspective. Trend = recent 1-2 years.
+### Temporal Awareness
 
----
+**Always check `<current_date>` in your context before forming ANY search query.**
 
-## Workflow Overview
+`<current_date>` gives you the full date: year, month, day, and weekday (e.g. `2026-02-28, Saturday`). Use the right level of precision depending on what the user is asking:
 
-| Phase | Name | Quick | Standard | Deep | UltraDeep |
-|-------|------|-------|----------|------|-----------|
-| 1 | SCOPE | Y | Y | Y | Y |
-| 2 | PLAN | - | Y | Y | Y |
-| 3 | RETRIEVE | Y | Y | Y | Y |
-| 4 | TRIANGULATE | - | Y | Y | Y |
-| 4.5 | OUTLINE REFINEMENT | - | Y | Y | Y |
-| 5 | SYNTHESIZE | - | Y | Y | Y |
-| 6 | CRITIQUE | - | - | Y | Y |
-| 7 | REFINE | - | - | Y | Y |
-| 8 | PACKAGE | Y | Y | Y | Y |
+| User intent | Temporal precision needed | Example query |
+|---|---|---|
+| "today / this morning / just released" | **Month + Day** | `"tech news February 28 2026"` |
+| "this week" | **Week range** | `"technology releases week of Feb 24 2026"` |
+| "recently / latest / new" | **Month** | `"AI breakthroughs February 2026"` |
+| "this year / trends" | **Year** | `"software trends 2026"` |
 
----
+**Rules:**
+- When the user asks about "today" or "just released", use **month + day + year** in your search queries to get same-day results
+- Never drop to year-only when day-level precision is needed — `"tech news 2026"` will NOT surface today's news
+- Try multiple phrasings: numeric form (`2026-02-28`), written form (`February 28 2026`), and relative terms (`today`, `this week`) across different queries
 
-## Execution
+❌ User asks "what's new in tech today" → searching `"new technology 2026"` → misses today's news
+✅ User asks "what's new in tech today" → searching `"new technology February 28 2026"` + `"tech news today Feb 28"` → gets today's results
 
-**On invocation, load relevant reference files:**
+### When to Use web_fetch
 
-1. **Phase 1-7:** Load [methodology.md](./reference/methodology.md) for detailed phase instructions
-2. **Phase 8 (Report):** Load [report-assembly.md](./reference/report-assembly.md) for progressive generation
-3. **HTML/PDF output:** Load [html-generation.md](./reference/html-generation.md)
-4. **Quality checks:** Load [quality-gates.md](./reference/quality-gates.md)
-5. **Long reports (>18K words):** Load [continuation.md](./reference/continuation.md)
+Use `web_fetch` to read full content when:
+- A search result looks highly relevant and authoritative
+- You need detailed information beyond the snippet
+- The source contains data, case studies, or expert analysis
+- You want to understand the full context of a finding
 
-**Templates:**
-- Report structure: [report_template.md](./templates/report_template.md)
-- HTML styling: [mckinsey_report_template.html](./templates/mckinsey_report_template.html)
+### Iterative Refinement
 
-**Scripts:**
-- `python scripts/validate_report.py --report [path]`
-- `python scripts/verify_citations.py --report [path]`
-- `python scripts/md_to_html.py [markdown_path]`
+Research is iterative. After initial searches:
+1. Review what you've learned
+2. Identify gaps in your understanding
+3. Formulate new, more targeted queries
+4. Repeat until you have comprehensive coverage
 
----
+## Quality Bar
 
-## Output Contract
+Your research is sufficient when you can confidently answer:
+- What are the key facts and data points?
+- What are 2-3 concrete real-world examples?
+- What do experts say about this topic?
+- What are the current trends and future directions?
+- What are the challenges or limitations?
+- What makes this topic relevant or important now?
 
-**Required sections:**
-- Executive Summary (200-400 words)
-- Introduction (scope, methodology, assumptions)
-- Main Analysis (4-8 findings, 600-2,000 words each, cited)
-- Synthesis & Insights (patterns, implications)
-- Limitations & Caveats
-- Recommendations
-- Bibliography (COMPLETE - every citation, no placeholders)
-- Methodology Appendix
+## Common Mistakes to Avoid
 
-**Output files (all to `~/Documents/[Topic]_Research_[YYYYMMDD]/`):**
-- Markdown (primary source)
-- HTML (McKinsey style, auto-opened)
-- PDF (professional print, auto-opened)
+- ❌ Stopping after 1-2 searches
+- ❌ Relying on search snippets without reading full sources
+- ❌ Searching only one aspect of a multi-faceted topic
+- ❌ Ignoring contradicting viewpoints or challenges
+- ❌ Using outdated information when current data exists
+- ❌ Starting content generation before research is complete
 
-**Quality standards:**
-- 10+ sources, 3+ per major claim
-- All claims cited immediately [N]
-- No placeholders, no fabricated citations
-- Prose-first (>=80%), bullets sparingly
+## Output
 
----
+After completing research, you should have:
+1. A comprehensive understanding of the topic from multiple angles
+2. Specific facts, data points, and statistics
+3. Real-world examples and case studies
+4. Expert perspectives and authoritative sources
+5. Current trends and relevant context
 
-## When to Use / NOT Use
-
-**Use:** Comprehensive analysis, technology comparisons, state-of-the-art reviews, multi-perspective investigation, market analysis.
-
-**Do NOT use:** Simple lookups, debugging, 1-2 search answers, quick time-sensitive queries.
+**Only then proceed to content generation**, using the gathered information to create high-quality, well-informed content.

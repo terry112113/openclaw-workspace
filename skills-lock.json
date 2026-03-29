@@ -111,15 +111,30 @@
       "sourceType": "github",
       "computedHash": "510b807215222ca8609b506f0d38a2ef50587a8ba8702b46432aa84db6e1c8ca"
     },
+    "chart-visualization": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "3c2878765e0f0dcc4e4a75ab1b80e85f7249b2cedc3e1530ed3dfc16f5395437"
+    },
     "chat-ui": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "f28ca5f4c57a8c587305d8ac7f090f4f8dd1723b403e126a95677606a4dc9572"
     },
+    "claude-to-deerflow": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "662b5b9d8a84ba22b44a2c470c0566546817995aaba10adfe997acd416678568"
+    },
     "complex-reasoning": {
       "source": "lobbi-docs/claude",
       "sourceType": "github",
       "computedHash": "e69c557a3c0f4279fb448cd5390dfde5dd35705d8b7e8a41acbc005de52edf86"
+    },
+    "consulting-analysis": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "3242c2149e8ca3290ade56ce380d1751c75473bc5420c092f7ee70718dd34597"
     },
     "content-strategy": {
       "source": "coreyhaines31/marketingskills",
@@ -161,6 +176,11 @@
       "sourceType": "github",
       "computedHash": "1dd61678b0612a6b05f9573ed3b8da71f3b918c3a9724de18cfca21be0b7fb6a"
     },
+    "data-analysis": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "36ba944ee6b0a5cc313fbf05181d29dd375ecafd32c4d42e9da0de6b5e5b9dcb"
+    },
     "data-scientist": {
       "source": "borghei/claude-skills",
       "sourceType": "github",
@@ -187,9 +207,9 @@
       "computedHash": "8cc9bc26833d28723b4c27f5d2b288f85c852a5505fc1c590b035300a12e3601"
     },
     "deep-research": {
-      "source": "199-biotechnologies/claude-deep-research-skill",
+      "source": "bytedance/deer-flow",
       "sourceType": "github",
-      "computedHash": "720e6800e94f1997054ac0787d0e900736a25848d749ade48e3c342aa0c89445"
+      "computedHash": "c0477094cbe075d32f103eb7c39b139c9bc2e762f8537260a2330e50d2df45a0"
     },
     "devops-cicd": {
       "source": "miles990/claude-software-skills",
@@ -231,6 +251,11 @@
       "sourceType": "github",
       "computedHash": "ad8f610f9a3c2861a0a91e318a8a4044bf6378d2a8159d46d11a2c6ebc9d6bf7"
     },
+    "find-skills": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "202da6ad9e3c65949fa70371e89b1f55a1f5bd6d11b20b4491af17de495a0caf"
+    },
     "flutter-development": {
       "source": "travisjneuman/.claude",
       "sourceType": "github",
@@ -240,6 +265,11 @@
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "3ceca583547c36999a9e52e3c9c193c5a5d4c1a9b9baa780dd5fa3de844aec12"
+    },
+    "frontend-design": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "8925cd22a5b6dba32095df9dee7b69fe2797bd0e0ba89d3fd8bdaee5543deffc"
     },
     "frontend-dev-guidelines": {
       "source": "mrgoonie/claudekit-skills",
@@ -265,6 +295,11 @@
       "source": "volcengine/OpenViking",
       "sourceType": "github",
       "computedHash": "25424bf300755ef4db1b745719f52dd9755a0ec6c7b6bf2d979143d6de042f7a"
+    },
+    "github-deep-research": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "f58cb23e922082c682dab353cd0b521164a987cb89c32ee23799e31f79953cd8"
     },
     "github-proxy": {
       "source": "volcengine/OpenViking",
@@ -295,6 +330,11 @@
       "source": "pr-pm/prpm",
       "sourceType": "github",
       "computedHash": "542a852ba6c255e46136d3c9c03e099980b916127b9b619fd4d6b3316fb2528e"
+    },
+    "image-generation": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "dd2d450cdb2fcd39c5f07b8033208bd3676a62f8db3770df01f7ce04dbb61550"
     },
     "ios-development": {
       "source": "travisjneuman/.claude",
@@ -456,10 +496,20 @@
       "sourceType": "github",
       "computedHash": "01c9cebd09b0d457d41f3164e81ae9615a3f1447c5caf622698f050427454af9"
     },
+    "podcast-generation": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "a2ff784e56eee40badba413abfd69531fea8e10cda161165eed787e2d4e57286"
+    },
     "postgresql-database-engineering": {
       "source": "manutej/luxor-claude-marketplace",
       "sourceType": "github",
       "computedHash": "6039063ea5257f77ff0797f08074d3ec40da34ca8f412d8af5b194b9b6db0e89"
+    },
+    "ppt-generation": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "1f95cca84b78975d6552da8e19c31fcb610ac80acc16f29c96c57bc6bc4d2173"
     },
     "press-release-writing": {
       "source": "inferen-sh/skills",
@@ -547,9 +597,9 @@
       "computedHash": "8246a3ddc037f9f65a1a1c040e18db8a98706a859675696408230df742ce4f06"
     },
     "skill-creator": {
-      "source": "volcengine/OpenViking",
+      "source": "bytedance/deer-flow",
       "sourceType": "github",
-      "computedHash": "cef9c7fd25e0b72d6a54075dba573be12726521e10eb1b00336e3a9beaa05d18"
+      "computedHash": "0c58e456ce22214d35ad381093c1f2aa510f5b3129f2abebdf1f5ec5e691b23d"
     },
     "skills-vetter": {
       "source": "kevinsong0/skills-vetter",
@@ -591,6 +641,11 @@
       "sourceType": "github",
       "computedHash": "190c2b7eb78e1f314b4f2ffae0b579f3831b54df9bc15ec5add3bba137e27712"
     },
+    "surprise-me": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "5f1e90e27bbf451bb0c1878ff4621b39a8f2c47f56e9a9b98426e736fbd1d37a"
+    },
     "task-execution-engine": {
       "source": "davila7/claude-code-templates",
       "sourceType": "github",
@@ -631,15 +686,25 @@
       "sourceType": "github",
       "computedHash": "07cd4bcb4588ca4bb7195afad32f3e7342a283776cc0d951a2dbe283b7ea9d04"
     },
+    "vercel-deploy": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "a93f4d00fbe0233466bb142e3881fb86af5c6465cd17da03d7235a92af210267"
+    },
+    "video-generation": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "computedHash": "8e94b83946799ee30733b10d65013e5d8605ef4db24dbfffce781ab50c5e01c4"
+    },
     "weather": {
       "source": "volcengine/OpenViking",
       "sourceType": "github",
       "computedHash": "a87330a165990ac02f384144052bd5fa6c944cccfc3963ee3df82ae8365d4d93"
     },
     "web-design-guidelines": {
-      "source": "vercel-labs/agent-skills",
+      "source": "bytedance/deer-flow",
       "sourceType": "github",
-      "computedHash": "d8e7d3afe37dcc8a97b99ffb5afdb4d0919ae0092ea8b68f44eb201f035e33ac"
+      "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a"
     },
     "web-scraper": {
       "source": "guia-matthieu/clawfu-skills",
