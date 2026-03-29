@@ -6,10 +6,55 @@
       "sourceType": "github",
       "computedHash": "73a461c6ca9d0d5d9fb66da78915f2500a92ed59874873f03beed4cfb7bdd281"
     },
+    "agent-browser": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "c20da326c9fb408b50ec1075cb471511d45d4fd466cd01cbf985cfda2d616d7b"
+    },
+    "agent-governance": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "a91eb8ef638422fa4ec457d81e270f79fe5040b41d7f137dba35016bc20529f5"
+    },
+    "agent-tools": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "00f8ff84839ec5fea4c04c0c7a4d35a5106384469cb66e99a8e964a5b292460a"
+    },
+    "agent-ui": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "e3dfd99e9ac5ab83ee4e841a5419224352a16cadc45f4f09202c499ce865515d"
+    },
+    "agentic-eval": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "40771d7d389c1542e6cb995d75e516893466f01c3b66bc040b158ceb793d4bed"
+    },
+    "ai-automation-workflows": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "00f2a6c6cd36cad8dae273c5bd5f8b6a9a1fb75123cc3d199cb77ee954797303"
+    },
+    "ai-product-strategy": {
+      "source": "refoundai/lenny-skills",
+      "sourceType": "github",
+      "computedHash": "e33a6e739f92c61ee988286bb55cbc2bfbaa3290db931643b9ad9d42569af123"
+    },
+    "ai-rag-pipeline": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "0ad883760ae4b617f46c6e6278bced27641c9751d002a54a9a0e485c33fac5e4"
+    },
     "biomedical-search": {
       "source": "yorkeccak/scientific-skills",
       "sourceType": "github",
       "computedHash": "3c4df974ff6437f37ef4278466971d8e85243dd2664472e482a3b66b89857665"
+    },
+    "chat-ui": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "f28ca5f4c57a8c587305d8ac7f090f4f8dd1723b403e126a95677606a4dc9572"
     },
     "complex-reasoning": {
       "source": "lobbi-docs/claude",
@@ -46,6 +91,11 @@
       "sourceType": "github",
       "computedHash": "ad8f610f9a3c2861a0a91e318a8a4044bf6378d2a8159d46d11a2c6ebc9d6bf7"
     },
+    "health": {
+      "source": "tw93/claude-health",
+      "sourceType": "github",
+      "computedHash": "47905e209130fb7df145390bd5407181d60a44a05fff7d870990c50d1c5ef5b7"
+    },
     "medical-research": {
       "source": "gexijin/vibe",
       "sourceType": "github",
@@ -66,6 +116,26 @@
       "sourceType": "github",
       "computedHash": "13ac6de90026c1c2089cd6a36b3c86c121cf8c3e67b7a02129fb392f65f8c098"
     },
+    "planning-under-uncertainty": {
+      "source": "refoundai/lenny-skills",
+      "sourceType": "github",
+      "computedHash": "b52e0edd039ed954a3c1223d0ae6d4fb0d8c1b019947b293045d382495783f19"
+    },
+    "planning-with-files": {
+      "source": "othmanadi/planning-with-files",
+      "sourceType": "github",
+      "computedHash": "1e794c485308c0460d65225c46c5c0bf95f919a20078d3093341e355fc0fba34"
+    },
+    "planning-with-files-zh": {
+      "source": "othmanadi/planning-with-files",
+      "sourceType": "github",
+      "computedHash": "01c9cebd09b0d457d41f3164e81ae9615a3f1447c5caf622698f050427454af9"
+    },
+    "project-health": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "computedHash": "adda13781b2effe78126c555e669fdc33f42f1d0d11fe6f01477a9ab1210d65a"
+    },
     "running-decision-processes": {
       "source": "refoundai/lenny-skills",
       "sourceType": "github",
@@ -75,6 +145,11 @@
       "source": "philschmid/self-learning-skill",
       "sourceType": "github",
       "computedHash": "49adf9d6e9027ad37066afa0b7d894b5c59c62bc429b4cc7a914d3617b764861"
+    },
+    "strategy-advisor": {
+      "source": "shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "computedHash": "1710a2178750d1ac124c25fcc9e5ecd64bfb1dda2d94b8371bc19f0572f35844"
     },
     "task-execution-engine": {
       "source": "davila7/claude-code-templates",
