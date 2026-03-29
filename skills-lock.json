@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "10x-vision": {
+      "source": "zanecole10/software-tailor-skills",
+      "sourceType": "github",
+      "computedHash": "4f789b67d27f6ee72611d58feb051bd0098f81b81a64ff85cbbb360d2174de70"
+    },
     "academic-researcher": {
       "source": "shubhamsaboo/awesome-llm-apps",
       "sourceType": "github",
@@ -10,6 +15,11 @@
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "c20da326c9fb408b50ec1075cb471511d45d4fd466cd01cbf985cfda2d616d7b"
+    },
+    "agent-fullstack-developer": {
+      "source": "tony363/superclaude",
+      "sourceType": "github",
+      "computedHash": "480377808fec90064c717dd909ad454da59715dd647359683cdabbf83f52a1b1"
     },
     "agent-governance": {
       "source": "github/awesome-copilot",
@@ -65,6 +75,11 @@
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "996c0f2abdf371f569cda89000cbc4a8355c8fc6a7e68b916ed0e1d11f62a305"
+    },
+    "android-development": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "computedHash": "4e273161351ffa7f54151704a735def922f4bbf9c4983927b41e6938d23b55bb"
     },
     "apify-ultimate-scraper": {
       "source": "apify/agent-skills",
@@ -131,6 +146,11 @@
       "sourceType": "github",
       "computedHash": "c008c80aff1eec1aba190edf421772a3f350e91405d4207575092b663c3702a7"
     },
+    "create-sticker": {
+      "source": "stvlynn/skills",
+      "sourceType": "github",
+      "computedHash": "ef8ce4025cc6a6ca2aee9b9268f8d3651a241c9fbe33bf5d998a22a936397b94"
+    },
     "critical-thinking-logical-reasoning": {
       "source": "sammcj/agentic-coding",
       "sourceType": "github",
@@ -186,6 +206,11 @@
       "sourceType": "github",
       "computedHash": "6e08dc3e60911fac27258ec6108d5f98f41d52766a4e730f1e93bef16b001e7b"
     },
+    "docx": {
+      "source": "jackiexiao/jackie-skills-starter",
+      "sourceType": "github",
+      "computedHash": "224c99ba9b12d6e7375e1e4cd00d492edd1b34f0c29f5bdfb7fb04d106ba7192"
+    },
     "elevenlabs-music": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
@@ -206,10 +231,25 @@
       "sourceType": "github",
       "computedHash": "ad8f610f9a3c2861a0a91e318a8a4044bf6378d2a8159d46d11a2c6ebc9d6bf7"
     },
+    "flutter-development": {
+      "source": "travisjneuman/.claude",
+      "sourceType": "github",
+      "computedHash": "c979b56e2328a59bd3f26c5987ccdf941065e319a4aa0a2edac40fb33810c36c"
+    },
     "flux-image": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "3ceca583547c36999a9e52e3c9c193c5a5d4c1a9b9baa780dd5fa3de844aec12"
+    },
+    "frontend-dev-guidelines": {
+      "source": "mrgoonie/claudekit-skills",
+      "sourceType": "github",
+      "computedHash": "f9e3b4dfa442f7674801176a4c0626f13a7fcd7baf73aa24bfde2a8eeea8e70d"
+    },
+    "frontend-mobile-development-component-scaffold": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "321c5996ecd869b0f15cd03281a643d62257fe8c3788a5aef932b9812fd43db3"
     },
     "gemini-watermark-remover": {
       "source": "rookie-ricardo/erduo-skills",
@@ -255,6 +295,11 @@
       "source": "pr-pm/prpm",
       "sourceType": "github",
       "computedHash": "542a852ba6c255e46136d3c9c03e099980b916127b9b619fd4d6b3316fb2528e"
+    },
+    "ios-development": {
+      "source": "travisjneuman/.claude",
+      "sourceType": "github",
+      "computedHash": "d160dda6146ea008681fa1926cc2af75087c6dca80c096b44df053f2b057ee59"
     },
     "knowledge-site-creator": {
       "source": "joeseesun/knowledge-site-creator",
@@ -376,6 +421,11 @@
       "sourceType": "github",
       "computedHash": "2a63c666e7636d8f6cd3638fa2083f5158efeaefecbdb17878ee0a0a5685b965"
     },
+    "pdf": {
+      "source": "jackiexiao/jackie-skills-starter",
+      "sourceType": "github",
+      "computedHash": "516209a39229d12716e67dd5ee9c8895b21676b756059688d47fe13dc00627c7"
+    },
     "persona-exec-assistant": {
       "source": "googleworkspace/cli",
       "sourceType": "github",
@@ -451,6 +501,11 @@
       "sourceType": "github",
       "computedHash": "69a402c113d0286ed562e7331bd2d3cac4536be3905faddff6f500c44858bd99"
     },
+    "react-native-app": {
+      "source": "fanthus/agent-skills",
+      "sourceType": "github",
+      "computedHash": "b34495536c8219c9f2a0b4af6010d0c2c840cd932d1d749176e9eecf40fbc34b"
+    },
     "running-claude-code-via-litellm-copilot": {
       "source": "xixu-me/skills",
       "sourceType": "github",
@@ -485,6 +540,11 @@
       "source": "philschmid/self-learning-skill",
       "sourceType": "github",
       "computedHash": "49adf9d6e9027ad37066afa0b7d894b5c59c62bc429b4cc7a914d3617b764861"
+    },
+    "shader-programming": {
+      "source": "omer-metin/skills-for-antigravity",
+      "sourceType": "github",
+      "computedHash": "8246a3ddc037f9f65a1a1c040e18db8a98706a859675696408230df742ce4f06"
     },
     "skill-creator": {
       "source": "volcengine/OpenViking",
@@ -607,9 +667,9 @@
       "computedHash": "b0e3065034610df41b9119445b5fd052042752bb3e598ca66aea2403a7c7685e"
     },
     "xlsx": {
-      "source": "davila7/claude-code-templates",
+      "source": "jackiexiao/jackie-skills-starter",
       "sourceType": "github",
-      "computedHash": "3f00b01ef71a41442310e04d22d6827aa3d020e043ffd8c99f640a7593d69844"
+      "computedHash": "8190d86acd0ce457e65bf692e65516195cc13f5c949e42de0b185e7dfb1f0560"
     }
   }
 }
