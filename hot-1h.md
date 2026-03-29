@@ -1,5 +1,5 @@
 # hot-1h.md - 狄仁杰热记忆
-> 最后更新：2026-03-29 21:33 GMT+8
+> 最后更新：2026-03-30 01:03 GMT+8
 > 版本：v1.3
 
 ---
@@ -39,6 +39,25 @@
 - 全天学习：明日6:00启动
 - 飞书同步：正常
 - Git：已提交
+
+---
+
+## 🔴 [00:00 2026-03-30] 三位一体cron修复报告
+
+### 问题诊断
+- 李元芳+魏征全天学习cron → 用了 `together/deepseek-ai/DeepSeek-V3-0324`（不存在）和 `deepseek/deepseek-chat`（不存在）
+- 两个Together API Key已失效（Unauthorized）
+- 狄仁杰守护cron timeoutSeconds=60太短
+
+### 修复措施
+1. 全部12个全天学习cron → 改为 `minimax-sub/MiniMax-M2.7`
+2. 热记忆守护 timeout 60s → 120s
+3. Skills维护 timeout 1200s → 1800s
+4. consecutiveErrors待下次运行自动清零
+
+### 待处理
+- [ ] together-wei的API Key需要重新配置（如需使用Together）
+- [ ] 原配置里的 `together-shensi` provider（李元芳）根本不存在
 
 ---
 
