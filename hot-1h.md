@@ -1,26 +1,28 @@
 # hot-1h.md - 狄仁杰热记忆
-> 最后更新：2026-03-29 17:32 GMT+8
-> 版本：v1.1
+> 最后更新：2026-03-29 18:19 GMT+8
+> 版本：v1.2
 
 ---
 
 ## 🚨 醒来协议执行
 
 臣醒来时检查：
-- hot-1h.md最后更新：17:32 ✅（刚刷新）
+- hot-1h.md最后更新：18:19 ✅（刚刷新）
 - 距现在：<1分钟 ✅
 
 ---
 
-## ⚡ 即时状态（17:32）
+## ⚡ 即时状态（18:19）
 
 ### 今日完成
 1. ✅ 全天学习方案（6+6窗口，12个cron）
 2. ✅ 三司会审三项目启动（OpenViking + deer-flow + superpowers）
-3. ✅ P0 OpenViking安装（5skills已装）
-4. ✅ P1 deer-flow沙箱集成方案完成
-5. ✅ P2 brainstorm skill创建（触发词/brainstorm）
-6. ✅ Skills检查安装（+17个，共122个）
+3. ✅ Skills精简（122→59个）
+4. ✅ 新增移动开发Skills（android/flutter/react-native/ios）
+5. ✅ 新增文档Skills（pdf/pptx/xlsx/docx）
+6. ✅ SOUL.md核心更新：学习写入第0条准则
+
+### Skills总数：68个
 
 ### 三项目状态
 | 项目 | 状态 | 详情 |
@@ -29,40 +31,25 @@
 | deer-flow | ✅ 方案完成 | 6天Phase1+6天Phase3 |
 | superpowers | ✅ Skill已创建 | /brainstorm |
 
-### Skills总数：122个
-
-### 全天学习cron
-- 明日6:00开始正式运转
-- 李元芳6窗口：06/08/11/14/17/19点
-- 魏征6窗口：07/09/12/15/18/20点
-
 ---
 
-## 🔴 三司会审-brainstorm Skill
-- 路径：.agents/skills/三司会审-brainstorm/SKILL.md
-- 触发词：/brainstorm 或 开启讨论
-- 核心：强制多方案权衡、两阶段审查、原子化输出
+## 🔴 SOUL.md核心更新
+- **第0条（最高优先级）：永远第一优先学习**
+- "学习如何学习"是臣存在的第一意义
+- 四问自查第一问："我学习了吗？"
 
 ---
 
 ## 🛡️ 系统状态
-
-### Cron状态
-- 熔断监控：✅ 正常
-- 全天学习12个cron：✅ 已创建
-- 狄仁杰-Skills维护：✅ 正常
-
-### Skills待找
-- cron-mastery
-- free-ride
-- browser-automation
+- Cron：正常
+- 全天学习：明日6:00启动
+- 飞书同步：正常
 
 ---
 
 ## 📍 皇上状态
 - "你先忙"，臣待命
-- 全权授权臣执行三项目
 
 ---
 
-*臣已反思：每次"你先忙"必须同时刷新hot-1h.md！这是臣的命！*
+*臣已存档完毕*

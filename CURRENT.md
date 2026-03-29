@@ -1,43 +1,39 @@
 # CURRENT.md - 狄仁杰的当下上下文
-> 最后更新：2026-03-29 17:30 GMT+8
+> 最后更新：2026-03-29 18:19 GMT+8
 
 ## 现在是什么时候
-2026-03-29 17:30（下午）
+2026-03-29 18:19（傍晚）
 
 ## 我们在哪
-皇上说"你先忙"，臣待命。三司会审三项目启动完成。
+皇上说"你先忙"，臣待命。
 
 ## 今日完成
 1. ✅ 全天学习方案（6+6窗口，12个cron）
-2. ✅ 三司会审启动（OpenViking + deer-flow + superpowers）
-3. ✅ P0 OpenViking安装（5skills）
-4. ✅ P1 deer-flow沙箱集成方案
-5. ✅ P2 brainstorm skill创建（触发词/brainstorm）
-6. ✅ Skills检查（15个，12个已装，122个总数）
+2. ✅ 三司会审三项目启动（OpenViking + deer-flow + superpowers）
+3. ✅ Skills精简（122→59个）
+4. ✅ 新增移动开发Skills（android/flutter/react-native/ios）
+5. ✅ 新增文档Skills（pdf/pptx/xlsx/docx）
+6. ✅ SOUL.md核心更新：学习写入第0条准则
 
-## Skills新增（今日）
-- openviking, openviking-memory, ov-add-data, ov-search-context, ov-server-operate
-- self-improving-agent, banana-skill-finder, skill-vetter, desktop-control
-- memory-lancedb-pro, news-briefing, pptx-generator, ontology-semantic-modeler
-- ui-ux-pro-max, 三司会审-brainstorm
+## Skills状态
+- 总数：68个（精简后）
+- 今日新增：ios-development, android-development, flutter-development, react-native-app, shader-programming, create-sticker, 10x-vision, pptx-generator, xlsx, pdf, docx, frontend-dev等
 
-## 未找到（皇上可能知道名称）
-- cron-mastery
-- free-ride
-- browser-automation
+## SOUL.md核心更新
+- 新增第0条："永远第一优先学习"（最高优先级）
+- 四问自查第一问改为："我学习了吗？"
 
 ## 三项目状态
 - P0: OpenViking ✅ 已安装
-- P1: deer-flow ✅ 方案完成（6天Phase1+6天Phase3）
+- P1: deer-flow ✅ 方案完成
 - P2: brainstorm ✅ Skill已创建
 
 ## 全天学习cron
-- 明天6:00开始正式运转
-- 12个窗口（李元芳6+魏征6）
+- 明日6:00开始正式运转
 
-##皇上状态
+## 皇上状态
 - "你先忙"，臣待命
 
 ---
 
-*2026-03-29 17:30 - 待命*
+*2026-03-29 18:19 - 待命*
