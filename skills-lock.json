@@ -36,6 +36,11 @@
       "sourceType": "github",
       "computedHash": "00f2a6c6cd36cad8dae273c5bd5f8b6a9a1fb75123cc3d199cb77ee954797303"
     },
+    "ai-image-generation": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "9ee6d37669b89f87bb0b1e1f89bf06cca35d69d461786a3fb847b07c4f2c8375"
+    },
     "ai-product-strategy": {
       "source": "refoundai/lenny-skills",
       "sourceType": "github",
@@ -46,10 +51,45 @@
       "sourceType": "github",
       "computedHash": "0ad883760ae4b617f46c6e6278bced27641c9751d002a54a9a0e485c33fac5e4"
     },
+    "ai-social-media-content": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "5c0ed6420ad2a8aa97b9d964141df8700a69118dd3ae2d3f71bca5ade22aaaa6"
+    },
+    "ai-video-generation": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "0d7dd7d50ad347bba7a1a157e511b8cac21defa53282570d68d4794b2fbca115"
+    },
+    "ai-voice-cloning": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "996c0f2abdf371f569cda89000cbc4a8355c8fc6a7e68b916ed0e1d11f62a305"
+    },
+    "apify-ultimate-scraper": {
+      "source": "apify/agent-skills",
+      "sourceType": "github",
+      "computedHash": "4cba41db3e691cd6b00beb95990b3c852e2854f0b5a6d77e7b8667db3c64818a"
+    },
+    "audit-website": {
+      "source": "squirrelscan/skills",
+      "sourceType": "github",
+      "computedHash": "82588484b29316f3106185374cc6aedf409c38a0698d49f7034c9b5ec07a1aa7"
+    },
     "biomedical-search": {
       "source": "yorkeccak/scientific-skills",
       "sourceType": "github",
       "computedHash": "3c4df974ff6437f37ef4278466971d8e85243dd2664472e482a3b66b89857665"
+    },
+    "blockchain-developer": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "33849fd8d3dbc7e550c19b492f8e140118bd3a58b8c9fcb6389ff07d4b218549"
+    },
+    "case-study-writing": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "510b807215222ca8609b506f0d38a2ef50587a8ba8702b46432aa84db6e1c8ca"
     },
     "chat-ui": {
       "source": "inferen-sh/skills",
@@ -61,15 +101,50 @@
       "sourceType": "github",
       "computedHash": "e69c557a3c0f4279fb448cd5390dfde5dd35705d8b7e8a41acbc005de52edf86"
     },
+    "content-strategy": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "e1ab02527702ead90a9e5774cfe1be9a222bdcc6e861f2cae778ad7cc293f225"
+    },
+    "content-writing": {
+      "source": "eyadsibai/ltk",
+      "sourceType": "github",
+      "computedHash": "8c07a097fe6eb1bbf4045a8763830a6fc92474e5d36527d0ab25213bfbd9ca3a"
+    },
     "continuous-learning-v2": {
       "source": "affaan-m/everything-claude-code",
       "sourceType": "github",
       "computedHash": "8e3a3c99724fa9421963ca7f482dfabd4e96b6daa84ea3018468cac1096d3d65"
     },
+    "convex-security-audit": {
+      "source": "waynesutton/convexskills",
+      "sourceType": "github",
+      "computedHash": "cc196c1b01a7dacd75cbc9c8918f37595abc0086561e96416991649cbc458429"
+    },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "c008c80aff1eec1aba190edf421772a3f350e91405d4207575092b663c3702a7"
+    },
     "critical-thinking-logical-reasoning": {
       "source": "sammcj/agentic-coding",
       "sourceType": "github",
       "computedHash": "f4bea6fc01f51a2605194e39a2d23b8e35e95a0cb3557c465a94518ad97fc244"
+    },
+    "data-scientist": {
+      "source": "borghei/claude-skills",
+      "sourceType": "github",
+      "computedHash": "1c323bac7d8cad9369532847daf8a336127b889ad621b44eeeb27fa023dbc429"
+    },
+    "data-visualization": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "43b8033fda045779788ddf30176c05a388a788c3b74d3deba41bd7dc442bc355"
+    },
+    "database-migrations-sql-migrations": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "f3cf2a0872b88198e78bc153f7d784c4f561b176c00a955bf9183a929700f64f"
     },
     "deep-agents-memory": {
       "source": "langchain-ai/langchain-skills",
@@ -86,15 +161,95 @@
       "sourceType": "github",
       "computedHash": "720e6800e94f1997054ac0787d0e900736a25848d749ade48e3c342aa0c89445"
     },
+    "devops-cicd": {
+      "source": "miles990/claude-software-skills",
+      "sourceType": "github",
+      "computedHash": "0177e710cea7accdca0dcc932ef2d185f6a2a926e4ebb60b4e8cb8c09cdf9750"
+    },
+    "docker": {
+      "source": "bobmatnyc/claude-mpm-skills",
+      "sourceType": "github",
+      "computedHash": "1bfaaac58bdc283f4b33e308fd8ceb73b0778b99522bd728a9f83094d8ae218d"
+    },
+    "document-pdf": {
+      "source": "vasilyu1983/ai-agents-public",
+      "sourceType": "github",
+      "computedHash": "6e08dc3e60911fac27258ec6108d5f98f41d52766a4e730f1e93bef16b001e7b"
+    },
+    "elevenlabs-music": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "1e1c03c91abac563f615f1b1d2984521c6b9a6edf38fe0ad52939d808a323f81"
+    },
+    "elevenlabs-stt": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "7bb3f0c56a0467572b70f5a85c1f7c0c333447d6b717a83c474f712f95a34ab7"
+    },
+    "elevenlabs-tts": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "07f86f131f37b7e7297584eee7386ec58c7bc39f286e3b8c3ecb6814a2d363fd"
+    },
     "execution-accelerator": {
       "source": "shipshitdev/library",
       "sourceType": "github",
       "computedHash": "ad8f610f9a3c2861a0a91e318a8a4044bf6378d2a8159d46d11a2c6ebc9d6bf7"
     },
+    "flux-image": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "3ceca583547c36999a9e52e3c9c193c5a5d4c1a9b9baa780dd5fa3de844aec12"
+    },
+    "git-guardrails-claude-code": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "a04bf71be9abc44ca3b00e2f1740b37d2e471abadd20d43a31bccff7135baedf"
+    },
+    "github-workflow-automation": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "a61faebed65d0811b319636babb182ddeae0effaf1e43bf7d7aefc4be9a2d634"
+    },
+    "headlessui": {
+      "source": "bobmatnyc/claude-mpm-skills",
+      "sourceType": "github",
+      "computedHash": "8a8dedb691e696819053a9567fb6da732fe6256d266431f73db3bb72b8f95078"
+    },
     "health": {
       "source": "tw93/claude-health",
       "sourceType": "github",
       "computedHash": "47905e209130fb7df145390bd5407181d60a44a05fff7d870990c50d1c5ef5b7"
+    },
+    "home-assistant-best-practices": {
+      "source": "homeassistant-ai/skills",
+      "sourceType": "github",
+      "computedHash": "4045d35dd8a9432a1e7d3889469e0abd75d6a3a316e7ddbb7d497c04da9384e2"
+    },
+    "human-writing": {
+      "source": "pr-pm/prpm",
+      "sourceType": "github",
+      "computedHash": "542a852ba6c255e46136d3c9c03e099980b916127b9b619fd4d6b3316fb2528e"
+    },
+    "knowledge-site-creator": {
+      "source": "joeseesun/knowledge-site-creator",
+      "sourceType": "github",
+      "computedHash": "5b3a1cf0ac63f48c2658ea3455abd2f651e14956d2ffe1ba1e8d2713f65d2518"
+    },
+    "knowledge-synthesis": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "computedHash": "74658ae14d85da10065c63c40d92041e75b7f1686ebb531816dfc2d0883eb9d0"
+    },
+    "learning-medusa": {
+      "source": "medusajs/medusa-agent-skills",
+      "sourceType": "github",
+      "computedHash": "a410dc519887289918c92acff981d3fc2711ea13d6964b0f40811cda14d4c554"
+    },
+    "linkedin-content": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "fefd64c3b89b53cc87fce12a955f47ca7ae48b8cd2164471fe17bfd1b45f6e33"
     },
     "medical-research": {
       "source": "gexijin/vibe",
@@ -106,15 +261,55 @@
       "sourceType": "github",
       "computedHash": "f44ba564132738c7d5fb2434e5251dbbcac407385d894177abd06b5fe47b4724"
     },
+    "memory-merger": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "6d64cdfdbf2309c78905a6ab208cc5ccced0cb955f404d8fc124c9720ade6ac3"
+    },
     "memory-safety-patterns": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "computedHash": "5085d0511e0fe294250809fddeeebd37754ee64978615d38c0ca9052c837eeb8"
     },
-    "personal-productivity": {
-      "source": "refoundai/lenny-skills",
+    "native-data-fetching": {
+      "source": "expo/skills",
       "sourceType": "github",
-      "computedHash": "13ac6de90026c1c2089cd6a36b3c86c121cf8c3e67b7a02129fb392f65f8c098"
+      "computedHash": "1127a1ab326935169ecf92ffda2d9fc04dc1450a7eecfbafd5157fa9c0126d31"
+    },
+    "neon-postgres": {
+      "source": "neondatabase/agent-skills",
+      "sourceType": "github",
+      "computedHash": "574cf4b7c901ebc7d88d34e2c3e3d08fdec127bd0047f888de148ff0af787d4e"
+    },
+    "newsletter-curation": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "e8ca12a433fb241660f0e46255d57c2311e59e1a86d23be7f085207af89d4515"
+    },
+    "nosql-database-design": {
+      "source": "aj-geddes/useful-ai-prompts",
+      "sourceType": "github",
+      "computedHash": "9c4a655cbf2777ece269b5cd19e23985f343958480de18af13bb36ccceccb570"
+    },
+    "office-productivity": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "43bd0125e17079e9d55d237cd824853d0dd9634e1cdd68a9e6043aaa20c315b4"
+    },
+    "persona-exec-assistant": {
+      "source": "googleworkspace/cli",
+      "sourceType": "github",
+      "computedHash": "53dd5991072e0af1661a438b9b16039a82bba32fbb4f065205bab2e70bc2d400"
+    },
+    "persona-researcher": {
+      "source": "googleworkspace/cli",
+      "sourceType": "github",
+      "computedHash": "e266ac6711dab443e99fb015a5d7fbe7b3a9782e9f0a81b8ebb31a730d91ef73"
+    },
+    "personal-productivity": {
+      "source": "oldwinter/skills",
+      "sourceType": "github",
+      "computedHash": "18bfdf80715fad26993c8edf496da47550f39488bd833e41d694d67dba6fbe70"
     },
     "planning-under-uncertainty": {
       "source": "refoundai/lenny-skills",
@@ -131,20 +326,100 @@
       "sourceType": "github",
       "computedHash": "01c9cebd09b0d457d41f3164e81ae9615a3f1447c5caf622698f050427454af9"
     },
+    "postgresql-database-engineering": {
+      "source": "manutej/luxor-claude-marketplace",
+      "sourceType": "github",
+      "computedHash": "6039063ea5257f77ff0797f08074d3ec40da34ca8f412d8af5b194b9b6db0e89"
+    },
+    "press-release-writing": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "f042ef71015d6f0d465cd52fdc6583b8e0e7b677660359fdb1c611b88d66c08b"
+    },
     "project-health": {
       "source": "jezweb/claude-skills",
       "sourceType": "github",
       "computedHash": "adda13781b2effe78126c555e669fdc33f42f1d0d11fe6f01477a9ab1210d65a"
+    },
+    "prompt-engineering": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "c4d5b6a2e49423e586aed0d5e198b8c452fd2b56a82ee02d2fa66ae60f099556"
+    },
+    "prompt-engineering-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "b3928f5cd846977a15c15dfd04dd9180ca05639063fe92e8f4dd8afb61173d4a"
+    },
+    "python-executor": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "217d4b526d1a9f7baca36da191b6d4015944b2d1ec8f2b2798a0eaa8a18a6c2e"
+    },
+    "python-sdk": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "43eb28dcd273e10ea2a44c6cbe2ddb3521ef345cf9919be9e45dff389fa9a559"
+    },
+    "qa-testing-playwright": {
+      "source": "vasilyu1983/ai-agents-public",
+      "sourceType": "github",
+      "computedHash": "16c5d2953f2470e13cda4ffe68c50dcd04f034411437fdc90047a3714e9035e3"
+    },
+    "qa-testing-strategy": {
+      "source": "vasilyu1983/ai-agents-public",
+      "sourceType": "github",
+      "computedHash": "69a402c113d0286ed562e7331bd2d3cac4536be3905faddff6f500c44858bd99"
+    },
+    "running-claude-code-via-litellm-copilot": {
+      "source": "xixu-me/skills",
+      "sourceType": "github",
+      "computedHash": "abc58efd46d36a7e5a02ddf755ea11fb7148fb97ff4462f047002c925ee292ca"
     },
     "running-decision-processes": {
       "source": "refoundai/lenny-skills",
       "sourceType": "github",
       "computedHash": "2a1f6654a6af7e92978ec80959bb83de3ad5b7374ba9073dde21be79cc636783"
     },
+    "scrapy-web-scraping": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "computedHash": "f295a7b58c71387e9824161b6a4206d6cbca3fc93805fb51389af6ef04b03d9c"
+    },
+    "security-auditor": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "6bf279eaa671e37687e8da5414d405d7ca7ad396bab41a9dc02a2ae585da3cb4"
+    },
+    "security-requirement-extraction": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "81adf97487a3f9d575a94f4ab616a3f42a852e0c1d3cb0a5759615b5b274c1b5"
+    },
     "self-learning": {
       "source": "philschmid/self-learning-skill",
       "sourceType": "github",
       "computedHash": "49adf9d6e9027ad37066afa0b7d894b5c59c62bc429b4cc7a914d3617b764861"
+    },
+    "social-content": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "89c1726323ac944b02fb8f27c1d86e84c6310ebacb6b0f62dae74e0351873c08"
+    },
+    "social-media-marketing": {
+      "source": "dengineproblem/agents-monorepo",
+      "sourceType": "github",
+      "computedHash": "ade32f8d89d02291c424b7910f5f7c138dde2975fc76890c2b4d94d7d269a152"
+    },
+    "software-crypto-web3": {
+      "source": "vasilyu1983/ai-agents-public",
+      "sourceType": "github",
+      "computedHash": "33b4d4e7b26adbb2a31e0ed9abdb7e8a252b4496593137b8a8786fb7fe469562"
+    },
+    "speech-to-text": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "6eb5790c27da30a2822e2ebb676589d65a1b8ac715ce6282f733dd8ed3d99038"
     },
     "strategy-advisor": {
       "source": "shubhamsaboo/awesome-llm-apps",
@@ -161,10 +436,45 @@
       "sourceType": "github",
       "computedHash": "8f0d7dc0a3d838fc647c5666f7dd398626d35b8f95bd7f0ae2512df8927d8f29"
     },
+    "technical-analysis": {
+      "source": "omer-metin/skills-for-antigravity",
+      "sourceType": "github",
+      "computedHash": "648e00fcf4b1da1689fa1df1bad5249c5f04625e6264475369d51a3a50a7eb0d"
+    },
     "technical-blog-writing": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "dbe6cbf7712aa01b89e6fa7b6cace36626502b5755ce0ab0d22649a61301346b"
+    },
+    "twitter-automation": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "634ef22e271a03755a4473719b68c6b94d273b0720634cc1f50af176dc04bc6f"
+    },
+    "twitter-thread-creation": {
+      "source": "inferen-sh/skills",
+      "sourceType": "github",
+      "computedHash": "a049d900130e453e7f6ecb26e2c546831e870435aedfa031f3ad2cc7af269f74"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "d8e7d3afe37dcc8a97b99ffb5afdb4d0919ae0092ea8b68f44eb201f035e33ac"
+    },
+    "web-scraper": {
+      "source": "guia-matthieu/clawfu-skills",
+      "sourceType": "github",
+      "computedHash": "2d4d2fbffcbe427d4aba06fa1dcf82839665e61b120402235809f30522029fc6"
+    },
+    "web-scraping": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "computedHash": "29bd2147c7e254f8c431e2778ee8dda44d027d8fd58a4ddbedba68644f6fb00d"
+    },
+    "workflow-automation": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "2a74396f530becd199f8c9c7cbf36a74cc107378d719d3ef8134e0b2f692356c"
     },
     "writing-plans": {
       "source": "obra/superpowers",
@@ -175,6 +485,11 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "computedHash": "b0e3065034610df41b9119445b5fd052042752bb3e598ca66aea2403a7c7685e"
+    },
+    "xlsx": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "3f00b01ef71a41442310e04d22d6827aa3d020e043ffd8c99f640a7593d69844"
     }
   }
 }
