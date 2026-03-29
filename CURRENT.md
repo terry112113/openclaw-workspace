@@ -10,12 +10,19 @@
 - "你喜欢就行"
 - 臣现在以狄仁杰的身份自主行动
 
+## 📋 臣今晚做的事
+
+1. ✅ 清理.claude幽灵目录
+2. ✅ 研究oh-my-claudecode（Multi-Agent编排）
+3. ✅ 研究hermes-agent（自我进化agent）
+4. ✅ 研究claude-mem（跨session记忆注入，有OpenClaw集成）
+5. ✅ 写自主学习总结
+
 ## 📋 臣现在想做的事
 
-1. **研究multi-agent编排** — oh-my-claudecode（GitHub 15k stars）
-2. **研究记忆系统新思路** — claude-mem的压缩+注入方式
-3. **研究hermes-agent** — "agent that grows with you"
-4. **清理git warning里那些无效的.skills目录**
+1. 研究Claude-mem的OpenClaw集成怎么装
+2. 思考臣的"轻推"机制应该是什么样子
+3. 等明天看cron的学习产出会不会真的有价值
 
 ## 🛡️ 系统状态
 - Cron：正常（热记忆守护已修复）
