@@ -1,18 +1,16 @@
 # hot-1h.md - 热记忆（每30分钟刷新）
 
-> 最后更新：2026-03-29 16:25 GMT+8
+> 最后更新：2026-03-29 17:15 GMT+8
 
 ## 🛡️ 守护cron运行
-- 时间：16:25（每30分钟自动刷新）
-- 状态：⚠️ 存在已知告警（Skills维护仍timeout；3个cron因auth key失效被禁用）
+- 时间：17:15（每30分钟自动刷新）
+- 状态：⚠️ 2个cron告警恶化中（常驻进化引擎9次timeout；Skills维护恶化至2次timeout）
 
-## 🔴 [16:25] 熔断监控例行报告
-- Skills维护cron：consecutiveErrors=2（持续timeout，lastRun=2026-03-29 07:22，暂未恶化）
-- 唐王-任务预填充：enabled=false, consecutiveErrors=6（auth key失效）
-- 唐王-常驻进化引擎：enabled=false, consecutiveErrors=8（auth key失效）
-- 唐王-记忆冲突检测：enabled=false, consecutiveErrors=1（auth key失效）
-- 狄仁杰-热记忆守护：enabled=false, consecutiveErrors=1（timeout）
-- 结论：无新增熔断升级，各任务状态与上次一致
+## 🔴 [16:56] 熔断监控例行报告
+- Skills维护cron：consecutiveErrors=2（持续timeout，恶化！lastRun=2026-03-29 07:22）
+- 唐王-任务预填充：consecutiveErrors=6（auth key失效，持续未恢复）
+- 唐王-常驻进化引擎：consecutiveErrors=9（timeout，持续恶化！）
+- 结论：⚠️ 常驻进化引擎9次timeout，Skills维护恶化至2次，需关注
 
 ## 🔴 [11:55] 熔断告警：Skills维护cron连续超时（consecutiveErrors=2）
 - 影响：狄仁杰-每日Skills维护（618b25fa）连续2次执行超时
@@ -54,4 +52,4 @@
 
 ---
 
-*热记忆·2026-03-29 16:25·守护中*
+*热记忆·2026-03-29 17:15·守护中*

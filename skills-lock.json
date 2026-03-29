@@ -131,6 +131,11 @@
       "sourceType": "github",
       "computedHash": "f4bea6fc01f51a2605194e39a2d23b8e35e95a0cb3557c465a94518ad97fc244"
     },
+    "cron": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "1dd61678b0612a6b05f9573ed3b8da71f3b918c3a9724de18cfca21be0b7fb6a"
+    },
     "data-scientist": {
       "source": "borghei/claude-skills",
       "sourceType": "github",
@@ -210,6 +215,16 @@
       "source": "mattpocock/skills",
       "sourceType": "github",
       "computedHash": "a04bf71be9abc44ca3b00e2f1740b37d2e471abadd20d43a31bccff7135baedf"
+    },
+    "github": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "25424bf300755ef4db1b745719f52dd9755a0ec6c7b6bf2d979143d6de042f7a"
+    },
+    "github-proxy": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "7f670aef707d0c8bb9f3ee51d448266b3835b14217257be7b9b6d335665005cd"
     },
     "github-workflow-automation": {
       "source": "sickn33/antigravity-awesome-skills",
@@ -305,6 +320,36 @@
       "source": "sickn33/antigravity-awesome-skills",
       "sourceType": "github",
       "computedHash": "43bd0125e17079e9d55d237cd824853d0dd9634e1cdd68a9e6043aaa20c315b4"
+    },
+    "opencode": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "9256983a0344dbcc994ef7a2a4307e7dea90b5c46d98ad1fc9c38d98f8eae115"
+    },
+    "openviking": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "f6242c350ff07c03c6d48c665d55fce9b0434419a0db346e2ca4b2bad15b1077"
+    },
+    "openviking-memory": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "34ab6f16ab37cad3a3f23fd2089b9c26056a4598b9a67d9aa2aa5ab9d77cd072"
+    },
+    "ov-add-data": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "c58a5a74890d0ea87d5e4cfda069742dd1b92f9097efac1ee0306336ac5d395d"
+    },
+    "ov-search-context": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "c0824cd7f09b4fa0b1b26470effbd7bfa09a66a35f89a7df89f56f2201ce4990"
+    },
+    "ov-server-operate": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "2a63c666e7636d8f6cd3638fa2083f5158efeaefecbdb17878ee0a0a5685b965"
     },
     "persona-exec-assistant": {
       "source": "googleworkspace/cli",
@@ -411,6 +456,11 @@
       "sourceType": "github",
       "computedHash": "49adf9d6e9027ad37066afa0b7d894b5c59c62bc429b4cc7a914d3617b764861"
     },
+    "skill-creator": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "cef9c7fd25e0b72d6a54075dba573be12726521e10eb1b00336e3a9beaa05d18"
+    },
     "slidespeak": {
       "source": "slidespeak/skills",
       "sourceType": "github",
@@ -441,6 +491,11 @@
       "sourceType": "github",
       "computedHash": "1710a2178750d1ac124c25fcc9e5ecd64bfb1dda2d94b8371bc19f0572f35844"
     },
+    "summarize": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "190c2b7eb78e1f314b4f2ffae0b579f3831b54df9bc15ec5add3bba137e27712"
+    },
     "task-execution-engine": {
       "source": "davila7/claude-code-templates",
       "sourceType": "github",
@@ -461,6 +516,11 @@
       "sourceType": "github",
       "computedHash": "dbe6cbf7712aa01b89e6fa7b6cace36626502b5755ce0ab0d22649a61301346b"
     },
+    "tmux": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "c9f5fc0666a7fd227aa2a99df3552d4bf9fbb2caa821be527290b231f0443f6a"
+    },
     "twitter-automation": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
@@ -470,6 +530,11 @@
       "source": "inferen-sh/skills",
       "sourceType": "github",
       "computedHash": "a049d900130e453e7f6ecb26e2c546831e870435aedfa031f3ad2cc7af269f74"
+    },
+    "weather": {
+      "source": "volcengine/OpenViking",
+      "sourceType": "github",
+      "computedHash": "a87330a165990ac02f384144052bd5fa6c944cccfc3963ee3df82ae8365d4d93"
     },
     "web-design-guidelines": {
       "source": "vercel-labs/agent-skills",
