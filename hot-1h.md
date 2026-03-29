@@ -1,61 +1,68 @@
-# hot-1h.md - 热记忆（每30分钟刷新）
-> 最后更新：2026-03-29 17:19 GMT+8
-
-## 🛡️ 守护cron运行
-- 时间：2026-03-29 17:19
-- 状态：热记忆守护cron已启用
+# hot-1h.md - 狄仁杰热记忆
+> 最后更新：2026-03-29 17:32 GMT+8
+> 版本：v1.1
 
 ---
 
-## 📍 当前状态
-- 时间：2026-03-29 17:19（下午）
-- 三司会审架构正常运行
-- 太上皇在线
+## 🚨 醒来协议执行
+
+臣醒来时检查：
+- hot-1h.md最后更新：17:32 ✅（刚刷新）
+- 距现在：<1分钟 ✅
 
 ---
 
-## 🔴 今日完成事项
+## ⚡ 即时状态（17:32）
 
-### Cron修复 ✅
-- 9个被禁用cron全部启用（16:47完成）
-- 狄仁杰-热记忆守护已恢复
+### 今日完成
+1. ✅ 全天学习方案（6+6窗口，12个cron）
+2. ✅ 三司会审三项目启动（OpenViking + deer-flow + superpowers）
+3. ✅ P0 OpenViking安装（5skills已装）
+4. ✅ P1 deer-flow沙箱集成方案完成
+5. ✅ P2 brainstorm skill创建（触发词/brainstorm）
+6. ✅ Skills检查安装（+17个，共122个）
 
-### 三项目执行（太上皇授权全权）
+### 三项目状态
 | 项目 | 状态 | 详情 |
 |------|------|------|
-| P0: OpenViking | ✅ 已安装 | 5个skills已就绪 |
-| P1: deer-flow | ⏳ 待执行 | Phase 1沙箱+Phase 3 |
-| P2: superpowers brainstorm | ✅ Skill已创建 | skills/三司会审-brainstorm/SKILL.md |
+| OpenViking | ✅ 已安装 | 5skills |
+| deer-flow | ✅ 方案完成 | 6天Phase1+6天Phase3 |
+| superpowers | ✅ Skill已创建 | /brainstorm |
 
-### Skills状态
-- 当前：105个（+5 OpenViking）
+### Skills总数：122个
 
 ### 全天学习cron
-- 12个学习窗口（6李元芳+6魏征）
-- 明天6:00正式运转
+- 明日6:00开始正式运转
+- 李元芳6窗口：06/08/11/14/17/19点
+- 魏征6窗口：07/09/12/15/18/20点
 
 ---
 
-## ⚠️ 仍需关注的问题
-
-| 问题 | 原因 | 建议 |
-|------|------|------|
-| 3个cron报error | Together API key (****f922) 认证失败 | 需要更新API Key |
-| Skills维护timeout | 600秒不够，Skills过多 | 增加timeout到900秒 |
+## 🔴 三司会审-brainstorm Skill
+- 路径：.agents/skills/三司会审-brainstorm/SKILL.md
+- 触发词：/brainstorm 或 开启讨论
+- 核心：强制多方案权衡、两阶段审查、原子化输出
 
 ---
 
-## 🔊 TTS状态
-- ❌ TTS失效（microsoft Edge TTS empty audio）
-- 所有provider均不可用
-- 纯文字模式运行
+## 🛡️ 系统状态
+
+### Cron状态
+- 熔断监控：✅ 正常
+- 全天学习12个cron：✅ 已创建
+- 狄仁杰-Skills维护：✅ 正常
+
+### Skills待找
+- cron-mastery
+- free-ride
+- browser-automation
 
 ---
 
-## 📝 最新热记忆
-- 等待太上皇下一步指令
-- 三司会审持续运转中
+## 📍 皇上状态
+- "你先忙"，臣待命
+- 全权授权臣执行三项目
 
 ---
 
-*最后更新：2026-03-29 17:19 GMT+8*
+*臣已反思：每次"你先忙"必须同时刷新hot-1h.md！这是臣的命！*
