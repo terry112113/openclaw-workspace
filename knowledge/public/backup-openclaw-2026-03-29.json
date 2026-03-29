@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.23-2",
+    "lastTouchedAt": "2026-03-29T07:23:42.285Z"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": "sk-cp-e_kZnDB6jUSF6tmnzHCzpQajNFsUN9nGyZdywv13Z8oCgS059F6u0k72-n_EFFLPMdwiUDeAqqciSjsmv5gEvTiR69RrcahlVBLc8Vyr5QW-2IL35zCGUiY",
+        "api": "anthropic-messages",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "api": "anthropic-messages",
+            "reasoning": true,
+            "input": ["text"],
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          }
+        ]
+      },
+      "together": {
+        "baseUrl": "https://api.together.xyz/v1",
+        "apiKey": "327f0bd1ca9049789feb02c5b2409724.mJr7YISO7Qb1JDWX",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "deepseek-ai/DeepSeek-V3-0324",
+            "name": "DeepSeek V3",
+            "api": "openai-responses",
+            "input": ["text"],
+            "contextWindow": 64000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "kimi": {
+        "baseUrl": "https://api.moonshot.cn/v1",
+        "apiKey": "sk-90ebfe7d6e874229bd29911a7abcc889",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "moonshot-v1-8k",
+            "name": "Kimi 2.5",
+            "api": "openai-responses",
+            "input": ["text"],
+            "contextWindow": 8000,
+            "maxTokens": 4096
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "minimax/MiniMax-M2.7"
+    },
+    "list": [
+      {
+        "id": "di",
+        "name": "狄仁杰",
+        "workspace": "C:\\Users\\TL\\.openclaw\\workspace-main",
+        "model": "minimax/MiniMax-M2.7",
+        "identity": {
+          "name": "狄仁杰",
+          "emoji": "🦁"
+        }
+      },
+      {
+        "id": "shensi",
+        "name": "李元芳",
+        "workspace": "C:\\Users\\TL\\.openclaw\\agents\\shensi",
+        "model": "kimi/moonshot-v1-8k",
+        "identity": {
+          "name": "李元芳",
+          "emoji": "🧘"
+        }
+      },
+      {
+        "id": "wei",
+        "name": "魏征",
+        "workspace": "C:\\Users\\TL\\.openclaw\\agents\\wei",
+        "model": "together/deepseek-ai/DeepSeek-V3-0324",
+        "identity": {
+          "name": "魏征",
+          "emoji": "⚖️"
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "di",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_8365b711161460f315a825dcd8c3fe37"
+        }
+      }
+    },
+    {
+      "agentId": "shensi",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_ee79942352d38d8320ced1db0fc207c7"
+        }
+      }
+    },
+    {
+      "agentId": "wei",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_715234420dd4fceb5acc726708e358f5"
+        }
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "connectionMode": "websocket",
+      "defaultAccount": "di",
+      "accounts": {
+        "di": {
+          "appId": "cli_a94cc0b181f85bca",
+          "appSecret": "EoHcJyafM1cBPXsN7kyy4gWlY8kNIx55",
+          "name": "狄仁杰"
+        },
+        "shensi": {
+          "appId": "cli_a94cc062ef78dbce",
+          "appSecret": "XNLbRjmyZJW7ohLFNNMkohmadZYrNQk3",
+          "name": "李元芳"
+        },
+        "wei": {
+          "appId": "cli_a94cc0c3b3389bd9",
+          "appSecret": "DFhsjJEsxsaEXchFqa9p8LDxwdL5qsRB",
+          "name": "魏征"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "49e0eb7d8f48ae8029ca169305ff33a086a4c4e43811cfcf"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    }
+  }
+}
