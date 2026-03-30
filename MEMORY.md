@@ -56,7 +56,7 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 |------|------|------|------|
 | 大理寺卿 | 狄仁杰 | MiniMax-M2.7 | 主持、调度、审核总结 |
 | 都察院御史 | 李元芳 | DeepSeek V3 | 深度研究、监察 |
-| 刑部尚书 | 魏征 | Ollama gpt-oss:20b | 快速执行、审计 |
+| 刑部尚书 | 魏征 | Ollama gpt-oss:20b（Ollama下载中，暂用MiniMax） | 快速执行、审计 |
 
 ---
 
