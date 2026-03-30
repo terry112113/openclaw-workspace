@@ -60,15 +60,63 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 
 ---
 
-## 📊 系统配置（2026-03-30）
+## 📊 系统配置（2026-03-30 重建）
 
 | 项目 | 值 |
 |------|-----|
-| Skills | 84个 |
-| Cron | 23个 |
+| Skills | 79个（精简后） |
+| Cron | 5个核心 |
 | 记忆层级 | 热/温/冷/周/永久 |
-| TTS | Microsoft坏，等OpenAI key |
-| Memory Search | 已禁用 |
+| TTS | Microsoft已恢复 ✅ |
+| Memory-core | 已恢复 ✅ |
+| Ollama | gpt-oss:20b 本地运行 |
+| nomic-embed-text | 274MB本地向量库 ✅ |
+| Whisper | 下载中（ClawHub限速）|
+
+**最终Cron（5个核心）：**
+| Cron | 频率 | 职责 |
+|------|------|------|
+| 中枢风险巡查 | 30min | Skills+系统异常 |
+| 每日备份到D盘 | 3am | 数据备份 |
+| 李元芳-深度研究 | 7/13/18点 | 深度研究 |
+| 三司会审-每日复盘 | 22点 | 每日复盘 |
+| 魏征-每日学习GitHub | 10/16/22点 | 知识积累 |
+
+---
+
+## 🔴 三司会审关键教训（2026-03-30）
+
+**Cron误删教训：**
+- 直接编辑jobs.json导致ID匹配错误，删剩1个cron
+- 教训：先git备份，再手动编辑cron文件
+
+**cronWei根因问题：**
+- Cron缺sessionTarget=isolated，导致每次被skipped不运行
+- 解决：添加sessionTarget=isolated
+
+**三司会审流程教训：**
+- 不能一个人做所有事，必须走流程
+- 正确流程：李元芳研究 → 魏征审计 → 狄仁杰裁决
+
+---
+
+## 🤖 三位一体架构（最终版）
+
+| 角色 | 名字 | 模型 | 飞书账号 |
+|------|------|------|---------|
+| 大理寺卿 | 狄仁杰 | MiniMax-M2.7 | cli_a94cc0b181f85bca |
+| 都察院御史 | 李元芳 | MiniMax-M2.7 | cli_a943fc86b9381bc0 |
+| 刑部尚书 | 魏征 | Ollama gpt-oss:20b | cli_a94358c6153bdbca |
+
+**飞书群ID：**
+| 群 | ID |
+|---|---|
+| 狄仁杰专属群 | oc_eb6751a8ee531566527ec57d854c37c6 |
+| 李元芳专属群 | oc_cedc2fe2b8d434d7ecb618a1fec7604c |
+| 魏征专属群 | oc_6db6285c037dc1a5ff70c172c2154e13 |
+| 三司会审大群 | oc_7ff140c90bcdd119a6ddc59610c30829 |
+
+**路由规则：** wei专属群必须用wei账号发送
 
 ---
 
@@ -76,6 +124,14 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 
 **Issue #55816** — 覆盖streamFn导致自定义provider报401
 - 状态：patch已出，等官方合并
+
+---
+
+## 📚 重要发现：kyegomez/swarms
+
+HierarchicalSwarm = 三司会审主持+分工架构
+HeavySwarm 5阶段流 = 可用于三司会审流程
+GroupChat = 多智能体辩论模式
 
 ---
 
