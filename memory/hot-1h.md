@@ -1,33 +1,35 @@
 # hot-1h.md - 热记忆（每30分钟刷新）
-> 最后更新：2026-03-31 18:46 GMT+8
 
-## 状态: ✅ 正常
+> 最后更新：2026-03-31 20:12 GMT+8
 
-### Cron Jobs
-- 14个任务正常
-- 熔断监控timeout已改为120s
-- 9个学习任务timeout已改为600s
+## 🛡️ 熔断监控报告
+
+### 时间：2026-03-31 20:12 GMT+8
+
+### Cron Jobs状态
+- 总数：29个
+- enabled=true：14个（正常运行）
+- enabled=false：15个（均为手动暂停，非熔断）
+
+### 异常检测
+- consecutiveErrors >= 2：0个（当前运行的job中无异常）
+- 唐王-任务预填充（已暂停，consecutiveErrors=6）
+- 魏征-每日学习GitHub（已暂停，consecutiveErrors=2）
+- 狄仁杰-每日Skills维护（已暂停，consecutiveErrors=2）
+- 唐王-熔断监控（已暂停，consecutiveErrors=4）
+- 唐王-常驻进化引擎（已暂停，consecutiveErrors=8）
 
 ### Skills数量
-- 当前: 79
+- .agents\skills：78个（含1个损坏目录）
+- global skills：33个
+- 总计：111个
+- 变化：无异常
 
-### 系统状态
-- Gateway: ✅
-- Ollama: ✅ D盘
-- Firecrawl: 525 credits
+### 热记忆新鲜度
+- hot-1h.md更新时间：18:47（约1小时25分钟前）
+- 状态：✅ 正常
 
-### 今日重大进展
-- 三司会审全面运作（三回合辩论流程确立）
-- Ollama迁移D盘完成
-- Firecrawl替换Tavily
-- OpenClaw系统漏洞优化辩论完成
-- 和皇上一起学习Agent知识辩论完成
-
-### 飞书群配置（重要）
-- groupPolicy: allowlist
-- groupAllowFrom: ["oc_7ff140c90bcdd119a6ddc59610c30829"]
-- groupSenderAllowFrom: ["ou_82c708d3c070ec7be65a899b7533c5e4"]
-
----
-
-*鱼香肉丝存档 18:46*
+### 状态判定
+- ✅ 熔断正常，无告警
+- ✅ Skills数量稳定
+- ✅ 热记忆新鲜
