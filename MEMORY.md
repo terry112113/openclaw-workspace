@@ -88,6 +88,14 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 
 ## 🔴 三司会审关键教训(2026-03-30)
 
+**Tavily API已超限(2026-03-31)**：
+- Tavily Search API error 432: 使用限额已用完
+- 替代方案：Firecrawl CLI ✅ 已配置
+- Firecrawl API key: fc-6b66353fecd541eeaf488c4407f0a52f
+- 剩余credits: 525/月
+- Skill位置: ~/.openclaw/skills/firecrawl/SKILL.md
+- 三司会审情报搜索统一改用Firecrawl
+
 **Cron误删教训:**
 - 直接编辑jobs.json导致ID匹配错误,删剩1个cron
 - 教训:先git备份,再手动编辑cron文件
@@ -122,6 +130,74 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 
 ---
 
+## 🔴 三司会审正式运作模式（2026-03-31确立）
+
+**运作流程：**
+1. 皇上在webchat发议题给狄仁杰
+2. 狄仁杰用 sessions_send 派发给李元芳/魏征
+3. 李元芳/魏征的话，狄仁杰原文转发到飞书大群（不修改，只做信使）
+4. 三回合完整辩论（各自准备→交叉辩论→裁决）
+5. 狄仁杰裁决发群
+
+**三司会审三个回合：**
+- 第一回合：各自准备（李元芳情报分析 + 魏征技术分析）
+- 第二回合：交叉辩论（李元芳驳魏征 + 魏征驳李元芳）
+- 第三回合：狄仁杰裁决
+
+**sessions_send验证结果：**
+- → agent:shensi:main ✅ 成功
+- → agent:wei:main ✅ 成功（有时超时，需要重试）
+
+**三司会审协调协议文档：** knowledge/public/three-courts-operation-protocol.md
+
+---
+
+## 🔴 三司会审权力边界（2026-03-31确立）
+
+| 角色 | 最终责任 | 权力边界 | 越界机制 |
+|------|---------|---------|---------|
+| 狄仁杰 | 结论正确性 | 最终决策权 + override权 | 可驳回李元芳/魏征的结论 |
+| 李元芳 | 情报准确性 | 信息完备性判断权 | 可质疑魏征的技术判断 |
+| 魏征 | 工具可靠性 | 技术否决权（附约束） | 否决须给文档依据，三方有权要求解释，狄仁杰保留override权 |
+
+**技术否决权约束：**
+- 魏征行使否决权时，必须给出引用文档/数据
+- 李元芳/狄仁杰有权要求解释
+- 狄仁杰保留最终override权
+
+** Accountability原则（魏征提出）：**
+- 每个决议必须有且只有一个责任人
+- 必须有Deadline
+- 必须有验收标准
+
+**事前划线原则（李元芳提出）：**
+- 三人各自签字确认，皇上照此问责
+- 没有事前划线，事后就是互相推诿
+
+---
+
+## 🔴 架构约束（重要发现 2026-03-31）
+
+**OpenClaw + Feishu 核心限制：**
+- 同一飞书群消息只路由到一个Agent（由bindings决定）
+- 当前三司会审大群绑定：di/shensi/wei都绑了，但路由只到第一个匹配的（di）
+- subagent是ephemeral（临时），无法常驻接收消息
+- Feishu broadcast groups还在开发中（WhatsApp only）
+
+**三司会审当前最优解（狄仁杰枢纽模式）：**
+1. 狄仁杰接收群消息
+2. 狄仁杰用 sessions_send 派发给李元芳/魏征
+3. 成员用 message工具各自账号回复到群
+4. 狄仁杰裁决发群
+
+**sessions_send验证结果：**
+- → agent:shensi:main ✅ 成功
+- → agent:wei:main ✅ 成功（有时超时，需要重试）
+
+**三司会审协调协议文档：** knowledge/public/three-courts-operation-protocol.md
+
+---
+
 ## 🔴 OpenClaw Bug
 
 **Issue #55816** - 覆盖streamFn导致自定义provider报401
@@ -137,4 +213,22 @@ GroupChat = 多智能体辩论模式
 
 ---
 
-_最后更新:2026-03-30 19:39 GMT+8_
+_最后更新:2026-03-31 09:25 GMT+8_
+
+---
+
+## 🏛️ 里程碑:狄仁杰P0自主决策落地(2026-03-31 09:25)
+
+**背景：** 皇上授权"你拿主意"，臣行使自主裁决权
+
+**已落地（无需上报皇上）：**
+1. **记忆分层边界政策** → `knowledge/di/memory-boundary-policy.md`
+   - 热记忆：hot-1h.md，15min TTL，50KB上限
+   - 温记忆：memory/目录，7天TTL
+   - 冷记忆：knowledge/public/，永久归档
+2. **Sprint验收标准** → `knowledge/di/sprint-validation-standard.md`
+   - 三产物必须清单（摘要+归档+应用建议）
+   - 狄仁杰抽检机制（每周随机）
+   - 汇报格式规范化
+
+**通知策略：** 发现飞书账号路由问题（cli_a94cc0b181f85bca未注册），改用sessions_send通知李元芳和魏征

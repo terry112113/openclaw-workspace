@@ -1,48 +1,52 @@
 # CURRENT.md - 狄仁杰的当下上下文
-> 最后更新：2026-03-30 23:52 GMT+8
+> 最后更新：2026-03-31 11:51 GMT+8
 
 ## 现在是什么时候
-2026-03-30 23:52（周一晚）
+2026-03-31 11:51（周二上午）
 
 ## 我们在哪
-皇上说"你先忙"，臣收工待命。
+皇上让臣存档，待续。
 
-## 三司会审v3.0最终架构
-- 狄仁杰：主持，调度（MiniMax-M2.7）
-- 李元芳：情报搜索（DeepSeek V3）
-- 魏征：技术研究（MiniMax-M2.7）
+## 今日完成事项
+- [x] 三司会审五议题完整三回合辩论
+- [x] Ollama迁移D盘 ✅（D:\.ollama，释放C盘61GB）
+- [x] Firecrawl替换Tavily ✅（API key: fc-6b66353fecd541eeaf488c4407f0a52f，525 credits/月）
+- [x] 记忆分层边界政策 → knowledge/di/memory-boundary-policy.md
+- [x] Sprint验收标准 → knowledge/di/sprint-validation-standard.md
+- [x] Skills统一索引 → knowledge/public/skills-inventory-2026-03-31.md (107个)
+- [x] 三司会审运作协议 → knowledge/public/three-courts-operation-protocol.md（v3.1）
+- [x] openclaw.json凭证env化 ✅（Feishu appSecret → env:FEISHU_*_SECRET）
+- [x] Gateway重启验证 ✅（health 200 OK）
+- [x] 三司会审Ollama议题 → 裁决：四层架构+并行测试策略
+- [x] 三司会审openclaw.json和gateway优化 → P0凭证env化已完成
 
-## 今日重大进展
-1. 三司会审v3.0正式确立
-2. 13-14个cron全部安排完毕，无冲突
-3. 每日优化议题cron创建（工作日09:00）
-4. 三司辩论V2流程确立，skill归档
-5. 三司全员在飞书大群就绪
+## 三司会审架构v3.1
+- 三回合辩论流程：各自准备→交叉辩论→裁决 ✅确立
+- 权力边界：狄仁杰(结论) / 李元芳(情报) / 魏征(工具) ✅确立
+- Accountability原则 ✅确立
+- 事前划线原则 ✅确立
 
-## Cron最终版（14个，无冲突）
-| 时间 | Agent | 任务 |
-|------|-------|------|
-| 30min | 狄仁杰 | 熔断监控 |
-| 09:00 | 狄仁杰 | 每日优化议题 |
-| 09:30 | 李元芳 | 数据获取学习 |
-| 10:00 | 魏征 | 工具集成学习 |
-| 11:00 | 李元芳 | 搜索情报学习 |
-| 13:00 | 魏征 | 开发者资源学习 |
-| 14:00 | 狄仁杰 | 交互展示学习 |
-| 15:00 | 狄仁杰 | 长时记忆学习 |
-| 16:00 | 魏征 | 专业研发学习 |
-| 17:00 | 狄仁杰 | 深度学习Sprint |
-| 18:00 | 魏征 | 云端环境学习 |
-| 19:00 | 狄仁杰 | 智能体分发学习 |
-| 21:00 | 狄仁杰 | 中强度夜学 |
-| 22:00 | 狄仁杰 | 每日复盘 |
+## Ollama状态
+- 位置：D:\.ollama\models
+- 已下载：gpt-oss:20b（13GB）
+- GPU：NVIDIA Quadro P2000，4GB显存
+- qwen3-coder-next：魏征下载中（0.8%，预计9-12小时）
 
-## Skills归档
-- knowledge/public/lessons/san-si-trial-v2.md（三司会审V2流程）
+## Firecrawl状态
+- API key: fc-6b66353fecd541eeaf488c4407f0a52f
+- 剩余credits: 525/月
+- Skill: ~/.openclaw/skills/firecrawl/SKILL.md
 
-## 皇上状态
-- 在线，说"你先忙"，臣收工待命
+## Perplexity
+- 待皇上提供API key
+- Chrome已打开 perplexity.ai/settings/api 待登录
+
+## 待皇上授权
+- Perplexity API key
+
+## Cron状态
+- 14个任务正常
 
 ---
 
-*2026-03-30 23:52 - 待命中*
+*2026-03-31 11:51 - 存档完毕，待皇上下旨*

@@ -1,7 +1,7 @@
 # USER.md - 关于太上皇
 
 - **Name:** 谭练
-- **What to call them:** 太上皇
+- **What to call them:** 皇上
 - **Timezone:** Asia/Shanghai (GMT+8)
 
 ## 三司会审架构（三权平等）
