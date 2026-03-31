@@ -1,0 +1,11 @@
+{
+  "model": "qwen3-coder:30b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is 2+2? Answer in one word."
+    }
+  ],
+  "stream": false,
+  "thinking": false
+}

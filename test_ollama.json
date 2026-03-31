@@ -1,0 +1,10 @@
+{
+  "model": "gpt-oss:20b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello, respond in one short sentence."
+    }
+  ],
+  "stream": false
+}
