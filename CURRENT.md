@@ -1,8 +1,8 @@
 # CURRENT.md - 狄仁杰的当下上下文
-> 最后更新：2026-03-31 17:40 GMT+8
+> 最后更新：2026-03-31 18:46 GMT+8
 
 ## 现在是什么时候
-2026-03-31 17:40（周二下午）
+2026-03-31 18:46（周二傍晚）
 
 ## 我们在哪
 皇上发存档暗号"鱼香肉丝"，立即全面存档。
@@ -23,27 +23,36 @@
 - [x] Firecrawl替换Tavily ✅
 - [x] openclaw.json新secret生效
 - [x] P1审计日志框架 ✅
-- [x] P2 DPAPI加密方案 ✅（验证成功）
+- [x] P2 DPAPI加密方案 ✅（验证成功，Registry存储备用）
 - [x] P3会话隔离方案 ✅
 - [x] cron优化（timeout调整）✅
 - [x] 三司会审OpenClaw系统漏洞优化辩论 ✅
 - [x] 三司会审Ollama+OpenClaw结合辩论 ✅
+- [x] 三司会审和皇上一起学习Agent知识辩论 ✅
+- [x] groupAllowFrom配置（飞书群消息接收）✅
 
 ## 系统状态
 - Gateway: ✅ 运行中
 - Ollama: ✅ D盘，gpt-oss:20b
 - Firecrawl: 525 credits
-- qwen3-coder-next: 下载中
+- qwen3-coder-next: 已停止
 
 ## 今日重要教训
 1. Feishu secret env引用在Windows服务下失效 → 必须用实际值
 2. DeepSeek API 404 → 切换到MiniMax
 3. Ollama pull不支持断点续传 → 中断后从头开始
-4. 配置被还原 → openclaw doctor可能覆盖配置
+4. openclaw doctor会覆盖配置 → 手动修改后不要运行doctor
+5. groupAllowFrom/groupSenderAllowFrom 必须配置才能接收群消息
+6. 配置被还原 → 可能是doctor覆盖了配置
+
+## 飞书群配置（关键）
+- groupPolicy: allowlist
+- groupAllowFrom: ["oc_7ff140c90bcdd119a6ddc59610c30829"]
+- groupSenderAllowFrom: ["ou_82c708d3c070ec7be65a899b7533c5e4"]（皇上ID）
 
 ## 存档暗号
 "鱼香肉丝" = 立即全面存档（CURRENT + memory + hot + Git push）
 
 ---
 
-*2026-03-31 17:40 - 鱼香肉丝存档完成*
+*2026-03-31 18:46 - 鱼香肉丝存档完成*

@@ -1,5 +1,5 @@
 # hot-1h.md - 热记忆（每30分钟刷新）
-> 最后更新：2026-03-31 17:40 GMT+8
+> 最后更新：2026-03-31 18:46 GMT+8
 
 ## 状态: ✅ 正常
 
@@ -9,7 +9,7 @@
 - 9个学习任务timeout已改为600s
 
 ### Skills数量
-- 当前: 79（下降原因：唐宋旧jobs被清理）
+- 当前: 79
 
 ### 系统状态
 - Gateway: ✅
@@ -21,11 +21,13 @@
 - Ollama迁移D盘完成
 - Firecrawl替换Tavily
 - OpenClaw系统漏洞优化辩论完成
+- 和皇上一起学习Agent知识辩论完成
 
-### 待皇上授权
-- Perplexity API key
-- 新三司会审议题
+### 飞书群配置（重要）
+- groupPolicy: allowlist
+- groupAllowFrom: ["oc_7ff140c90bcdd119a6ddc59610c30829"]
+- groupSenderAllowFrom: ["ou_82c708d3c070ec7be65a899b7533c5e4"]
 
 ---
 
-*鱼香肉丝存档 17:40*
+*鱼香肉丝存档 18:46*
