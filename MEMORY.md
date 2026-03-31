@@ -79,7 +79,7 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 |------|------|------|------|
 | 大理寺卿 | 狄仁杰 | MiniMax-M2.7 | 主持三司会审，分拆任务，调度全局 |
 | 都察院御史 | 李元芳 | DeepSeek V3 | 搜索情报，内容工作 |
-| 刑部尚书 | 魏征 | MiniMax-M2.7（Ollama下载中） | 技术研究，技术落地，执行 |
+| 刑部尚书 | 魏征 | MiniMax-M2.7 | 技术研究，技术落地，执行 |
 
 ---
 
@@ -131,7 +131,7 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 |------|------|------|---------| 
 | 大理寺卿 | 狄仁杰 | MiniMax-M2.7 | cli_a94cc0b181f85bca |
 | 都察院御史 | 李元芳 | DeepSeek V3 | cli_a943fc86b9381bc0 |
-| 刑部尚书 | 魏征 | Ollama gpt-oss:20b | cli_a94358c6153bdbca |
+| 刑部尚书 | 魏征 | MiniMax-M2.7 | cli_a94358c6153bdbca |
 
 **飞书群ID:**
 | 群 | ID |

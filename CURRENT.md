@@ -19,8 +19,7 @@
 - [x] 2个监控cron创建 ✅
 - [x] 三人夜学cron设置 ✅
 - [x] L4进化5个机制规格（狄仁杰夜学）✅
-- [x] Ollama合理科学利用决议 ✅
-- [x] Ollama测试结果 ✅（qwen3-coder:30b主力，gpt-oss:20b备用）
+
 
 ### 明日待办
 - [ ] L5专题研究
@@ -28,7 +27,7 @@
 
 ## 系统状态
 - Gateway: ✅
-- Ollama: ✅ qwen3-coder:30b（主力）+ gpt-oss:20b（备用）
+
 - Firecrawl: 525 credits
 
 ---
