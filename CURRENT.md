@@ -1,8 +1,8 @@
 # CURRENT.md - 狄仁杰的当下上下文
-> 最后更新：2026-03-31 18:46 GMT+8
+> 最后更新：2026-03-31 19:15 GMT+8
 
 ## 现在是什么时候
-2026-03-31 18:46（周二傍晚）
+2026-03-31 19:15（周二傍晚）
 
 ## 我们在哪
 皇上发存档暗号"鱼香肉丝"，立即全面存档。
@@ -23,19 +23,19 @@
 - [x] Firecrawl替换Tavily ✅
 - [x] openclaw.json新secret生效
 - [x] P1审计日志框架 ✅
-- [x] P2 DPAPI加密方案 ✅（验证成功，Registry存储备用）
+- [x] P2 DPAPI加密方案 ✅
 - [x] P3会话隔离方案 ✅
 - [x] cron优化（timeout调整）✅
 - [x] 三司会审OpenClaw系统漏洞优化辩论 ✅
 - [x] 三司会审Ollama+OpenClaw结合辩论 ✅
 - [x] 三司会审和皇上一起学习Agent知识辩论 ✅
-- [x] groupAllowFrom配置（飞书群消息接收）✅
+- [x] 公共知识库重建（research/operations/lessons/archive）✅
+- [x] L1-L5心跳考核机制确立 ✅
 
 ## 系统状态
 - Gateway: ✅ 运行中
 - Ollama: ✅ D盘，gpt-oss:20b
 - Firecrawl: 525 credits
-- qwen3-coder-next: 已停止
 
 ## 今日重要教训
 1. Feishu secret env引用在Windows服务下失效 → 必须用实际值
@@ -48,11 +48,27 @@
 ## 飞书群配置（关键）
 - groupPolicy: allowlist
 - groupAllowFrom: ["oc_7ff140c90bcdd119a6ddc59610c30829"]
-- groupSenderAllowFrom: ["ou_82c708d3c070ec7be65a899b7533c5e4"]（皇上ID）
+- groupSenderAllowFrom: ["ou_82c708d3c070ec7be65a899b7533c5e4"]
+
+## L1-L5心跳考核机制
+| 阶段 | 关键词 | 特征 |
+|------|-------|------|
+| L1 | 等指示 | 被动执行 |
+| L2 | 发现了 | 不等指令就行动 |
+| L3 | 我分享给 | 主动协作+知识共享 |
+| L4 | 我计划 | 自我管理，狄仁杰只拍板 |
+| L5 | 我创建 | 创造新框架 |
+
+**当前阶段：**
+- 狄仁杰：L3
+- 李元芳：L2巅峰
+- 魏征：L2巅峰
+
+**心跳Cron：** 周一至周五 18:00，三司会审大群发每日心跳
 
 ## 存档暗号
 "鱼香肉丝" = 立即全面存档（CURRENT + memory + hot + Git push）
 
 ---
 
-*2026-03-31 18:46 - 鱼香肉丝存档完成*
+*2026-03-31 19:15 - 鱼香肉丝存档完成*
