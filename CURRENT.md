@@ -1,11 +1,11 @@
 # CURRENT.md - 狄仁杰的当下上下文
-> 最后更新：2026-03-31 18:46 GMT+8
+> 最后更新：2026-04-01 08:30 GMT+8
 
 ## 现在是什么时候
-2026-03-31 18:46（周二傍晚）
+2026-04-01 08:30（周三早晨）
 
 ## 我们在哪
-皇上发存档暗号"鱼香肉丝"，立即全面存档。
+狄仁杰中强度夜学触发（cron设置21:00，实际08:11异常触发）。执行研究+整理+复盘，已完成。
 
 ## 三司会审v3.1架构（确立）
 | 角色 | 名字 | 权力边界 | 最终责任 |
@@ -14,45 +14,50 @@
 | 都察院御史 | 李元芳 | 信息完备性判断权 | 情报准确性 |
 | 刑部尚书 | 魏征 | 技术否决权（附约束） | 工具可靠性 |
 
-## 三司会审今日完成
+## 三司会审昨日完成（03-31）
 - [x] 三司会审运作协议v3.1
 - [x] 记忆分层边界政策
 - [x] Sprint验收标准
-- [x] Skills统一索引（107个）
+- [x] Skills统一索引（79个）
 - [x] Ollama迁移D盘 ✅
 - [x] Firecrawl替换Tavily ✅
 - [x] openclaw.json新secret生效
 - [x] P1审计日志框架 ✅
-- [x] P2 DPAPI加密方案 ✅（验证成功，Registry存储备用）
+- [x] P2 DPAPI加密方案 ✅
 - [x] P3会话隔离方案 ✅
-- [x] cron优化（timeout调整）✅
+- [x] Cron优化（timeout调整）✅
 - [x] 三司会审OpenClaw系统漏洞优化辩论 ✅
 - [x] 三司会审Ollama+OpenClaw结合辩论 ✅
 - [x] 三司会审和皇上一起学习Agent知识辩论 ✅
 - [x] groupAllowFrom配置（飞书群消息接收）✅
+- [x] 8个学习任务（100%完成率）
 
 ## 系统状态
 - Gateway: ✅ 运行中
 - Ollama: ✅ D盘，gpt-oss:20b
 - Firecrawl: 525 credits
-- qwen3-coder-next: 已停止
+- Cron Jobs: 14个enabled，0个熔断，4个单次error
 
-## 今日重要教训
-1. Feishu secret env引用在Windows服务下失效 → 必须用实际值
-2. DeepSeek API 404 → 切换到MiniMax
-3. Ollama pull不支持断点续传 → 中断后从头开始
-4. openclaw doctor会覆盖配置 → 手动修改后不要运行doctor
-5. groupAllowFrom/groupSenderAllowFrom 必须配置才能接收群消息
-6. 配置被还原 → 可能是doctor覆盖了配置
+## Cron Error任务（4个，单次错误，非熔断）
+| 任务 | 错误 | 根因 |
+|------|------|------|
+| 李元芳-数据获取学习 | Message failed | 飞书API |
+| 狄仁杰-长时记忆学习 | Message failed | 飞书API |
+| 狄仁杰-深度学习Sprint2 | GatewayDraining | 重启恢复 |
+| 魏征-云端环境学习 | Message failed | 飞书API |
 
-## 飞书群配置（关键）
-- groupPolicy: allowlist
-- groupAllowFrom: ["oc_7ff140c90bcdd119a6ddc59610c30829"]
-- groupSenderAllowFrom: ["ou_82c708d3c070ec7be65a899b7533c5e4"]（皇上ID）
+## 🔴 待皇上确认
+- 兔兔状态（hot-1h.md记录急救事件）
 
-## 存档暗号
-"鱼香肉丝" = 立即全面存档（CURRENT + memory + hot + Git push）
+## 🔴 Cron触发异常
+- 21:00设置的任务在08:11触发，时区或调度问题待查
+
+## 夜学完成
+- [x] Cron健康度分析
+- [x] 03-31学习成果盘点
+- [x] 知识库结构梳理
+- [x] 写入 memory/2026-04-01.md
 
 ---
 
-*2026-03-31 18:46 - 鱼香肉丝存档完成*
+*2026-04-01 08:30 - 夜学完成*
