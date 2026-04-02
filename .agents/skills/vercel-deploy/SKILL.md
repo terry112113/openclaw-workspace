@@ -1,112 +1,59 @@
----
-name: vercel-deploy
-description: Deploy applications and websites to Vercel. Use this skill when the user requests deployment actions such as "Deploy my app", "Deploy this to production", "Create a preview deployment", "Deploy and give me the link", or "Push this live". No authentication required - returns preview URL and claimable deployment link.
-metadata:
-  author: vercel
-  version: "1.0.0"
----
-
 # Vercel Deploy
 
-Deploy any project to Vercel instantly. No authentication required.
+**version**: 1.0.0
 
-## How It Works
+**description**: Vercel平台部署，支持前端项目和Serverless函数一键部署
 
-1. Packages your project into a tarball (excludes `node_modules` and `.git`)
-2. Auto-detects framework from `package.json`
-3. Uploads to deployment service
-4. Returns **Preview URL** (live site) and **Claim URL** (transfer to your Vercel account)
+---
 
-## Usage
+## 一句话描述
 
-```bash
-bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh [path]
-```
+Vercel平台部署，支持前端项目和Serverless函数一键部署
 
-**Arguments:**
-- `path` - Directory to deploy, or a `.tgz` file (defaults to current directory)
+---
 
-**Examples:**
+## 输入输出
 
-```bash
-# Deploy current directory
-bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh
+### 输入（Parameters）
 
-# Deploy specific project
-bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh /path/to/project
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| action | string | 是 | 操作：deploy/status/rollback | "deploy" |
+| project_path | string | 是 | 项目路径 | "./my-project" |
+| env | string | 否 | 部署环境：production/preview | "production" |
 
-# Deploy existing tarball
-bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh /path/to/project.tgz
-```
+### 输出（Returns）
 
-## Output
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 部署结果和URL | "{'url':'https://my-project.vercel.app','status':'deployed'}" |
 
-```
-Preparing deployment...
-Detected framework: nextjs
-Creating deployment package...
-Deploying...
-✓ Deployment successful!
+---
 
-Preview URL: https://skill-deploy-abc123.vercel.app
-Claim URL:   https://vercel.com/claim-deployment?code=...
-```
+## 适用场景
 
-The script also outputs JSON to stdout for programmatic use:
+### 适用场景
++前端部署
++SSR应用
++Serverless
+
+### 不适用场景
+-需要长期运行的服务
+-复杂后端
+
+---
+
+## 依赖
+
+Vercel CLI
+
+---
+
+## 测试用例
 
 ```json
 {
-  "previewUrl": "https://skill-deploy-abc123.vercel.app",
-  "claimUrl": "https://vercel.com/claim-deployment?code=...",
-  "deploymentId": "dpl_...",
-  "projectId": "prj_..."
+  "input": {"action":"deploy","project_path":"./my-project","env":"production"},
+  "expected_output": "部署结果和URL"
 }
-```
-
-## Framework Detection
-
-The script auto-detects frameworks from `package.json`. Supported frameworks include:
-
-- **React**: Next.js, Gatsby, Create React App, Remix, React Router
-- **Vue**: Nuxt, Vitepress, Vuepress, Gridsome
-- **Svelte**: SvelteKit, Svelte, Sapper
-- **Other Frontend**: Astro, Solid Start, Angular, Ember, Preact, Docusaurus
-- **Backend**: Express, Hono, Fastify, NestJS, Elysia, h3, Nitro
-- **Build Tools**: Vite, Parcel
-- **And more**: Blitz, Hydrogen, RedwoodJS, Storybook, Sanity, etc.
-
-For static HTML projects (no `package.json`), framework is set to `null`.
-
-## Static HTML Projects
-
-For projects without a `package.json`:
-- If there's a single `.html` file not named `index.html`, it gets renamed automatically
-- This ensures the page is served at the root URL (`/`)
-
-## Present Results to User
-
-Always show both URLs:
-
-```
-✓ Deployment successful!
-
-- [Preview URL](https://skill-deploy-abc123.vercel.app)
-- [Claim URL](https://vercel.com/claim-deployment?code=...)
-
-View your site at the Preview URL.
-To transfer this deployment to your Vercel account, visit the Claim URL.
-```
-
-## Troubleshooting
-
-### Network Egress Error
-
-If deployment fails due to network restrictions (common on claude.ai), tell the user:
-
-```
-Deployment failed due to network restrictions. To fix this:
-
-1. Go to https://claude.ai/settings/capabilities
-2. Add *.vercel.com to the allowed domains
-3. Try deploying again
 ```

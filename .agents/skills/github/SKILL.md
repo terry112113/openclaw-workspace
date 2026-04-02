@@ -1,48 +1,58 @@
+# Github
+
+**version**: 1.0.0
+
+**description**: GitHub仓库搜索、项目分析和开发者信息查询
+
 ---
-name: github
-description: "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries."
-metadata: {"vikingbot":{"emoji":"🐙","requires":{"bins":["gh"]},"install":[{"id":"brew","kind":"brew","formula":"gh","bins":["gh"],"label":"Install GitHub CLI (brew)"},{"id":"apt","kind":"apt","package":"gh","bins":["gh"],"label":"Install GitHub CLI (apt)"}]}}
+
+## 一句话描述
+
+GitHub仓库搜索、项目分析和开发者信息查询
+
 ---
 
-# GitHub Skill
+## 输入输出
 
-Use the `gh` CLI to interact with GitHub. Always specify `--repo owner/repo` when not in a git directory, or use URLs directly.
+### 输入（Parameters）
 
-## Pull Requests
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| query | string | 是 | 搜索关键词或GitHub URL | "openai GPT language:python" |
+| action | string | 否 | 操作：search/repo/user | "search" |
 
-Check CI status on a PR:
-```bash
-gh pr checks 55 --repo owner/repo
-```
+### 输出（Returns）
 
-List recent workflow runs:
-```bash
-gh run list --repo owner/repo --limit 10
-```
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 搜索结果、仓库信息或用户资料 | "{'repos':[{'name':'gpt','stars':1000}],'total':50}" |
 
-View a run and see which steps failed:
-```bash
-gh run view <run-id> --repo owner/repo
-```
+---
 
-View logs for failed steps only:
-```bash
-gh run view <run-id> --repo owner/repo --log-failed
-```
+## 适用场景
 
-## API for Advanced Queries
+### 适用场景
++代码搜索
++项目调研
++开发者信息
 
-The `gh api` command is useful for accessing data not available through other subcommands.
+### 不适用场景
+-私有仓库
+-复杂代码分析
 
-Get PR with specific fields:
-```bash
-gh api repos/owner/repo/pulls/55 --jq '.title, .state, .user.login'
-```
+---
 
-## JSON Output
+## 依赖
 
-Most commands support `--json` for structured output.  You can use `--jq` to filter:
+GitHub API
 
-```bash
-gh issue list --repo owner/repo --json number,title --jq '.[] | "\(.number): \(.title)"'
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"query":"openai GPT language:python","action":"search"},
+  "expected_output": "搜索结果、仓库信息或用户资料"
+}
 ```

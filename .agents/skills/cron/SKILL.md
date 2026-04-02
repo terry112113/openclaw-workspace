@@ -1,47 +1,61 @@
----
-name: cron
-description: Schedule reminders and recurring tasks.
----
-
 # Cron
 
-Use the `cron` tool to schedule reminders or recurring tasks.
+**version**: 1.0.0
 
-## Three Modes
+**description**: 定时提醒和周期性任务调度，支持一次性提醒和循环任务
 
-1. **Reminder** - message is sent directly to user
-2. **Task** - message is a task description, agent executes and sends result
-3. **One-time** - runs once at a specific time, then auto-deletes
+---
 
-## Examples
+## 一句话描述
 
-Fixed reminder:
+定时提醒和周期性任务调度，支持一次性提醒和循环任务
+
+---
+
+## 输入输出
+
+### 输入（Parameters）
+
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| action | string | 是 | 操作类型：add/list/remove | "add" |
+| message | string | 是 | 提醒内容 | "会议5分钟后开始" |
+| every_seconds | number | 否 | 循环间隔秒数 | 3600 |
+| at | string | 否 | 一次性执行时间(ISO格式) | "2026-04-01T15:00:00" |
+| job_id | string | 否 | 任务ID（remove时必填） | "job-123" |
+
+### 输出（Returns）
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 操作结果或执行反馈 | "{'job_id':'job-123','next_run':'15:00'}" |
+
+---
+
+## 适用场景
+
+### 适用场景
++定时提醒
++周期任务
++自动化调度
+
+### 不适用场景
+-实时任务
+-长时间运行任务
+
+---
+
+## 依赖
+
+Cron系统
+
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"action":"add","message":"会议5分钟后","every_seconds":3600},
+  "expected_output": "操作结果或执行反馈"
+}
 ```
-cron(action="add", message="Time to take a break!", every_seconds=1200)
-```
-
-Dynamic task (agent executes each time):
-```
-cron(action="add", message="Check HKUDS/vikingbot GitHub stars and report", every_seconds=600)
-```
-
-One-time scheduled task (compute ISO datetime from current time):
-```
-cron(action="add", message="Remind me about the meeting", at="<ISO datetime>")
-```
-
-List/remove:
-```
-cron(action="list")
-cron(action="remove", job_id="abc123")
-```
-
-## Time Expressions
-
-| User says | Parameters |
-|-----------|------------|
-| every 20 minutes | every_seconds: 1200 |
-| every hour | every_seconds: 3600 |
-| every day at 8am | cron_expr: "0 8 * * *" |
-| weekdays at 5pm | cron_expr: "0 17 * * 1-5" |
-| at a specific time | at: ISO datetime string (compute from current time) |

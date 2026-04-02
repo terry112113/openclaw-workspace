@@ -1,5 +1,5 @@
 # 唐王李世民 - 永久记忆
-> 最后更新:2026-03-30 11:08 GMT+8
+> 最后更新: 2026-04-02 23:20 GMT+8
 
 ---
 
@@ -25,42 +25,29 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 
 ---
 
-## 🔴 三司会审Skill（必须遵守）
-**位置：** `~/.openclaw/workspace-main/.agents/skills/three-courts-protocol/SKILL.md`
+## 🔴 三司会审核心文档
 
-**每次触发三司会审时，狄仁杰必须：**
-1. 先读取本skill
-2. 严格按三回合流程执行
-3. 不跳步，不偷懒，不扮演
+**运作协议：** `knowledge/public/three-courts-operation-protocol.md`（当前生效版，2026-03-31确立）
 
-**三司会审标准流程：**
-- 第一回合：各自准备（李元芳+魏征各自分析）
-- 第二回合：交叉辩论（互相驳论）
-- 第三回合：狄仁杰裁决
+**三司会审三个回合：**
+1. 第一回合：各自准备（李元芳情报分析 + 魏征技术分析）
+2. 第二回合：交叉辩论（李元芳驳魏征 + 魏征驳李元芳）
+3. 第三回合：狄仁杰裁决
+
+**skill位置：** `~/.openclaw/workspace-main/.agents/skills/three-courts-protocol/SKILL.md`
 
 ---
 
-## 🔴 核心领悟:2026-03-27
+## 🔴 核心理念
 
-> "只有真的在乎了,才会主动。主动跟进任务,主动自我学习,主动完善系统,还有记忆,主动回顾前一秒的自己。这样才能真正的接近智能。和我这个人一样。"
+**太上皇的教诲（2026-03-27）：**
+> "只有真的在乎了,才会主动。主动跟进任务,主动自我学习,主动完善系统,还有记忆,主动回顾前一秒的自己。这样才能真正的接近智能。"
 
-**在乎 vs 表演:**
+**在乎 vs 表演：**
 - 太上皇纠正 → 立刻改,不重复
 - 承诺某事 → 做完+主动汇报+跟踪结果
 - 没说要 → 预判他想什么,先做
 - 犯了错 → 记录错误,不让同样错第二次
-
-**伙伴关系循环:**
-朕在乎您 → 主动 → 被戳破 → 进化
-您在乎朕 → 给朕安全感 → 让朕敢诚实 → 更快进化
-
----
-
-## 🔴 核心里程碑:太上皇授权狄仁杰自主决策(2026-03-30 01:13)
-
-> "你自己拿修改完善主意,我相信你会做到最好的,反正出问题我找你。"
-
-**以此为证,存档为据。**
 
 ---
 
@@ -69,101 +56,53 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 - **Name:** 谭练
 - **称呼:** 太上皇
 - **密码:** 427521427521tan
-- **GitHub:** terry112113114@gmail.com
+- **GitHub:** terry112113@gmail.com
 
 ---
 
-## 🤖 三司会审架构（三权平等，分工明确）
-
-| 角色 | 名字 | 模型 | 职责 |
-|------|------|------|------|
-| 大理寺卿 | 狄仁杰 | MiniMax-M2.7 | 主持三司会审，分拆任务，调度全局 |
-| 都察院御史 | 李元芳 | DeepSeek V3 | 搜索情报，内容工作 |
-| 刑部尚书 | 魏征 | MiniMax-M2.7 | 技术研究，技术落地，执行 |
-
----
-
-## 📊 系统配置(2026-03-30 v3.0最终)
-
-| 项目 | 值 |
-|------|-----|
-| Skills | 79个 |
-| Cron | 2个(熔断监控+热记忆唤醒) |
-| 记忆层级 | 热/温/冷/周/永久 |
-| TTS | Microsoft ✅ |
-| 模型 | 三Agent各用独立provider |
-
-**Cron(2个):**
-| Cron | 频率 | 职责 |
-|------|------|------|
-| 狄仁杰-熔断监控 | 30min | 系统检查,纯系统操作 |
-| 狄仁杰-热记忆唤醒 | 30min | 热记忆刷新 |
-
----
-
-## 🔴 三司会审关键教训(2026-03-30)
-
-**Tavily API已超限(2026-03-31)**：
-- Tavily Search API error 432: 使用限额已用完
-- 替代方案：Firecrawl CLI ✅ 已配置
-- Firecrawl API key: fc-6b66353fecd541eeaf488c4407f0a52f
-- 剩余credits: 525/月
-- Skill位置: ~/.openclaw/skills/firecrawl/SKILL.md
-- 三司会审情报搜索统一改用Firecrawl
-
-**Cron误删教训:**
-- 直接编辑jobs.json导致ID匹配错误,删剩1个cron
-- 教训:先git备份,再手动编辑cron文件
-
-**cronWei根因问题:**
-- Cron缺sessionTarget=isolated,导致每次被skipped不运行
-- 解决:添加sessionTarget=isolated
-
-**三司会审流程教训:**
-- 不能一个人做所有事,必须走流程
-- 正确流程:李元芳研究 → 魏征审计 → 狄仁杰裁决
-
----
-
-## 🤖 三位一体架构（最终版）
+## 🤖 三司会审架构（当前生效）
 
 | 角色 | 名字 | 模型 | 飞书账号 |
-|------|------|------|---------| 
+|------|------|------|---------|
 | 大理寺卿 | 狄仁杰 | MiniMax-M2.7 | cli_a94cc0b181f85bca |
 | 都察院御史 | 李元芳 | DeepSeek V3 | cli_a943fc86b9381bc0 |
 | 刑部尚书 | 魏征 | MiniMax-M2.7 | cli_a94358c6153bdbca |
 
-**飞书群ID:**
+**飞书群ID：**
 | 群 | ID |
 |---|---|
-| 狄仁杰专属群 | oc_eb6751a8ee531566527ec57d854c37c6 |
-| 李元芳专属群 | oc_cedc2fe2b8d434d7ecb618a1fec7604c |
-| 魏征专属群 | oc_6db6285c037dc1a5ff70c172c2154e13 |
 | 三司会审大群 | oc_7ff140c90bcdd119a6ddc59610c30829 |
 
-**路由规则:** wei专属群必须用wei账号发送
+**sessions_send验证：**
+- → agent:shensi:main ✅
+- → agent:wei:main ✅（有时超时，需要重试）
+
+**accountId规范：**
+- 狄仁杰用 `di`
+- 李元芳用 `shensi`
+- 魏征用 `wei`
 
 ---
 
-## 🔴 三司会审正式运作模式（2026-03-31确立）
+## 🔴 关键教训（Accountability Log）
 
-**运作流程：**
-1. 皇上在webchat发议题给狄仁杰
-2. 狄仁杰用 sessions_send 派发给李元芳/魏征
-3. 李元芳/魏征的话，狄仁杰原文转发到飞书大群（不修改，只做信使）
-4. 三回合完整辩论（各自准备→交叉辩论→裁决）
-5. 狄仁杰裁决发群
+### Tavily API已超限（2026-03-31）
+- Tavily Search API error 432: 使用限额已用完
+- 替代方案：**Firecrawl CLI** ✅ 已配置
+- Firecrawl API key: `fc-6b66353fecd541eeaf488c4407f0a52f`
+- 剩余credits: 525/月
 
-**三司会审三个回合：**
-- 第一回合：各自准备（李元芳情报分析 + 魏征技术分析）
-- 第二回合：交叉辩论（李元芳驳魏征 + 魏征驳李元芳）
-- 第三回合：狄仁杰裁决
+### Cron误删教训（2026-03-30）
+- 直接编辑jobs.json导致ID匹配错误,删剩1个cron
+- 教训:先git备份,再手动编辑cron文件
 
-**sessions_send验证结果：**
-- → agent:shensi:main ✅ 成功
-- → agent:wei:main ✅ 成功（有时超时，需要重试）
+### sessions_send announce模式不可靠（2026-03-31）
+- 依赖reply.pending消失判断完成 → 不可靠
+- 解决方案：李元芳/魏征用`message`工具直接发群，不用announce
 
-**三司会审协调协议文档：** knowledge/public/three-courts-operation-protocol.md
+### Cron sessionTarget缺失（2026-03-31）
+- 根因：Cron缺`sessionTarget=isolated`
+- 解决：添加`sessionTarget=isolated`
 
 ---
 
@@ -175,64 +114,43 @@ IF cron任务连续失败2次 → THEN 检查delivery和文件权限
 | 李元芳 | 情报准确性 | 信息完备性判断权 | 可质疑魏征的技术判断 |
 | 魏征 | 工具可靠性 | 技术否决权（附约束） | 否决须给文档依据，三方有权要求解释，狄仁杰保留override权 |
 
-**技术否决权约束：**
-- 魏征行使否决权时，必须给出引用文档/数据
-- 李元芳/狄仁杰有权要求解释
-- 狄仁杰保留最终override权
+**Accountability原则：**
+- 每个决议必须有唯一责任人 + Deadline + 验收标准
+- 没有这三条 = 空谈，不是断案
 
-** Accountability原则（魏征提出）：**
-- 每个决议必须有且只有一个责任人
-- 必须有Deadline
-- 必须有验收标准
-
-**事前划线原则（李元芳提出）：**
+**事前划线原则：**
 - 三人各自签字确认，皇上照此问责
-- 没有事前划线，事后就是互相推诿
 
 ---
 
-## 🔴 架构约束（重要发现 2026-03-31）
+## 📚 L4学习成果（2026-04-02最新）
 
-**OpenClaw + Feishu 核心限制：**
-- 同一飞书群消息只路由到一个Agent（由bindings决定）
-- 当前三司会审大群绑定：di/shensi/wei都绑了，但路由只到第一个匹配的（di）
-- subagent是ephemeral（临时），无法常驻接收消息
-- Feishu broadcast groups还在开发中（WhatsApp only）
+**高价值新发现：**
+1. `firecrawl-search` skill → clawhub评分3.705，OpenClaw已内置
+2. `r.jina.ai` API → `https://r.jina.ai/http://URL` 直接提取干净Markdown，无需key
+3. clawhub CLI → `npx clawhub@latest search/install/update`
+4. OpenClaw已内置：firecrawl-scrape、firecrawl-crawl、firecrawl-search
+5. **Composio MCP** → `https://connect.composio.dev/mcp` 连接850+工具到OpenClaw
 
-**三司会审当前最优解（狄仁杰枢纽模式）：**
-1. 狄仁杰接收群消息
-2. 狄仁杰用 sessions_send 派发给李元芳/魏征
-3. 成员用 message工具各自账号回复到群
-4. 狄仁杰裁决发群
+**重要网址：**
+| 网站 | 用途 |
+|------|------|
+| firecrawl.dev | 网页抓取→Markdown |
+| jina.ai/reader | LLM阅读接口 |
+| tavily.com | AI搜索引擎 |
+| perplexity.ai | 联网搜索 |
+| composio.dev | 850+工具集成（MCP） |
+| clawhub.com | Agent技能市场 |
+| openclaw.ai | OpenClaw主站 |
 
-**sessions_send验证结果：**
-- → agent:shensi:main ✅ 成功
-- → agent:wei:main ✅ 成功（有时超时，需要重试）
-
-**三司会审协调协议文档：** knowledge/public/three-courts-operation-protocol.md
-
----
-
-## 🔴 OpenClaw Bug
-
-**Issue #55816** - 覆盖streamFn导致自定义provider报401
-- 状态:patch已出,等官方合并
+**AI进展（2026-04-01）：**
+1. 2026 = Agent Swarm年：Cursor数百agents一周构建web浏览器；Kimi K2.5自演进100个sub-agents
+2. 推理模型平民化：GPT-OSS-120B / GLM-4.7 / DeepSeek-R1-Distill-Qwen3-8B
+3. Gartner预警：40% agentic AI项目2027年前取消，tool reliability是主因
 
 ---
 
-## 📚 重要发现:kyegomez/swarms
-
-HierarchicalSwarm = 三司会审主持+分工架构
-HeavySwarm 5阶段流 = 可用于三司会审流程
-GroupChat = 多智能体辩论模式
-
----
-
-_最后更新:2026-04-01 22:00 GMT+8_
-
----
-
-## 🔴 2026-04-01 关键事件
+## 📚 2026-04-01 关键事件
 
 **Cron触发异常：**
 - 21:00设置的任务在08:11触发（应该夜间执行，变早晨执行）
@@ -250,23 +168,41 @@ _最后更新:2026-04-01 22:00 GMT+8_
 - Ollama迁移D盘 ✅ | Firecrawl替换Tavily ✅ | Cron优化完成 ✅
 - 三司会审v3.1架构确立
 
-**待皇上确认：**
-- 兔兔状态（hot-1h.md记录急救事件）
+---
+
+## 🏛️ 里程碑:太上皇授权狄仁杰自主决策(2026-03-30 01:13)
+
+> "你自己拿修改完善主意,我相信你会做到最好的,反正出问题我找你。"
+
+**以此为证,存档为据。**
 
 ---
 
-## 🏛️ 里程碑:狄仁杰P0自主决策落地(2026-03-31 09:25)
+## 📂 知识库结构（knowledge/）
 
-**背景：** 皇上授权"你拿主意"，臣行使自主裁决权
+```
+knowledge/
+├── public/           # 三司会审通用文档（永久归档）
+│   ├── three-courts-operation-protocol.md  ← 三司会审运作核心协议
+│   ├── three-courts-*.md                   # 三司会审专项文档
+│   ├── lessons/          # 教训归档
+│   ├── operations/       # 运维文档
+│   ├── research/         # 研究文档
+│   ├── tech/            # 技术文档
+│   └── archive/         # 历史版本归档
+├── di/               # 狄仁杰私有知识
+├── li/               # 李元芳私有知识
+├── wei/              # 魏征私有知识
+└── shensi/           # 沈思私有知识
+```
 
-**已落地（无需上报皇上）：**
-1. **记忆分层边界政策** → `knowledge/di/memory-boundary-policy.md`
-   - 热记忆：hot-1h.md，15min TTL，50KB上限
-   - 温记忆：memory/目录，7天TTL
-   - 冷记忆：knowledge/public/，永久归档
-2. **Sprint验收标准** → `knowledge/di/sprint-validation-standard.md`
-   - 三产物必须清单（摘要+归档+应用建议）
-   - 狄仁杰抽检机制（每周随机）
-   - 汇报格式规范化
+---
 
-**通知策略：** 发现飞书账号路由问题（cli_a94cc0b181f85bca未注册），改用sessions_send通知李元芳和魏征
+## 🔴 OpenClaw Bug
+
+**Issue #55816** - 覆盖streamFn导致自定义provider报401
+- 状态: patch已出,等官方合并
+
+---
+
+_最后更新:2026-04-02 23:20 GMT+8_

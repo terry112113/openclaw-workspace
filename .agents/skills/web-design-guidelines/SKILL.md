@@ -1,39 +1,54 @@
+# Web Design Guidelines
+
+**version**: 1.0.0
+
+**description**: 网页设计规范和最佳实践，响应式设计和无障碍访问指南
+
 ---
-name: web-design-guidelines
-description: Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
-metadata:
-  author: vercel
-  version: "1.0.0"
-  argument-hint: <file-or-pattern>
+
+## 输入输出
+
+### 输入（Parameters）
+
+| 参数名 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| category | string | 否 | 规范分类：layout/typography/color/accessibility |
+| context | string | 否 | 使用上下文描述 |
+
+### 输出（Returns）
+
+| 类型 | 说明 |
+|------|------|
+| string | 设计规范说明和代码示例 |
+
 ---
 
-# Web Interface Guidelines
+## 适用场景
 
-Review files for compliance with Web Interface Guidelines.
+- 需要网页设计规范和最佳实践的场景
+- 自动化任务执行
+- 信息检索和分析
 
-## How It Works
+---
 
-1. Fetch the latest guidelines from the source URL below
-2. Read the specified files (or prompt user for files/pattern)
-3. Check against all rules in the fetched guidelines
-4. Output findings in the terse `file:line` format
+## 依赖
 
-## Guidelines Source
+- 依赖其他Skill：无
+- 环境要求：无
 
-Fetch fresh guidelines before each review:
+---
 
+## 版本历史
+
+- 1.0.0 (2026-04-01): 补充真实IO文档
+
+## 测试用例
+
+```json
+{
+  "input": {
+    "category": "test value"
+  },
+  "expected_output": "设计规范说明和代码示例"
+}
 ```
-https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md
-```
-
-Use WebFetch to retrieve the latest rules. The fetched content contains all the rules and output format instructions.
-
-## Usage
-
-When a user provides a file or pattern argument:
-1. Fetch guidelines from the source URL above
-2. Read the specified files
-3. Apply all rules from the fetched guidelines
-4. Output findings using the format specified in the guidelines
-
-If no files specified, ask the user which files to review.

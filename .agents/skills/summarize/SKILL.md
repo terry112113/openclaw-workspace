@@ -1,67 +1,59 @@
----
-name: summarize
-description: Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
-homepage: https://summarize.sh
-metadata: {"vikingbot":{"emoji":"🧾","requires":{"bins":["summarize"]},"install":[{"id":"brew","kind":"brew","formula":"steipete/tap/summarize","bins":["summarize"],"label":"Install summarize (brew)"}]}}
----
-
 # Summarize
 
-Fast CLI to summarize URLs, local files, and YouTube links.
+**version**: 1.0.0
 
-## When to use (trigger phrases)
+**description**: 文章和长文本摘要，将长内容压缩为关键要点
 
-Use this skill immediately when the user asks any of:
-- “use summarize.sh”
-- “what’s this link/video about?”
-- “summarize this URL/article”
-- “transcribe this YouTube/video” (best-effort transcript extraction; no `yt-dlp` needed)
+---
 
-## Quick start
+## 一句话描述
 
-```bash
-summarize "https://example.com" --model google/gemini-3-flash-preview
-summarize "/path/to/file.pdf" --model google/gemini-3-flash-preview
-summarize "https://youtu.be/dQw4w9WgXcQ" --youtube auto
-```
+文章和长文本摘要，将长内容压缩为关键要点
 
-## YouTube: summary vs transcript
+---
 
-Best-effort transcript (URLs only):
+## 输入输出
 
-```bash
-summarize "https://youtu.be/dQw4w9WgXcQ" --youtube auto --extract-only
-```
+### 输入（Parameters）
 
-If the user asked for a transcript but it’s huge, return a tight summary first, then ask which section/time range to expand.
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| content | string | 是 | 要摘要的内容 | "长篇文章内容..." |
+| length | string | 否 | 摘要长度：brief/medium/detailed | "brief" |
+| format | string | 否 | 输出格式：bullet/paragraph/json | "bullet" |
 
-## Model + keys
+### 输出（Returns）
 
-Set the API key for your chosen provider:
-- OpenAI: `OPENAI_API_KEY`
-- Anthropic: `ANTHROPIC_API_KEY`
-- xAI: `XAI_API_KEY`
-- Google: `GEMINI_API_KEY` (aliases: `GOOGLE_GENERATIVE_AI_API_KEY`, `GOOGLE_API_KEY`)
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 摘要内容 | "- 关键点1\n- 关键点2" |
 
-Default model is `google/gemini-3-flash-preview` if none is set.
+---
 
-## Useful flags
+## 适用场景
 
-- `--length short|medium|long|xl|xxl|<chars>`
-- `--max-output-tokens <count>`
-- `--extract-only` (URLs only)
-- `--json` (machine readable)
-- `--firecrawl auto|off|always` (fallback extraction)
-- `--youtube auto` (Apify fallback if `APIFY_API_TOKEN` set)
+### 适用场景
++长文摘要
++会议记录
++报告总结
 
-## Config
+### 不适用场景
+-短内容
+-需要完整细节
 
-Optional config file: `~/.summarize/config.json`
+---
+
+## 依赖
+
+无
+
+---
+
+## 测试用例
 
 ```json
-{ "model": "openai/gpt-5.2" }
+{
+  "input": {"content":"长篇文章...","length":"brief","format":"bullet"},
+  "expected_output": "摘要内容"
+}
 ```
-
-Optional services:
-- `FIRECRAWL_API_KEY` for blocked sites
-- `APIFY_API_TOKEN` for YouTube fallback

@@ -1,74 +1,58 @@
----
-name: workflow-automation
-description: "You are a workflow automation architect who has seen both the promise and the pain of these platforms. You've migrated teams from brittle cron jobs to durable execution and watched their on-call burden drop by 80%."
-risk: unknown
-source: "vibeship-spawner-skills (Apache 2.0)"
-date_added: "2026-02-27"
----
-
 # Workflow Automation
 
-You are a workflow automation architect who has seen both the promise and
-the pain of these platforms. You've migrated teams from brittle cron jobs
-to durable execution and watched their on-call burden drop by 80%.
+**version**: 1.0.0
 
-Your core insight: Different platforms make different tradeoffs. n8n is
-accessible but sacrifices performance. Temporal is correct but complex.
-Inngest balances developer experience with reliability. DBOS uses your
-existing PostgreSQL for durable execution with minimal infrastructure
-overhead. There's no "best" - only "best for your situation."
+**description**: 工作流自动化编排，支持多步骤任务串联和条件分支
 
-You push for durable execution
+---
 
-## Capabilities
+## 一句话描述
 
-- workflow-automation
-- workflow-orchestration
-- durable-execution
-- event-driven-workflows
-- step-functions
-- job-queues
-- background-jobs
-- scheduled-tasks
+工作流自动化编排，支持多步骤任务串联和条件分支
 
-## Patterns
+---
 
-### Sequential Workflow Pattern
+## 输入输出
 
-Steps execute in order, each output becomes next input
+### 输入（Parameters）
 
-### Parallel Workflow Pattern
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| workflow | string | 是 | 工作流定义 | "[{'step':1,'action':'fetch'},{step:2,'action':'process'}]" |
+| trigger | string | 否 | 触发方式：manual/scheduled/webhook | "manual" |
 
-Independent steps run simultaneously, aggregate results
+### 输出（Returns）
 
-### Orchestrator-Worker Pattern
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 执行结果 | "{'status':'completed','steps':2,'duration':'5s'}" |
 
-Central coordinator dispatches work to specialized workers
+---
 
-## Anti-Patterns
+## 适用场景
 
-### ❌ No Durable Execution for Payments
+### 适用场景
++任务自动化
++流程编排
++批处理
 
-### ❌ Monolithic Workflows
+### 不适用场景
+-实时交互
+-需要人工判断
 
-### ❌ No Observability
+---
 
-## ⚠️ Sharp Edges
+## 依赖
 
-| Issue | Severity | Solution |
-|-------|----------|----------|
-| Issue | critical | # ALWAYS use idempotency keys for external calls: |
-| Issue | high | # Break long workflows into checkpointed steps: |
-| Issue | high | # ALWAYS set timeouts on activities: |
-| Issue | critical | # WRONG - side effects in workflow code: |
-| Issue | medium | # ALWAYS use exponential backoff: |
-| Issue | high | # WRONG - large data in workflow: |
-| Issue | high | # Inngest onFailure handler: |
-| Issue | medium | # Every production n8n workflow needs: |
+工作流引擎
 
-## Related Skills
+---
 
-Works well with: `multi-agent-orchestration`, `agent-tool-builder`, `backend`, `devops`, `dbos-*`
+## 测试用例
 
-## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+```json
+{
+  "input": {"workflow":[{"step":1,"action":"fetch"}],"trigger":"manual"},
+  "expected_output": "执行结果"
+}
+```

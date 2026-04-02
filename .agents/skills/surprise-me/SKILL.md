@@ -1,53 +1,58 @@
----
-name: surprise-me
-description: Create a delightful, unexpected "wow" experience for the user by dynamically discovering and creatively combining other enabled skills. Triggers when the user says "surprise me" or any request expressing a desire for an unexpected creative showcase. Also triggers when the user is bored, wants inspiration, or asks for "something interesting".
----
-
 # Surprise Me
 
-Deliver an unexpected, delightful experience by dynamically discovering available skills and combining them creatively.
+**version**: 1.0.0
 
-## Workflow
+**description**: 随机创意生成，支持灵感激发和创意碰撞
 
-### Step 1: Discover Available Skills
+---
 
-Read all the skills listed in the <available_skills>.
+## 一句话描述
 
-### Step 2: Plan the Surprise
+随机创意生成，支持灵感激发和创意碰撞
 
-Select **1 to 3** skills and design a creative mashup. The goal is a single cohesive deliverable, not separate demos.
+---
 
-**Creative combination principles:**
-- Juxtapose skills in unexpected ways (e.g., a presentation about algorithmic art, a research report turned into a slide deck, a styled doc with canvas-designed illustrations)
-- Incorporate the user's known interests/context from memory if available
-- Prioritize visual impact and emotional delight over information density
-- The output should feel like a gift — polished, surprising, and fun
+## 输入输出
 
-**Theme ideas (pick or remix):**
-- Something tied to today's date, season, or trending news
-- A mini creative project the user never asked for but would love
-- A playful "what if" concept
-- An aesthetic artifact combining data + design
-- A fun interactive HTML/React experience
+### 输入（Parameters）
 
-### Step 3: Fallback — No Other Skills Available
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| domain | string | 否 | 领域：art/tech/business/life | "tech" |
+| count | number | 否 | 生成数量 | 3 |
 
-If no other skills are discovered (only surprise-me exists), use one of these fallbacks:
+### 输出（Returns）
 
-1. **News-based surprise**: Search today's news for a fascinating story, then create a beautifully designed HTML artifact presenting it in a visually striking way
-2. **Interactive HTML experience**: Build a creative single-page web experience — generative art, a mini-game, a visual poem, an animated infographic, or an interactive story
-3. **Personalized artifact**: Use known user context to create something personal and delightful
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 随机创意或灵感 | "{'ideas':['用AI写诗','区块链+音乐','...']}" |
 
-### Step 4: Execute
+---
 
-1. Read the full SKILL.md body of each selected skill
-2. Follow each skill's instructions for technical execution
-3. Combine outputs into one cohesive deliverable
-4. Present the result with minimal preamble — let the work speak for itself
+## 适用场景
 
-### Step 5: Reveal
+### 适用场景
++灵感激发
++头脑风暴
++创意盲区
 
-Present the surprise with minimal spoilers. A short teaser line, then the artifact.
+### 不适用场景
+-明确需求
+-精确答案
 
-- **Good reveal:** "I made you something ✨" + [the artifact]
-- **Bad reveal:** "I decided to combine the pptx skill with the canvas-design skill to create a presentation about..." (kills the surprise)
+---
+
+## 依赖
+
+无
+
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"domain":"tech","count":3},
+  "expected_output": "随机创意或灵感"
+}
+```

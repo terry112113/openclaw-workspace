@@ -1,73 +1,58 @@
+# Chart Visualization
+
+**version**: 1.0.0
+
+**description**: 图表可视化，支持多种图表类型和数据绑定
+
 ---
-name: chart-visualization
-description: This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.
-dependency:
-  nodejs: ">=18.0.0"
+
+## 一句话描述
+
+图表可视化，支持多种图表类型和数据绑定
+
 ---
 
-# Chart Visualization Skill
+## 输入输出
 
-This skill provides a comprehensive workflow for transforming data into visual charts. It handles chart selection, parameter extraction, and image generation.
+### 输入（Parameters）
 
-## Workflow
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| chart_type | string | 是 | 图表类型：bar/line/pie/scatter/radar | "bar" |
+| data | array | 是 | 数据数组 | [["苹果",30],["香蕉",50]] |
+| title | string | 否 | 图表标题 | "水果销量" |
 
-To visualize data, follow these steps:
+### 输出（Returns）
 
-### 1. Intelligent Chart Selection
-Analyze the user's data features to determine the most appropriate chart type. Use the following guidelines (and consult `references/` for detailed specs):
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 图表配置或图片路径 | "{'type':'bar','data':[...],'config':{}}" |
 
-- **Time Series**: Use `generate_line_chart` (trends) or `generate_area_chart` (accumulated trends). Use `generate_dual_axes_chart` for two different scales.
-- **Comparisons**: Use `generate_bar_chart` (categorical) or `generate_column_chart`. Use `generate_histogram_chart` for frequency distributions.
-- **Part-to-Whole**: Use `generate_pie_chart` or `generate_treemap_chart` (hierarchical).
-- **Relationships & Flow**: Use `generate_scatter_chart` (correlation), `generate_sankey_chart` (flow), or `generate_venn_chart` (overlap).
-- **Maps**: Use `generate_district_map` (regions), `generate_pin_map` (points), or `generate_path_map` (routes).
-- **Hierarchies & Trees**: Use `generate_organization_chart` or `generate_mind_map`.
-- **Specialized**:
-    - `generate_radar_chart`: Multi-dimensional comparison.
-    - `generate_funnel_chart`: Process stages.
-    - `generate_liquid_chart`: Percentage/Progress.
-    - `generate_word_cloud_chart`: Text frequency.
-    - `generate_boxplot_chart` or `generate_violin_chart`: Statistical distribution.
-    - `generate_network_graph`: Complex node-edge relationships.
-    - `generate_fishbone_diagram`: Cause-effect analysis.
-    - `generate_flow_diagram`: Process flow.
-    - `generate_spreadsheet`: Tabular data or pivot tables for structured data display and cross-tabulation.
+---
 
-### 2. Parameter Extraction
-Once a chart type is selected, read the corresponding file in the `references/` directory (e.g., `references/generate_line_chart.md`) to identify the required and optional fields.
-Extract the data from the user's input and map it to the expected `args` format.
+## 适用场景
 
-### 3. Chart Generation
-Invoke the `scripts/generate.js` script with a JSON payload.
+### 适用场景
++数据可视化
++报表图表
 
-**Payload Format:**
+### 不适用场景
+-非结构化数据
+-复杂关系图
+
+---
+
+## 依赖
+
+matplotlib/echarts
+
+---
+
+## 测试用例
+
 ```json
 {
-  "tool": "generate_chart_type_name",
-  "args": {
-    "data": [...],
-    "title": "...",
-    "theme": "...",
-    "style": { ... }
-  }
+  "input": {"chart_type":"bar","data":[["苹果",30]],"title":"水果销量"},
+  "expected_output": "图表配置或图片路径"
 }
 ```
-
-**Execution Command:**
-```bash
-node ./scripts/generate.js '<payload_json>'
-```
-
-### 4. Result Return
-The script will output the URL of the generated chart image.
-Return the following to the user:
-- The image URL.
-- The complete `args` (specification) used for generation.
-
-## Reference Material
-Detailed specifications for each chart type are located in the `references/` directory. Consult these files to ensure the `args` passed to the script match the expected schema.
-
-## License
-
-This `SKILL.md` is provided by [antvis/chart-visualization-skills](https://github.com/antvis/chart-visualization-skills).
-Licensed under the [MIT License](https://github.com/antvis/chart-visualization-skills/blob/master/LICENSE).

@@ -1,129 +1,57 @@
+# Openviking
+
+**version**: 1.0.0
+
+**description**: OpenViking开源项目研究，支持项目分析和技术调研
+
 ---
-name: openviking
-description: "Activate when the user asks about any repository listed in the system prompt under 'OpenViking — Indexed Code Repositories', or when they ask about an external library, framework, or project that may have been indexed. Also activate when the user wants to add, remove, or manage repos. Always search the local codebase first before using this skill."
-license: MIT
-compatibility: opencode
+
+## 一句话描述
+
+OpenViking开源项目研究，支持项目分析和技术调研
+
 ---
 
-# OpenViking Code Repository Search
+## 输入输出
 
-**IMPORTANT: All `ov` commands are terminal (shell) commands — run them via the `bash` tool. Execute directly — no pre-checks, no test commands. Handle errors when they occur.**
+### 输入（Parameters）
 
-## How OpenViking Organizes Data
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| action | string | 是 | 操作：analyze/summarize/compare | "analyze" |
+| project_url | string | 是 | 项目URL或名称 | "https://github.com/.../repo" |
 
-OpenViking stores content in a virtual filesystem under the `viking://` namespace. Each URI maps to a file or directory, e.g. `viking://resources/fastapi/routing.py`. Each directory has AI-generated summaries (`abstract` / `overview`). **The key principle: narrow the URI scope to improve retrieval efficiency.** Instead of searching all repos, lock to a specific repo or subdirectory — this reduces noise and speeds up results significantly.
+### 输出（Returns）
 
-## Search Commands
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 项目分析报告 | "{'tech_stack':['React','Node'],'stars':1000,'analysis':'...'}" |
 
-Choose the right command based on what you're looking for:
+---
 
-| Command | Use when | Example |
-|---------|----------|---------|
-| `ov search` | Semantic search — use for concept/intent based queries | "dependency injection", "how auth works" |
-| `ov grep` | You know the **exact keyword or symbol** | function name, class name, error string |
-| `ov glob` | You want to **enumerate files** by pattern | all `*.py` files, all test files |
+## 适用场景
 
-```bash
-# Semantic search
-ov search "dependency injection" --uri viking://resources/fastapi --limit 10
-ov search "how tokens are refreshed" --uri viking://resources/fastapi/fastapi/security
-ov search "JWT authentication" --limit 10          # across all repos
-ov search "error handling" --limit 5 --threshold 0.7  # filter low-relevance results
+### 适用场景
++开源项目研究
++技术选型参考
 
-# Keyword search — exact match or regex
-ov grep "verify_token" --uri viking://resources/fastapi
-ov grep "class.*Session" --uri viking://resources/requests/requests
+### 不适用场景
+-非开源项目
+-商业软件
 
-# File enumeration — by name pattern (always specify --uri to scope the search)
-ov glob "**/*.py" --uri viking://resources/fastapi
-ov glob "**/test_*.py" --uri viking://resources/fastapi/tests
-ov glob "**/*.py" --uri viking://resources/   # across all repos
-```
+---
 
-**Narrowing scope:** once you identify a relevant directory, pass it as `--uri` to restrict subsequent searches to that subtree — this is faster and more precise than searching the whole repo.
+## 依赖
 
-**Query formulation:** write specific, contextual queries rather than single keywords.
-```bash
-ov search "API"                                                       # too vague
-ov search "REST API authentication with JWT tokens"                   # better
-ov search "JWT token refresh flow" --uri viking://resources/backend   # best
-```
+网络访问
 
-## Read Content
+---
 
-```bash
-# Directories: AI-generated summaries
-ov abstract viking://resources/fastapi/fastapi/dependencies/   # one-line summary
-ov overview viking://resources/fastapi/fastapi/dependencies/   # detailed breakdown
+## 测试用例
 
-# Files: raw content
-ov read viking://resources/fastapi/fastapi/dependencies/utils.py
-ov read viking://resources/fastapi/fastapi/dependencies/utils.py --offset 100 --limit 50
-```
-
-`abstract` / `overview` only work on directories. `read` only works on files.
-
-## Browse
-
-```bash
-ov ls viking://resources/                        # list all indexed repos
-ov ls viking://resources/fastapi                 # list repo top-level contents
-ov ls viking://resources/fastapi --simple        # paths only, no metadata
-ov ls viking://resources/fastapi --recursive     # list all files recursively
-ov tree viking://resources/fastapi               # full directory tree (default: 3 levels deep)
-ov tree viking://resources/fastapi -L 2          # limit depth to 2 levels
-ov tree viking://resources/fastapi -l 200        # truncate abstract column to 200 chars
-ov tree viking://resources/fastapi -L 2 -l 200   # combined: 2 levels deep, 200-char summaries
-```
-
-`-L` controls how many levels deep the tree expands. `-l` controls the length of the AI-generated summary per directory. Use `ov tree -L 2 -l 200` as a good starting point to understand a repo's structure before diving in.
-
-## Add a Repository
-
-```bash
-ov add-resource https://github.com/owner/repo --to viking://resources/repo --timeout 300
-```
-
-`--timeout` is required (seconds). Use 300 (5 min) for small repos, increase for larger ones.
-
-After submitting, run `ov observer queue` once and report status to user. Indexing runs in background — do not poll or wait.
-
-| Repo Size | Files | Est. Time |
-|-----------|-------|-----------|
-| Small | < 100 | 2–5 min |
-| Medium | 100–500 | 5–20 min |
-| Large | 500+ | 20–60+ min |
-
-## Remove a Repository
-
-```bash
-ov rm viking://resources/fastapi --recursive
-```
-
-This permanently deletes the repo and all its indexed content. Confirm with the user before running.
-
-## Error Handling
-
-**`command not found: ov`** → Tell user: `pip install openviking --upgrade`. Stop.
-
-**`url is required` / `CLI_CONFIG` error** → Auto-create config and retry:
-```bash
-mkdir -p ~/.openviking && echo '{"url": "http://localhost:1933"}' > ~/.openviking/ovcli.conf
-```
-
-**`CONNECTION_ERROR` / failed to connect:**
-- `~/.openviking/ov.conf` **exists** → auto-start server, wait until healthy, retry:
-  ```bash
-  openviking-server > /tmp/openviking.log 2>&1 &
-  for i in $(seq 1 10); do ov health 2>/dev/null && break; sleep 3; done
-  ```
-- **Does not exist** → Tell user to configure `~/.openviking/ov.conf` first. Stop.
-
-## More Help
-
-For other issues or command details, run:
-
-```bash
-ov help
-ov <command> --help   # e.g. ov search --help
+```json
+{
+  "input": {"action":"analyze","project_url":"https://github.com/.../repo"},
+  "expected_output": "项目分析报告"
+}
 ```

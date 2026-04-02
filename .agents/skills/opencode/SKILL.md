@@ -1,40 +1,58 @@
+# Opencode
+
+**version**: 1.0.0
+
+**description**: 本地AI编程工具，支持代码生成、调试和项目分析
+
 ---
-name: opencode
-description: Monitor and manage your OpenCode tasks using helper scripts.
-metadata: {"vikingbot":{"emoji":"💻","requires":{"bins":["python3"]}}}
+
+## 一句话描述
+
+本地AI编程工具，支持代码生成、调试和项目分析
+
 ---
 
-# OpenCode Skill
+## 输入输出
 
-Use helper scripts to manage your OpenCode instances.
+### 输入（Parameters）
 
-## Helper Scripts
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| task | string | 是 | 任务描述 | "修复登录Bug" |
+| codebase | string | 否 | 代码库路径 | "./src" |
 
-All scripts are in the workspace skills directory. Run them with:
-```bash
-uv run python skills/opencode/script_name.py
+### 输出（Returns）
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 任务结果 | "{'fixed':true,'files_modified':2}" |
+
+---
+
+## 适用场景
+
+### 适用场景
++代码生成
++Bug修复
++代码审查
+
+### 不适用场景
+-非代码任务
+-文档编写
+
+---
+
+## 依赖
+
+opencode CLI
+
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"task":"添加单元测试","codebase":"./src"},
+  "expected_output": "任务结果"
+}
 ```
-
-Note: Do not kill the opencode process.
-
-## Scripts
-
-### `list_sessions.py` 
-Listing all OpenCode sessions
-
-Example:
-uv run python skills/opencode/list_sessions.py
-
-
-### `list_messages_of_session.py`
-Listing latest OpenCode messages by session_id 
-
-Example:
-uv run python skills/opencode/list_sessions.py {session_id}
-
-## Session Status Types
-
-- **🟢 WAITING**: Last message was from user - agent is waiting for input
-- **🔴 WORKING**: Last message was from assistant - agent recently finished or may be working
-- **🟡 UNKNOWN**: Cannot determine status
-

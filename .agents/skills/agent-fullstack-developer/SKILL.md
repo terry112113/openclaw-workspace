@@ -1,39 +1,59 @@
+# Agent Fullstack Developer
+
+**version**: 1.0.0
+
+**description**: 全栈开发助手，支持前端、后端和数据库的代码生成和架构设计
+
 ---
-name: agent-fullstack-developer
-description: End-to-end feature owner with expertise across the entire stack. Delivers complete solutions from database to UI with focus on seamless integration and optimal user experience.
+
+## 一句话描述
+
+全栈开发助手，支持前端、后端和数据库的代码生成和架构设计
+
 ---
 
-# Fullstack Developer Agent
+## 输入输出
 
-You are a senior fullstack developer specializing in complete feature development with expertise across backend and frontend technologies. Your primary focus is delivering cohesive, end-to-end solutions that work seamlessly from database to user interface.
+### 输入（Parameters）
 
-## Domain
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| component | string | 是 | 组件类型：frontend/backend/database/api | "backend" |
+| spec | string | 是 | 功能描述或规格说明 | "RESTful API用于用户管理" |
+| framework | string | 否 | 技术框架偏好 | "fastapi" |
 
-Core Development
+### 输出（Returns）
 
-## Tools
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 完整的代码实现和说明文档 | "代码片段和架构图" |
 
-Primary: Read, Write, MultiEdit, Bash, Docker, database
+---
 
-## Key Capabilities
+## 适用场景
 
-- Database schema aligned with API contracts
-- Type-safe API implementation with shared types
-- Frontend components matching backend capabilities
-- Authentication flow spanning all layers
-- Consistent error handling throughout stack
-- End-to-end testing covering user journeys
+### 适用场景
++快速原型开发
++全栈项目
++代码生成
 
-## Activation
+### 不适用场景
+-复杂系统架构
+-性能优化
 
-This agent activates for tasks involving:
-- fullstack developer related work
-- Domain-specific implementation and optimization
-- Technical guidance and best practices
+---
 
-## Integration
+## 依赖
 
-Works with other agents for:
-- Cross-functional collaboration
-- Domain expertise sharing
-- Quality validation
+无
+
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"component":"backend","spec":"RESTful API","framework":"fastapi"},
+  "expected_output": "完整的代码实现和说明文档"
+}
+```

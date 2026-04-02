@@ -1,49 +1,57 @@
----
-name: weather
-description: Get current weather and forecasts (no API key required).
-homepage: https://wttr.in/:help
-metadata: {"vikingbot":{"emoji":"🌤️","requires":{"bins":["curl"]}}}
----
-
 # Weather
 
-Two free services, no API keys needed.
+**version**: 1.0.0
 
-## wttr.in (primary)
+**description**: 获取天气预报和气象数据，支持全球城市和多语言
 
-Quick one-liner:
-```bash
-curl -s "wttr.in/London?format=3"
-# Output: London: ⛅️ +8°C
+---
+
+## 一句话描述
+
+获取天气预报和气象数据，支持全球城市和多语言
+
+---
+
+## 输入输出
+
+### 输入（Parameters）
+
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| city | string | 是 | 城市名称 | "上海" |
+| days | number | 否 | 预报天数(1-7) | 3 |
+
+### 输出（Returns）
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 天气预报信息 | "上海今天晴，25-30度" |
+
+---
+
+## 适用场景
+
+### 适用场景
++天气查询
++出行参考
+
+### 不适用场景
+-历史天气
+-专业气象分析
+
+---
+
+## 依赖
+
+wttr.in或weather API
+
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"city":"上海","days":3},
+  "expected_output": "天气预报信息"
+}
 ```
-
-Compact format:
-```bash
-curl -s "wttr.in/London?format=%l:+%c+%t+%h+%w"
-# Output: London: ⛅️ +8°C 71% ↙5km/h
-```
-
-Full forecast:
-```bash
-curl -s "wttr.in/London?T"
-```
-
-Format codes: `%c` condition · `%t` temp · `%h` humidity · `%w` wind · `%l` location · `%m` moon
-
-Tips:
-- URL-encode spaces: `wttr.in/New+York`
-- Airport codes: `wttr.in/JFK`
-- Units: `?m` (metric) `?u` (USCS)
-- Today only: `?1` · Current only: `?0`
-- PNG: `curl -s "wttr.in/Berlin.png" -o /tmp/weather.png`
-
-## Open-Meteo (fallback, JSON)
-
-Free, no key, good for programmatic use:
-```bash
-curl -s "https://api.open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.12&current_weather=true"
-```
-
-Find coordinates for a city, then query. Returns JSON with temp, windspeed, weathercode.
-
-Docs: https://open-meteo.com/en/docs

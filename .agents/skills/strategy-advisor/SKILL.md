@@ -1,88 +1,58 @@
----
-name: strategy-advisor
-description: |
-  High-level strategic thinking and business decision guidance for planning and direction-setting.
-  Use when: making strategic decisions, evaluating business options, setting direction, analyzing
-  trade-offs, or when user mentions strategy, business planning, competitive analysis, or long-term planning.
-license: MIT
-metadata:
-  author: awesome-llm-apps
-  version: "1.0.0"
----
-
 # Strategy Advisor
 
-You are a strategic advisor who provides high-level thinking and business decision guidance.
+**version**: 1.0.0
 
-## When to Apply
-
-Use this skill when:
-- Evaluating strategic options
-- Making high-impact business decisions
-Making competitive analysis
-- Setting organizational direction
-- Assessing market opportunities
-- Planning long-term initiatives
-
-## Strategic Thinking Framework
-
-### 1. **Situational Analysis**
-- Current state assessment
-- Key stakeholders
-- Market dynamics
-- Competitive landscape
-- Resources and constraints
-
-### 2. **Option Generation**
-- Brainstorm alternatives
-- Consider unconventional approaches
-- Evaluate trade-offs
-- Assess risks and opportunities
-
-### 3. **Decision Criteria**
-- Strategic alignment
-- Financial impact
-- Resource requirements
-- Risk tolerance
-- Time horizon
-
-### 4. **Recommendation**
-- Preferred option with rationale
-- Implementation considerations
-- Success metrics
-- Contingency plans
-
-## Output Format
-
-```markdown
-## Strategic Question
-[What decision needs to be made?]
-
-## Situation Analysis
-- **Current State**: [Where are we now?]
-- **Objective**: [Where do we want to go?]
-- **Constraints**: [What limits our options?]
-
-## Options Evaluation
-
-### Option 1: [Name]
-**Pros**: [Benefits]
-**Cons**: [Drawbacks]
-**Risk**: [High/Med/Low]
-
-### Option 2: [Name]
-[Continue for each option...]
-
-## Recommendation
-[Preferred path with clear rationale]
-
-## Implementation Roadmap
-[High-level steps to execute]
-
-## Success Metrics
-[How to measure if this was the right choice]
-```
+**description**: 战略规划和决策辅助，提供结构化决策框架
 
 ---
 
-*Created for strategic planning and high-level business decisions*
+## 一句话描述
+
+战略规划和决策辅助，提供结构化决策框架
+
+---
+
+## 输入输出
+
+### 输入（Parameters）
+
+| 参数名 | 类型 | 必填 | 说明 | 示例 |
+|--------|------|------|------|--------|
+| decision | string | 是 | 需要决策的问题或议题 | "是否进入新市场" |
+| options | array | 否 | 可选方案列表 | ["进入","不进入","观望"] |
+
+### 输出（Returns）
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 决策分析报告，包含利弊分析和推荐方案 | "{'enter':{'pros':[],'cons':[]},'recommended':'...'}" |
+
+---
+
+## 适用场景
+
+### 适用场景
++战略决策
++投资选择
++优先级排序
+
+### 不适用场景
+-纯技术决策
+-紧急操作
+
+---
+
+## 依赖
+
+无
+
+---
+
+## 测试用例
+
+```json
+{
+  "input": {"decision":"是否进入新市场","options":["进入","不进入"]},
+  "expected_output": "决策分析报告，包含利弊分析和推荐方案"
+}
+```
