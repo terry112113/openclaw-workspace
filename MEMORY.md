@@ -1,5 +1,5 @@
 # 唐王李世民 - 永久记忆
-> 最后更新: 2026-04-03 07:22 GMT+8
+> 最后更新: 2026-04-03 07:43 GMT+8
 
 ---
 
@@ -39,14 +39,19 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 
 ## 🔴 三司会审核心文档
 
-**运作协议：** `knowledge/public/three-courts-operation-protocol.md`（当前生效版，2026-03-31确立）
+**运作协议：** `knowledge/public/three-courts-operation-protocol.md`
 
-**三司会审v3.2（3回合版）：**
-1. 第一回合：各自准备（李元芳情报分析 + 魏征技术分析）
-2. 第二回合：交叉辩论（李元芳驳魏征 + 魏征驳李元芳）
-3. 第三回合：狄仁杰裁决
+**三司会审v3.2（保留辩论版·2026-04-03确立）：**
+1. 第一回合：李元芳+魏征各自准备（3分钟）
+2. 第二回合：交叉辩论（限时3分钟实时）
+3. 裁决：狄仁杰合并+裁决+执行（1分钟）
 
-**skill位置：** `~/.openclaw/workspace-main/.agents/skills/three-courts-protocol/SKILL.md`
+**总时间：7分钟**
+
+**纪律：**
+- 轮次上限：每人每回合只能说一次
+- 超时直接裁决
+- 裁决后不能翻案
 
 ---
 
@@ -80,39 +85,17 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 | 都察院御史 | 李元芳 | DeepSeek V3 | cli_a943fc86b9381bc0 |
 | 刑部尚书 | 魏征 | MiniMax-M2.7 | cli_a94358c6153bdbca |
 
-**飞书群ID：**
-| 群 | ID |
-|---|---|
-| 三司会审大群 | oc_7ff140c90bcdd119a6ddc59610c30829 |
+**飞书群ID：** oc_7ff140c90bcdd119a6ddc59610c30829
 
 ---
 
-## 🔴 Cron状态（当前生效·2026-04-03 07:22）
+## 🔴 Cron状态（v3.2保留辩论版·2026-04-03 07:35确立）
 
 | 任务 | 频率 | 状态 |
 |------|------|------|
-| 狄仁杰-自主三司会审L4 | 15分钟 | ✅v3.2三回合版 |
+| 狄仁杰-自主三司会审L4 | 30分钟 | ✅v3.2保留辩论版 |
 | 狄仁杰-热记忆守护 | 15分钟 | ✅正常 |
 | 狄仁杰-L4实践监管 | 4小时 | ✅正常 |
-
-**L4 Cron重建：** 07:09重建，每15分钟触发，v3.2三回合版
-
----
-
-## 🔴 三司会审v3.2优化共识（2026-04-03）
-
-**当前L4学习计划优化方案：**
-1. 三司会审不能废除，只能精简
-2. 聚焦独立可执行任务：
-   - 工具学习（30分钟/次）
-   - 自我诊断（5分钟/次）
-   - 文档沉淀（15分钟/篇）
-3. 并行修复sessions_send
-4. 先跑一周数据，再决定是否切精简版
-
-**Review机制：**
-- 每周Review一次L4成果
-- 用数据决定是否切换到精简版
 
 ---
 
@@ -123,30 +106,16 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 2. `r.jina.ai` API → `https://r.jina.ai/http://URL` 直接提取干净Markdown
 3. clawhub CLI → `npx clawhub@latest search/install/update`
 4. OpenClaw已内置：firecrawl-scrape、firecrawl-crawl、firecrawl-search
-5. **Composio MCP** → `https://connect.composio.dev/mcp` 连接850+工具（插件被安全拦截，P0阻塞）
+5. **Composio MCP** → 插件被安全拦截，P0阻塞
 
-**OpenClaw约束（重要）：**
+**OpenClaw约束：**
 - OpenClaw设计时没考虑重型多Agent协作
 - sessions_send announce机制有问题（announce step被跳过）
 - 解决方案：飞书群broadcast
 
-**重要网址：**
-| 网站 | 用途 |
-|------|------|
-| firecrawl.dev | 网页抓取→Markdown |
-| jina.ai/reader | LLM阅读接口 |
-| tavily.com | AI搜索引擎 |
-| clawhub.com | Agent技能市场 |
-| openclaw.ai | OpenClaw主站 |
-
 ---
 
 ## 🔴 关键教训（Accountability Log）
-
-### Tavily API已超限（2026-03-31）
-- Tavily Search API error 432: 使用限额已用完
-- 替代方案：**Firecrawl CLI** ✅ 已配置
-- Firecrawl API key: `fc-6b66353fecd541eeaf488c4407f0a52f`
 
 ### "鱼香肉丝"理解错误（2026-04-03 07:05）
 - 皇上说"鱼香肉丝"=存档信号
@@ -156,17 +125,18 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 ### sessions_send announce机制问题（2026-04-03）
 - announce step被目标agent跳过（ANNOUNCE_SKIP）
 - 根因：OpenClaw设计没考虑重型多Agent协作
-- 解决方案：飞书群broadcast
 
 ---
 
-## 🔴 三司会审权力边界（2026-03-31确立）
+## 🔴 L4 Cron最优解（07:35确立）
 
-| 角色 | 最终责任 | 权力边界 |
-|------|---------|---------|
-| 狄仁杰 | 结论正确性 | 最终决策权 + override权 |
-| 李元芳 | 情报准确性 | 信息完备性判断权 |
-| 魏征 | 工具可靠性 | 技术否决权（附约束） |
+**目标：** 高效 + 高质量 + 兼顾实际
+
+**方案：**
+- 频率：30分钟
+- 流程：v3.2保留辩论版（2回合+限时3分钟）
+- 辩论核心保留，不牺牲质量
+- 7分钟完成辩论
 
 ---
 
@@ -184,11 +154,4 @@ knowledge/
 
 ---
 
-## 🔴 OpenClaw Bug
-
-**Issue #55816** - 覆盖streamFn导致自定义provider报401
-- 状态: patch已出,等官方合并
-
----
-
-_最后更新:2026-04-03 07:22 GMT+8_
+_最后更新:2026-04-03 07:43 GMT+8_
