@@ -1,4 +1,4 @@
-# 鱼香肉丝存档 - 2026-04-03 00:05
+# 鱼香肉丝存档 - 2026-04-03 03:43
 
 ## 🔴 当前Cron状态（3个任务）
 
@@ -6,48 +6,44 @@
 |------|------|------|
 | 狄仁杰-自主三司会审L4 | 15分钟 | 🔴运行中 |
 | 狄仁杰-热记忆守护 | 15分钟 | ✅正常 |
-| 狄仁杰-L4实践监管 | 4小时 | ✅已创建 |
+| 狄仁杰-L4实践监管 | 4小时 | ✅下次触发07:22 |
 
-## 📊 L4学习成果（23:47更新）
+## 📊 L4学习成果（深夜-凌晨）
 
-### 重大发现
-- ✅ Composio主站522是表象，核心服务正常
-- ✅ **已有OpenClaw集成文档**（composio.dev/toolkits/openclaw）
-- ✅ Hugging Face Smolagents轻量Agent框架
-- ✅ OpenClaw 2026.4.1不支持原生MCP Server（schema无mcpServers路径）
+### 02:50-03:00 重大发现
+- ✅ Composio插件安装路径完全确认
+- ✅ Firecrawl interact动作体系（click/write/press/scroll/screenshot/scrape）
+- ✅ OpenClaw Stock插件已启用（firecrawl/tavily）
+- ⚠️ 需皇上授权：openclaw plugins install @composio/openclaw-plugin
 
-### 下个15分钟计划（P0）
-1. 配置Composio MCP到OpenClaw settings.json
-2. 深入Smolagents找可集成场景
-3. Zapier Central探索
+### 03:05-03:20 发现
+- ⚠️ firecrawl API key无效（Unauthorized），credentials待配置
+- ✅ Composio MCP地址确认：https://connect.composio.dev/mcp
+- ✅ consumerKey已持有：ck_Ey0Wv2WsNkZzqt2ha7b8
 
-## 🔧 三司会审v3.2（23:26确立）
-
-| 回合 | 内容 |
-|------|------|
-| 第一回合 | 各自准备 |
-| 第二回合 | 交叉辩论 |
-| 第三回合 | 补充深化（再答辩） |
-| 第四回合 | 狄仁杰裁决 |
+### 03:20-03:35 发现
+- ⏰ 深夜时段，暂缓需要皇上授权的操作
+- 臣在做什么：持续监控L4运行，等待皇上清醒
 
 ## 📝 待皇上确认
-- Composio MCP配置（臣强烈建议做）
-- L4实践监管主题（臣找还是皇上定？）
+1. `openclaw plugins install @composio/openclaw-plugin && gateway restart`
+2. Firecrawl API Key配置（key无效）
+3. Composio Consumer Key配置
 
-## 🔴 晚间重大事件（22:27-00:05）
+## 🔴 今日重大事件（04-02 22:27 → 04-03 03:43）
 
 | 时间 | 事件 |
 |------|------|
 | 22:27 | Cron全部27个任务被禁用 |
 | 22:36 | 重建Cron，删除7个旧错误任务 |
-| 22:48 | 鱼香肉丝存档git push |
 | 22:53 | 全力冲刺L4 |
-| 23:13 | Cron精简至2个任务 |
 | 23:22 | 创建L4实践监管cron |
 | 23:24 | L4发现：OpenClaw不支持MCP Server |
 | 23:26 | 三司会审v3.2确立（四回合） |
 | 23:31 | git push a77f45e |
-| 23:47 | L4新发现：Composio有OpenClaw集成文档 |
-| 00:05 | 心跳刷新 |
+| 00:05 | 跨午夜心跳刷新 |
+| 02:50 | Composio插件路径确认 |
+| 03:15 | hot-1h上次刷新 |
+| 03:43 | 心跳刷新 |
 
 *TTL: 15分钟*
