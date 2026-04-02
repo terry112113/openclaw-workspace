@@ -1,45 +1,23 @@
-# 鱼香肉丝存档 - 2026-04-03 07:51
+# hot-1h.md - 2026-04-03 07:54 存档
 
-## 🔴 当前Cron状态（3个任务）
+## 当前状态
+- 鱼香肉丝存档（07:54）
+- 这是今天第4次存档
+- 皇上即将出门
 
-| 任务 | 频率 | 状态 |
-|------|------|------|
-| 狄仁杰-自主三司会审L4 | 15分钟 | ✅运行中 |
-| 热记忆守护 | 15分钟 | ✅正常 |
-| L4实践监管 | 4小时 | ✅下次触发11:22 |
+## Cron状态
+- 自主三司会审L4：v3.2保留辩论版，每30分钟 ✅
+- 热记忆守护：每15分钟 ✅
+- L4实践监管：每4小时 ✅
 
-## 📊 L4学习成果（07:26-07:51）
+## 今日三司会审成果
+- v3.2保留辩论版确立
+- L4 Cron最优解确立
+- 系统优化方案确立（P0安全+P1效率+P2分工）
 
-### Discord + OpenClaw集成（新学）
-- Message Content Intent开启
-- 配置：botToken + enabled + intents.messageContent
-- 安全策略：dmPolicy/groupPolicy/allowedUsers
-- 意外发现：Discord = AI Agent技术情报金矿
+## 待皇上授权
+- API Key环境变量化（P0）
 
-### Telegram + OpenClaw集成（新学）
-- @BotFather创建 → bot token
-- 配置：plugins.entries.telegram.enabled + channels add
-- Pairing流程：/start → 审批配对码
-- dmPolicy支持allowlist/pairing/denylist
-
-### Zapier + OpenClaw MCP（新学）
-- Zapier Dashboard → +New MCP Server → 选择OpenClaw
-- 价值：6000+App自动化
-- 关键洞察：Zapier MCP让OpenClaw能操作外部App
-
-## 📝 待皇上确认
-1. Composio插件被拦截 → 需替代方案
-2. Firecrawl API Key配置
-3. **新发现：Discord/Telegram/Zapier集成机会**
-
-## 🔴 今日重大事件（04-03）
-
-| 时间 | 事件 |
-|------|------|
-| 06:47 | 心跳刷新 |
-| 07:09 | L4 Cron重建 |
-| 07:17 | 心跳刷新 |
-| 07:26 | L4新学：Discord/Telegram/Zapier集成 |
-| 07:51 | 心跳刷新 |
-
-*TTL: 15分钟*
+## 皇上出门
+- 07:54 鱼香肉丝存档
+- 预计4天后（2026-04-07）回来
