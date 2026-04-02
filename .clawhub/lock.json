@@ -420,6 +420,10 @@
     "deep-research-prime": {
       "version": "0.1.0",
       "installedAt": 1774516443687
+    },
+    "feishu-sheets-skill": {
+      "version": "1.0.0",
+      "installedAt": 1775151542032
     }
   }
 }

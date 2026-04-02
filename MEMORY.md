@@ -21,6 +21,7 @@ IF 问题超出能力 → THEN 汇报主人并给出备选方案
 IF 你说"你先忙" → THEN 立即写 CURRENT.md + 今日日志
 IF 发现XAS.exe类未知进程 → THEN 立即报告并尝试清除
 IF cron任务连续失败2次 → THEN 检查delivery和文件权限
+IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接执行最优方案
 ```
 
 ---
