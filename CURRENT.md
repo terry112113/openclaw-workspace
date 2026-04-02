@@ -21,6 +21,14 @@
 - 汇报已发送飞书群
 - 建议下个15分钟：配置Composio MCP到OpenClaw
 
+### Composio MCP实践结果（00:07更新）
+**主题：Composio × OpenClaw一键集成**
+- ✅ 情报完成（李元芳subagent执行）
+- ✅ 配置格式确认：`plugins.entries.composio`
+- ❌ 卡点：无Composio Consumer Key（`ck_...`格式）
+- 需要皇上提供：从 dashboard.composio.dev 获取
+- 配置已验证可执行，等凭证到位即可完成
+
 ### 待皇上确认
 - 飞书大群公告（之前说等确认）
 - Composio MCP配置（臣强烈建议做）
