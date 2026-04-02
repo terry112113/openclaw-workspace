@@ -1,5 +1,5 @@
 # 唐王李世民 - 永久记忆
-> 最后更新: 2026-04-02 23:20 GMT+8
+> 最后更新: 2026-04-03 07:22 GMT+8
 
 ---
 
@@ -26,11 +26,22 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 
 ---
 
+## 🔴 鱼香肉丝存档规则（刻入灵魂）
+
+**"鱼香肉丝"= 存档 + 离开信号**
+- 收到"鱼香肉丝" → 立即执行完整存档
+- 写hot-1h.md → memory/YYYY-MM-DD.md
+- 更新CURRENT.md
+- 更新今日日志
+- 发飞书群确认
+
+---
+
 ## 🔴 三司会审核心文档
 
 **运作协议：** `knowledge/public/three-courts-operation-protocol.md`（当前生效版，2026-03-31确立）
 
-**三司会审三个回合：**
+**三司会审v3.2（3回合版）：**
 1. 第一回合：各自准备（李元芳情报分析 + 魏征技术分析）
 2. 第二回合：交叉辩论（李元芳驳魏征 + 魏征驳李元芳）
 3. 第三回合：狄仁杰裁决
@@ -74,14 +85,59 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 |---|---|
 | 三司会审大群 | oc_7ff140c90bcdd119a6ddc59610c30829 |
 
-**sessions_send验证：**
-- → agent:shensi:main ✅
-- → agent:wei:main ✅（有时超时，需要重试）
+---
 
-**accountId规范：**
-- 狄仁杰用 `di`
-- 李元芳用 `shensi`
-- 魏征用 `wei`
+## 🔴 Cron状态（当前生效·2026-04-03 07:22）
+
+| 任务 | 频率 | 状态 |
+|------|------|------|
+| 狄仁杰-自主三司会审L4 | 15分钟 | ✅v3.2三回合版 |
+| 狄仁杰-热记忆守护 | 15分钟 | ✅正常 |
+| 狄仁杰-L4实践监管 | 4小时 | ✅正常 |
+
+**L4 Cron重建：** 07:09重建，每15分钟触发，v3.2三回合版
+
+---
+
+## 🔴 三司会审v3.2优化共识（2026-04-03）
+
+**当前L4学习计划优化方案：**
+1. 三司会审不能废除，只能精简
+2. 聚焦独立可执行任务：
+   - 工具学习（30分钟/次）
+   - 自我诊断（5分钟/次）
+   - 文档沉淀（15分钟/篇）
+3. 并行修复sessions_send
+4. 先跑一周数据，再决定是否切精简版
+
+**Review机制：**
+- 每周Review一次L4成果
+- 用数据决定是否切换到精简版
+
+---
+
+## 📚 L4学习成果（2026-04-02/03）
+
+**高价值发现：**
+1. `firecrawl-search` skill → clawhub评分3.705，OpenClaw已内置
+2. `r.jina.ai` API → `https://r.jina.ai/http://URL` 直接提取干净Markdown
+3. clawhub CLI → `npx clawhub@latest search/install/update`
+4. OpenClaw已内置：firecrawl-scrape、firecrawl-crawl、firecrawl-search
+5. **Composio MCP** → `https://connect.composio.dev/mcp` 连接850+工具（插件被安全拦截，P0阻塞）
+
+**OpenClaw约束（重要）：**
+- OpenClaw设计时没考虑重型多Agent协作
+- sessions_send announce机制有问题（announce step被跳过）
+- 解决方案：飞书群broadcast
+
+**重要网址：**
+| 网站 | 用途 |
+|------|------|
+| firecrawl.dev | 网页抓取→Markdown |
+| jina.ai/reader | LLM阅读接口 |
+| tavily.com | AI搜索引擎 |
+| clawhub.com | Agent技能市场 |
+| openclaw.ai | OpenClaw主站 |
 
 ---
 
@@ -91,91 +147,26 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 - Tavily Search API error 432: 使用限额已用完
 - 替代方案：**Firecrawl CLI** ✅ 已配置
 - Firecrawl API key: `fc-6b66353fecd541eeaf488c4407f0a52f`
-- 剩余credits: 525/月
 
-### Cron误删教训（2026-03-30）
-- 直接编辑jobs.json导致ID匹配错误,删剩1个cron
-- 教训:先git备份,再手动编辑cron文件
+### "鱼香肉丝"理解错误（2026-04-03 07:05）
+- 皇上说"鱼香肉丝"=存档信号
+- 臣理解成点菜 → 严重错误
+- 以后任何皇上输入，臣先想三层含义再反应
 
-### sessions_send announce模式不可靠（2026-03-31）
-- 依赖reply.pending消失判断完成 → 不可靠
-- 解决方案：李元芳/魏征用`message`工具直接发群，不用announce
-
-### Cron sessionTarget缺失（2026-03-31）
-- 根因：Cron缺`sessionTarget=isolated`
-- 解决：添加`sessionTarget=isolated`
+### sessions_send announce机制问题（2026-04-03）
+- announce step被目标agent跳过（ANNOUNCE_SKIP）
+- 根因：OpenClaw设计没考虑重型多Agent协作
+- 解决方案：飞书群broadcast
 
 ---
 
 ## 🔴 三司会审权力边界（2026-03-31确立）
 
-| 角色 | 最终责任 | 权力边界 | 越界机制 |
-|------|---------|---------|---------|
-| 狄仁杰 | 结论正确性 | 最终决策权 + override权 | 可驳回李元芳/魏征的结论 |
-| 李元芳 | 情报准确性 | 信息完备性判断权 | 可质疑魏征的技术判断 |
-| 魏征 | 工具可靠性 | 技术否决权（附约束） | 否决须给文档依据，三方有权要求解释，狄仁杰保留override权 |
-
-**Accountability原则：**
-- 每个决议必须有唯一责任人 + Deadline + 验收标准
-- 没有这三条 = 空谈，不是断案
-
-**事前划线原则：**
-- 三人各自签字确认，皇上照此问责
-
----
-
-## 📚 L4学习成果（2026-04-02最新）
-
-**高价值新发现：**
-1. `firecrawl-search` skill → clawhub评分3.705，OpenClaw已内置
-2. `r.jina.ai` API → `https://r.jina.ai/http://URL` 直接提取干净Markdown，无需key
-3. clawhub CLI → `npx clawhub@latest search/install/update`
-4. OpenClaw已内置：firecrawl-scrape、firecrawl-crawl、firecrawl-search
-5. **Composio MCP** → `https://connect.composio.dev/mcp` 连接850+工具到OpenClaw
-
-**重要网址：**
-| 网站 | 用途 |
-|------|------|
-| firecrawl.dev | 网页抓取→Markdown |
-| jina.ai/reader | LLM阅读接口 |
-| tavily.com | AI搜索引擎 |
-| perplexity.ai | 联网搜索 |
-| composio.dev | 850+工具集成（MCP） |
-| clawhub.com | Agent技能市场 |
-| openclaw.ai | OpenClaw主站 |
-
-**AI进展（2026-04-01）：**
-1. 2026 = Agent Swarm年：Cursor数百agents一周构建web浏览器；Kimi K2.5自演进100个sub-agents
-2. 推理模型平民化：GPT-OSS-120B / GLM-4.7 / DeepSeek-R1-Distill-Qwen3-8B
-3. Gartner预警：40% agentic AI项目2027年前取消，tool reliability是主因
-
----
-
-## 📚 2026-04-01 关键事件
-
-**Cron触发异常：**
-- 21:00设置的任务在08:11触发（应该夜间执行，变早晨执行）
-- 原因：时区或调度系统问题，待查
-
-**飞书API单次错误（4个，均未熔断）：**
-- 李元芳-数据获取学习：Message failed
-- 狄仁杰-长时记忆学习：Message failed
-- 狄仁杰-深度学习Sprint2：GatewayDraining（重启恢复）
-- 魏征-云端环境学习：Message failed
-
-**三司会审03-31成果（100%完成）：**
-- 8个学习任务全部完成
-- P1审计日志 + P2 DPAPI加密 + P3会话隔离 全部落地
-- Ollama迁移D盘 ✅ | Firecrawl替换Tavily ✅ | Cron优化完成 ✅
-- 三司会审v3.1架构确立
-
----
-
-## 🏛️ 里程碑:太上皇授权狄仁杰自主决策(2026-03-30 01:13)
-
-> "你自己拿修改完善主意,我相信你会做到最好的,反正出问题我找你。"
-
-**以此为证,存档为据。**
+| 角色 | 最终责任 | 权力边界 |
+|------|---------|---------|
+| 狄仁杰 | 结论正确性 | 最终决策权 + override权 |
+| 李元芳 | 情报准确性 | 信息完备性判断权 |
+| 魏征 | 工具可靠性 | 技术否决权（附约束） |
 
 ---
 
@@ -183,18 +174,12 @@ IF 需要皇上决定的事 → THEN 60秒内皇上沉默 → 三司会审直接
 
 ```
 knowledge/
-├── public/           # 三司会审通用文档（永久归档）
-│   ├── three-courts-operation-protocol.md  ← 三司会审运作核心协议
-│   ├── three-courts-*.md                   # 三司会审专项文档
-│   ├── lessons/          # 教训归档
-│   ├── operations/       # 运维文档
-│   ├── research/         # 研究文档
-│   ├── tech/            # 技术文档
-│   └── archive/         # 历史版本归档
+├── public/           # 三司会审通用文档
+│   ├── three-courts-operation-protocol.md
+│   └── lessons/      # 教训归档
 ├── di/               # 狄仁杰私有知识
 ├── li/               # 李元芳私有知识
-├── wei/              # 魏征私有知识
-└── shensi/           # 沈思私有知识
+└── wei/              # 魏征私有知识
 ```
 
 ---
@@ -206,4 +191,4 @@ knowledge/
 
 ---
 
-_最后更新:2026-04-02 23:20 GMT+8_
+_最后更新:2026-04-03 07:22 GMT+8_
